@@ -1,0 +1,14 @@
+{
+  "name": "webfront",
+  "version": "1.0.0",
+  "description": "11",
+  "main": "index.js",
+  "scripts": {
+    "test": "s"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "anywhere": "^1.6.0"
+  }
+}
