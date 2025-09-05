@@ -3,17 +3,20 @@ function pageWrapFlowUp() {
   const ob = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        const delay = entry.target.dataset.delayStep || 0;
+        console.log('fromTo', delay)
         gsap.fromTo(
           entry.target,
           {
-            autoAlpha: 0.2,
-            transform: "translateY(3rem)",
+            autoAlpha: 0,
+            transform: "translateY(6rem)",
           },
           {
             autoAlpha: 1,
             transform: "translateY(0)",
-            duration: 0.8,
-            ease: "linear",
+            delay: 0.3 + delay,
+            duration: 1,
+            ease: "power1.out",
           }
         );
         ob.unobserve(entry.target);
@@ -36,7 +39,7 @@ function showPolicy() {
     {
       transform: "translateY(0)",
       duration: 0.8,
-      ease: "linear",
+      ease: "power1.out",
       delay: 1,
     }
   );
