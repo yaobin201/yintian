@@ -108,7 +108,21 @@ function newsBgSwitch() {
   });
 }
 
+function bannerScaleAni() {
+ ScrollTrigger.create({
+  trigger: ".banner-container",
+  start: "top top",
+  end: `+=980`,
+  scrub: true,
+  // markers: true,
+  pin: true,
+  animation: gsap.to('.banner-wrapper', {width: '100%'})
+ })
+
+}
+
 $(document).ready(function () {
+  bannerScaleAni();
   solutionAccording();
   newsBgSwitch();
   startNumberSwitch();

@@ -28,9 +28,34 @@ body {
   color: #333;
   font-family: Poppins-Regular, Arial, sans-serif;
 }
+body{
+  overflow-x:hidden;
+}
 
 .font-semi-bold {
   font-family: Poppins-SemiBold, Arial, sans-serif;
+}
+
+.header_wrapper.header_wrapper_scroll{
+  position:fixed;
+  top:-4rem;
+  left:0;
+  opacity: 0;
+  animation: slowDownAni ease .3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slowDownAni {
+  0% {
+    opacity: 0;
+    top:-4rem;
+  }
+
+  100% {
+    opacity: 1;
+    top:0;
+  }
 }
 
 .home-wrapper {
@@ -44,8 +69,9 @@ body {
     right: -1.5rem !important;
   }
 }
-.banner-wrapper:hover .cus-swiper-pages{
-  display: none;
+
+
+.banner-wrapper .cus-swiper-pages{
   font-family: Poppins-SemiBold, Arial, sans-serif;
 }
 

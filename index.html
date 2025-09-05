@@ -14,8 +14,8 @@
 </head>
 
 <body>
-  <div class="fixed z-20 top-0 left-0 w-screen bg-slate-100 header_wrapper">
-    <div class="w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
+  <div class="relative z-20 w-full bg-[#eef1f4] header_wrapper">
+    <div class="relative w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
       <div class="header-left-column flex-initial">
         <img class="h-14 header-logo" src="./images/logo.png" alt="logo" />
       </div>
@@ -24,7 +24,7 @@
         <div class="md:hidden mobile-bg"></div>
         <div class="flex flex-col md:flex-row h-auto md:h-16 text-black menu-items">
           <div class="mx-5 flex items-center menu-item">
-            <a href="#">Home</a>
+            <a href="./index.html">Home</a>
           </div>
           <div class="mx-5 flex items-center menu-item relative product-underline">
             <a href="./products-all.html">Product</a>
@@ -95,40 +95,41 @@
     </div>
   </div>
   <div class="relative z-10 w-full scroll-section">
-    <div class="relative w-full h-16 pointer-events-none"></div>
     <div class="relative w-full home-wrapper">
       <!-- banner start -->
-      <div class="w-11/12 relative mx-auto banner-wrapper md:hover:w-full transition-all duration-500">
-        <div class="swiper-banner swiper w-full aspect-video md:aspect-auto md:h-[calc(100vh-8rem)]">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="h-full w-full flex items-center justify-center flex-col bg-center bg-no-repeat bg-cover rounded-md hover:rounded-none"
-                style="background-image: url(./images/full-solution.jpg)">
-                <div class="text-[#c7f0ff] text-4xl font-semi-bold font-bold" data-swiper-parallax-y="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">PROFESSIONAL AUTOMATIC</div>
-                <div class="text-white text-4xl font-semi-bold mt-4 font-bold" data-swiper-parallax-y="-240" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800">ID ENTIFICATION & DATA CAPTURE (AIDC)</div>
-                <div class="text-white text-2xl font-semi-bold font-bold mt-8" data-swiper-parallax-y="-300"  data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000">Solutions Provider</div>
+      <div class="banner-container w-full overflow-x-hidden">
+        <div class="w-11/12 relative mx-auto banner-wrapper">
+          <div class="swiper-banner swiper w-full aspect-video md:aspect-auto md:h-[calc(100vh-4rem)]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="h-full w-full flex items-center justify-center flex-col bg-center bg-no-repeat bg-cover rounded-md hover:rounded-none"
+                  style="background-image: url(./images/full-solution.jpg)">
+                  <div class="text-[#c7f0ff] text-4xl font-semi-bold font-bold" data-swiper-parallax-y="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">PROFESSIONAL AUTOMATIC</div>
+                  <div class="text-white text-4xl font-semi-bold mt-4 font-bold" data-swiper-parallax-y="-240" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800">ID ENTIFICATION & DATA CAPTURE (AIDC)</div>
+                  <div class="text-white text-2xl font-semi-bold font-bold mt-8" data-swiper-parallax-y="-300"  data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000">Solutions Provider</div>
+                </div>
+                <img class="h-full invisible" src="./images/full-solution.jpg" alt="banner1" />
               </div>
-              <img class="h-full invisible" src="./images/full-solution.jpg" alt="banner1" />
-            </div>
-            <div class="swiper-slide">
-              <div class="h-full w-full flex items-center justify-center flex-col bg-center bg-no-repeat bg-cover rounded-md hover:rounded-none"
-                style="background-image: url(./images/full-solution.jpg)">
-                <div class="text-[#c7f0ff] text-4xl font-semi-bold font-bold" data-swiper-parallax-y="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">PROFESSIONAL AUTOMATIC</div>
-                <div class="text-white text-4xl font-semi-bold mt-4 font-bold" data-swiper-parallax-y="-240" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800">ID ENTIFICATION & DATA CAPTURE (AIDC)</div>
-                <div class="text-white text-2xl font-semi-bold font-bold mt-8" data-swiper-parallax-y="-300"  data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000">Solutions Provider</div>
+              <div class="swiper-slide">
+                <div class="h-full w-full flex items-center justify-center flex-col bg-center bg-no-repeat bg-cover rounded-md hover:rounded-none"
+                  style="background-image: url(./images/full-solution.jpg)">
+                  <div class="text-[#c7f0ff] text-4xl font-semi-bold font-bold" data-swiper-parallax-y="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">PROFESSIONAL AUTOMATIC</div>
+                  <div class="text-white text-4xl font-semi-bold mt-4 font-bold" data-swiper-parallax-y="-240" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800">ID ENTIFICATION & DATA CAPTURE (AIDC)</div>
+                  <div class="text-white text-2xl font-semi-bold font-bold mt-8" data-swiper-parallax-y="-300"  data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000">Solutions Provider</div>
+                </div>
+                <img class="h-full invisible" src="./images/full-solution.jpg" alt="banner1" />
               </div>
-              <img class="h-full invisible" src="./images/full-solution.jpg" alt="banner1" />
-            </div>
-            <div class="swiper-slide">
-              <div class="h-full w-full rounded-md overflow-hidden hover:rounded-none">
-                <video class="w-full" autoplay muted loop>
-                  <source src="./images/banner/33.mp4" type="video/mp4" />
-                </video>
+              <div class="swiper-slide">
+                <div class="h-full w-full rounded-md overflow-hidden hover:rounded-none">
+                  <video class="w-full" autoplay muted loop>
+                    <source src="./images/banner/33.mp4" type="video/mp4" />
+                  </video>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="swiper-pagination cus-swiper-pages "></div>
+          <div class="swiper-pagination cus-swiper-pages "></div>
+      </div>
       </div>
       <!-- banner end -->
 

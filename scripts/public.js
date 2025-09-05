@@ -4,7 +4,7 @@ function pageWrapFlowUp() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const delay = entry.target.dataset.delayStep || 0;
-        console.log('fromTo', delay)
+        console.log("fromTo", delay);
         gsap.fromTo(
           entry.target,
           {
@@ -50,6 +50,34 @@ function showPolicy() {
   });
 }
 
+function isMobileDevice() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  // 检查设备是否为移动设备
+  return /iPad|iPhone|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(
+    userAgent
+  );
+}
+
+function controlNavbar() {
+  if (isMobileDevice()) {
+    return;
+  }
+  let lastScrollTop = 0; // 上一次滚动的位置
+  $(window).scroll(function (event) {
+    const st = $(this).scrollTop(); // 当前滚动的位置
+    if (st == 0) {
+      $(".header_wrapper").removeClass("header_wrapper_scroll");
+      return;
+    }
+    if (st > lastScrollTop) {
+      $(".header_wrapper").removeClass("header_wrapper_scroll");
+    } else {
+      $(".header_wrapper").addClass("header_wrapper_scroll");
+    }
+    lastScrollTop = st;
+  });
+}
+
 $(document).ready(function () {
   // 处理导航
   $("#menuBurger").click(function () {
@@ -69,6 +97,8 @@ $(document).ready(function () {
   $(".mobile-menus .product-underline").click(function () {
     $(this).find(".categorys-list").toggle();
   });
+
+  controlNavbar();
 
   // 语言切换
   $("#langArrow").click(function () {
