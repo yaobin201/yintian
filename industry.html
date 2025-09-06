@@ -1,0 +1,429 @@
+<html lang="en" class="text-[14px] md:text-[1.1vw]">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./scripts/jquery.animateNumber.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./style/public.css" />
+</head>
+
+<body>
+  <div class="relative z-20 w-full bg-[#eef1f4] header_wrapper">
+    <div class="relative w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
+      <div class="header-left-column flex-initial">
+        <img class="h-14 header-logo" src="./images/logo.png" alt="logo" />
+      </div>
+      <div class="hidden md:flex flex-row justify-end flex-auto header-right-column">
+        <div class="md:hidden mobile-mask"></div>
+        <div class="md:hidden mobile-bg"></div>
+        <div class="flex flex-col md:flex-row h-auto md:h-16 text-black menu-items">
+          <div class="mx-5 flex items-center menu-item">
+            <a href="#">Home</a>
+          </div>
+          <div class="mx-5 flex items-center menu-item relative product-underline">
+            <a href="./products-all.html">Product</a>
+            <div
+              class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
+              <div class="py-2 category-item">
+                <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
+              </div>
+              <div class="py-2 category-item">
+                <a href="./products-barcode-scanner.html" class="category-link">Tablet PC</a>
+              </div>
+              <div class="py-2 category-item">
+                <a href="./products-barcode-scanner.html" class="category-link">Bar code scanner</a>
+              </div>
+              <div class="py-2 category-item">
+                <a href="./products-barcode-scanner.html" class="category-link">Printer</a>
+              </div>
+              <div class="py-2 category-item">
+                <a href="./products-barcode-scanner.html" class="category-link">Category 1</a>
+              </div>
+            </div>
+          </div>
+          <div class="mx-5 flex items-center menu-item">
+            <a href="./solution.html">Solution</a>
+          </div>
+          <div class="mx-5 flex items-center menu-item">
+            <a href="./industry.html">Industry</a>
+          </div>
+          <div class="mx-5 flex items-center menu-item">
+            <a href="#">Service</a>
+          </div>
+          <div class="mx-5 flex items-center menu-item">
+            <a href="#">News</a>
+          </div>
+          <div class="mx-5 flex items-center menu-item">
+            <a href="#">About Us</a>
+          </div>
+        </div>
+        <div class="ml-24 flex items-center lang-sections relative">
+          <div class="flex items-center lang-local">
+            <img class="h-4" src="./images/icons/language.svg" alt="" />
+            <span class="mx-2">EN</span>
+            <img class="h-4 cursor-pointer transition-all duration-300" id="langArrow"
+              src="./images/icons/arrow-down.svg" alt="" />
+          </div>
+          <div class="absolute top-6 md:top-16 left-0 md:left-auto md:right-0 px-5 py-2 bg-white rounded-md hidden shadow-lg lang-items">
+            <div class="cursor-pointer py-1 hover:text-sky-500 border-b border-slate-300 lang-item text-sky-500"
+              data-lang="en">
+              English
+            </div>
+            <div class="cursor-pointer py-1 hover:text-sky-500 lang-item" data-lang="fanti">
+              繁体
+            </div>
+          </div>
+        </div>
+        <div class="ml-6 flex items-center search-entry">
+          <a class="flex items-center search-txt cursor-pointer" href="#">
+            <img class="h-4" src="./images/icons/search.svg" alt="search" />
+          </a>
+        </div>
+        <div class="ml-6 flex items-center contact-entry">
+          <a class="px-5 py-2 rounded-full text-white bg-sky-500 cursor-pointer" href="#">Contact us</a>
+        </div>
+      </div>
+      <div class="md:hidden flex items-center menu-burger">
+        <div><img id="menuBurger" class="h-8" src="./images/icons/menu.svg" alt="menu" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="relative z-10 w-full scroll-section">
+    <!-- <div class="relative w-full h-16 pointer-events-none"></div> -->
+    <div class="relative w-full home-wrapper">
+
+      <!-- 首屏 -->
+      <div ani-gsap-bg class="w-full h-[calc(100vh-4rem)] md:h-[calc-4rem] bg-top bg-no-repeat" style="background-image: url(./images/full-solution.jpg);">
+        <div class="w-11/12 mx-auto h-full flex flex-col justify-betweens  text-white">
+          <div class="flex-auto flex flex-col items-center justify-center">
+            <div data-banner-title class="font-bold text-5xl">INDUSTRY</div>
+            <div data-banner-icon class="text-base mt-2"><img src="./images/p001.png"></div>
+          </div>
+          <div class="site-breadcrumb site-banner mb-8 hidden md:flex items-center gap-2 text-sm h-12 border-b border-white flow-up">
+            <img class="h-[1.5em]" src="./images/icons/home-white.svg" />
+            <a href="./index.html">Home</a>
+            <img class="h-[.4em]" src="./images/icons//arrow-right-white.svg" />
+            <a href="javascript:void(0)">Solution</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full bg-white">
+
+        <div class="w-11/14 flex items-center flex-col py-20">
+          <div data-delay-step="0.2" class="flow-up  font-bold font-semi-bold text-black text-3xl text-center">FMCG/RETAIL</div>
+          <div data-delay-step="0.4" class="flow-up text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">The rapid growth of the retail / FMCG industry and the increase in customer demand led to evolve a new edge shopping experience – Omni-channel Retailing. </div>
+          <a data-delay-step="0.6"class="flow-up mt-6 cus-link-btn" href="#">More products<img src="images/icons/arrow-right.svg" /><img
+                src="images/icons/arrow-right-blue.svg" /></a>
+        </div>
+  
+        <div class="industry-wrapper w-full bg-white pb-16">
+          <div class="industry-ani1 font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
+          <div class="industry-section w-11/12 mx-auto">
+            <div class="industryFlag w-full flex h-24vh md:h-[36vw] flexing">
+              <div data-delay="0" class="industry-sitem on">
+                <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
+                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+              </div>
+              <div data-delay="0.1" class="industry-sitem">
+                <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
+                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+              </div>
+              <div data-delay="0.2" class="industry-sitem">
+                <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
+                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+              </div>
+              <div data-delay="0.3" class="industry-sitem">
+                <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
+                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+              </div>
+              <div data-delay="0.4" class="industry-sitem">
+                <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
+                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-11/14 flex items-center flex-col pb-20">
+          <div data-delay-step="0.2" class="flow-up  font-bold font-semi-bold text-black text-3xl text-center">LOGISTICS & TRANSPORTATION</div>
+          <div data-delay-step="0.4" class="flow-up text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">Globalization rapidly transforms the landscape of transportation and logistics industry. It accelerates the demand of complexity in business-related requirements and variety of support services...</div>
+          <a data-delay-step="0.6"class="flow-up mt-6 cus-link-btn" href="#">More products<img src="images/icons/arrow-right.svg" /><img
+                src="images/icons/arrow-right-blue.svg" /></a>
+        </div>
+
+        <div class="industry-wrap2 w-full bg-white pb-16">
+          <div class="flow-up font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
+          <div class="flow-up industry-section w-11/12 mx-auto">
+            <div id="industryWrap2" class="swiper rounded-md h-20vh md:h-[36vw]">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="w-full h-full object-cover" src="./images/solution-1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="w-full h-full object-cover" src="./images/full-solution.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="w-full h-full object-cover" src="./images/solution-1.jpg" />
+                </div>
+              </div>
+              <div id="cusSwiperNav1" class="w-full absolute h-[4rem] left-0 bottom-0 bg-black/[0.5] z-10 text-white flex items-center overflow-hidden">
+                <div class="flex-1 text-center overflow-hidden text-ellipsis whitespace-nowrap px-4 cursor-pointer">INVENTORY MANAGEMENT SYSTEM SYSTEMSYSTEM</div>
+                <div class="flex-1 text-center overflow-hidden text-ellipsis whitespace-nowrap px-4 cursor-pointer">INVENTORY MANAGEMENT SYSTEM</div>
+                <div class="flex-1 text-center overflow-hidden text-ellipsis whitespace-nowrap px-4 cursor-pointer">INVENTORY MANAGEMENT SYSTEM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-11/14 flex items-center flex-col pb-20">
+          <div data-delay-step="0.2" class="flow-up  font-bold font-semi-bold text-black text-3xl text-center">LOGISTICS & TRANSPORTATION</div>
+          <div data-delay-step="0.4" class="flow-up text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">Globalization rapidly transforms the landscape of transportation and logistics industry. It accelerates the demand of complexity in business-related requirements and variety of support services...</div>
+          <a data-delay-step="0.6"class="flow-up mt-6 cus-link-btn" href="#">More products<img src="images/icons/arrow-right.svg" /><img
+                src="images/icons/arrow-right-blue.svg" /></a>
+        </div>
+
+        <div class="industry-wrapper w-full bg-white pb-16">
+          <div class="industry-ani1 font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
+          <div class="industry-section w-11/12 mx-auto">
+            <div class="industryFlag w-full flex h-20vh md:h-[30vw] flexing">
+              <div data-delay="0" class="industry-sitem on">
+                <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
+                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+              </div>
+              <div data-delay="0.1" class="industry-sitem">
+                <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
+                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+              </div>
+              <div data-delay="0.2" class="industry-sitem">
+                <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
+                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+      <div class="h-72 bg-cover bg-center bg-no-repeat text-white mt-2"
+        style="background-image: url('./images/n4.jpg')">
+        <div class="w-11/12 mx-auto h-full flex flex-col md:flex-row justify-center md:justify-between md:items-center">
+          <div class="footer-theme-section flex flex-col">
+            <h1 class="font-bold text-5xl font-semi-bold text-center md:text-left">GET OUT ADVICE</h1>
+            <span class="text-xl font-bold mt-3">Subscribe now to receive exclusive discounts and product
+              updates</span>
+          </div>
+          <div class="footer-links flex mt-12 md:mt-0">
+            <a href="#" class="pr-1 py-1.5 rounded-full bg-white flex items-center link-btn bigger w-fit text-[#999999]">
+              <span class="text-xs scale-75">Contact us immediately</span>
+              <i class="rounded-full h-4 w-4 flex items-center justify-center ml-2 sm-arrow"><img class="h-2"
+                  src="./images/icons/arrow-right-white.svg" alt="" /></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="relative md:fixed z-0 bottom-0 w-screen h-auto md:h-screen overflow-hidden bg-white">
+    <div class="hidden md:block relative w-full h-16 pointer-events-none"></div>
+    <div class="w-11/12 mx-auto flex flex-col md:flex-row pt-4 md:pt-16">
+      <div class="flex-none w-full md:w-[26%]">
+        <div class="hidden md:block"><img src="./images/footer-logo.png" /></div>
+        <div class="hidden md:flex mt-4 medias-section">
+          <a class="media-item" href="tel:0123456789"><img src="./images/icons/phone-white.svg" /></a>
+          <a class="media-item" href="#"><img src="./images/icons/facebook-white.svg" /></a>
+          <a class="media-item instagram" href="#" target="_blank"><img src="./images/icons/instagram.svg" /></a>
+          <a class="media-item relative ani-pop-code" href="#" target="_blank">
+            <img src="./images/icons/wechat-white.svg" />
+            <div class="hidden absolute top-[1.5rem] left-[-2.5rem] w-[6rem] h-[6rem] bg-white rounded-lg p-4 shadow-lg pop-code">
+              <img class="!w-full" src="./images/footer-logo.png" />
+            </div>
+          </a>
+        </div>
+        
+        <div class="mt-4 text-base">NEWSLETTER</div>
+        <div class="mt-2 text-xs text-[#666666]">
+          Keep updated with our latest news, articles and resources.
+        </div>
+        <form>
+          <div class="mt-4">
+            <div class="text-sm">E-mail*</div>
+            <div class="mt-3 cus-input">
+              <input placeholder="Input you e-mail..." type="email" />
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="text-sm">Country*</div>
+            <div class="mt-3 cus-input">
+              <select name="country" id="country" placeholder="Select or type">
+                <option value="">Select or type</option>
+                <option value="1">US</option>
+                <option value="2">FA</option>
+                <option value="3">China</option>
+              </select>
+            </div>
+          </div>
+          <p class="mt-4 text-xs">
+            I have read and agree to this site's Privacy Policy
+          </p>
+          <div class="mt-4">
+            <div class="privacy-btn primary btn-ani">Submit</div>
+          </div>
+        </form>
+      </div>
+      <div class="flex-none hidden md:block w-[10%]"></div>
+      <div class="flex-auto">
+        <div class="flex flex-wrap footer-cats">
+          <div class="flex-none mb-4 md:mb-0 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">PRODUCT</div>
+            <div class="mt-1.5 text-base md:h-[12rem]">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Mobile terminal</a>
+                <a href="#">Tablet PC</a>
+                <a href="#">Bar code scanner</a>
+                <a href="#">Printer</a>
+                <a href="#">Printing consumables (label carbon tape)</a>
+                <a href="#">Other1</a>
+                <a href="#">Other2</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">INDUSTRY</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">FMCG/Retail</a>
+                <a href="#">Logistics & Transportation</a>
+                <a href="#">Manufacturing</a>
+                <a href="#">Health Care</a>
+                <a href="#">Education</a>
+                <a href="#">Utilities</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">NEWS</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Company News</a>
+                <a href="#">Industry News</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">About</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Company Profile</a>
+                <a href="#">Company structure</a>
+                <a href="#">Milestones</a>
+                <a href="#">Company Honors</a>
+                <a href="#">Join Us</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">CONTACT</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Contact Information</a>
+                <a href="#">Online Message</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 mt-0 md:mt-6 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">SOLUTION</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Automation</a>
+                <a href="#">Mobility</a>
+                <a href="#">Traceable</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 mt-0 md:mt-6 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">SERVICES SUPPORT</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Project management</a>
+                <a href="#">Maintenance support</a>
+                <a href="#">Consulting service</a>
+                <a href="#">Program development</a>
+                <a href="#">Label printing</a>
+                <a href="#">Professional training</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative w-11/12 mx-auto flex flex-col md:flex-row md:items-center justify-between md:justify-start mt-12 py-8 border-t border-[#cccccc]">
+      <div class="flex-none w-full md:w-[36%]">
+        <p>Copyright 2023 Powered by Manfulls Technology.</p>
+      </div>
+      <div class="flex-auto pl-0 md:pl-4">
+        <a href="#">Privacy Policy</a>
+        <a class="ml-[8rem]" href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+  <div class="hidden md:block relative w-full h-screen pointer-events-none z-0"></div>
+  <div class="medias-section media-absolute">
+    <a class="media-item" href="tel:0123456789"><img src="./images/icons/phone-blue.svg" /></a>
+    <a class="media-item" href="#"><img src="./images/icons/facebook-blue.svg" /></a>
+    <a class="media-item instagram" href="#" target="_blank"><img src="./images/icons/instagram-white.svg" /></a>
+    <a class="media-item relative ani-pop-code" href="#" target="_blank">
+      <img src="./images/icons/wechat-blue.svg" />
+      <div class="hidden absolute top-[-2.5rem] left-[-6.5rem] w-[6rem] h-[6rem] bg-white rounded-lg p-4 shadow-lg pop-code">
+        <img class="!w-full" src="./images/footer-logo.png" />
+      </div>
+    </a>
+  </div>
+  <div id="data-policy" class="w-full fixed bottom-0 left-0 z-50 bg-[#f7f7f7]">
+    <div class="w-11/12 mx-auto flex flex-row py-4">
+      <div class="flex-auto">
+        <div class="font-bold text-base">We value you privacy</div>
+        <p class="text-xs">
+          We use cookies to enhance you browsing exprience serve
+          persionalized ads or content,and analyze our traffc.
+        </p>
+        <p class="text-xs">
+          By clicking "Accept All", you consent to our use of cookies.
+        </p>
+      </div>
+      <div class="flex-none flex flex-row items-center gap-2">
+        <div class="privacy-btn" data-type="reject">Reject All</div>
+        <div class="privacy-btn btn-ani primary" data-type="accept">Accept All</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- 引入malihu custom scrollbar CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+<!-- 引入malihu custom scrollbar JS -->
+<script src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"
+  type="text/javascript"></script>
+
+<script src="./scripts/gsap/3.13.0/gsap.min.js" type="text/javascript"></script>
+<script src="./scripts/gsap/3.13.0/ScrollTrigger.min.js" type="text/javascript"></script>
+<script src="./scripts/gsap/3.13.0/SplitText.min.js" type="text/javascript"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger, SplitText);
+</script>
+
+<script src="./scripts/public.js" type="text/javascript"></script>
+<script src="./scripts/industry.js" type="text/javascript"></script>
+
+
+</html>

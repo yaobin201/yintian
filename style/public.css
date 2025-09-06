@@ -770,3 +770,56 @@ body{
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+.flexing .industry-sitem{
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: .5rem;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+  margin: 0 .2rem;
+  transition: -ms-flex .6s, -ms-flex .6s, flex .6s;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+.flexing .industry-sitem .msg{
+  font-size:.8rem;
+  z-index: 10;
+  width: 16vw;
+  max-width: 80%;
+  position: absolute;
+  bottom: .4rem;
+  left: 1rem;
+  color:#fff;
+  height:4.2rem;
+}
+.flexing .industry-sitem .pic{
+  /* filter: grayscale(); */
+  border-radius: .5rem;
+  width: 100%;
+  height: 100%;
+  transition: filter .5s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.flexing .industry-sitem .pic::after{
+  content: "";
+  background: linear-gradient(transparent 55%, rgba(0, 0, 0, .8) 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.flexing .industry-sitem.on{
+  flex:3;
+}
+.flexing .industry-sitem.on .pic{
+  /* filter: grayscale(0); */
+}

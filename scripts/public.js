@@ -3,8 +3,7 @@ function pageWrapFlowUp() {
   const ob = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const delay = entry.target.dataset.delayStep || 0;
-        console.log("fromTo", delay);
+        const delay = +entry.target.dataset.delayStep || 0;
         gsap.fromTo(
           entry.target,
           {
@@ -15,7 +14,7 @@ function pageWrapFlowUp() {
             autoAlpha: 1,
             transform: "translateY(0)",
             delay: 0.3 + delay,
-            duration: 1,
+            duration: 0.3 + delay,
             ease: "power1.out",
           }
         );
