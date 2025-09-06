@@ -3,6 +3,7 @@ $(document).ready(function () {
   new Swiper(".product-cats-swiper", {
     loop: true, // 循环模式选项
     slidesPerView: 2,
+    spaceBetween: 6,
     autoplay: true,
     breakpoints: {
       768: {
