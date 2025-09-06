@@ -14,8 +14,8 @@
 </head>
 
 <body>
-  <div class="fixed z-20 top-0 left-0 w-screen bg-slate-100 header_wrapper">
-    <div class="w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
+  <div class="relative z-20 w-full bg-[#eef1f4] header_wrapper">
+    <div class="relative w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
       <div class="header-left-column flex-initial">
         <img class="h-14 header-logo" src="./images/logo.png" alt="logo" />
       </div>
@@ -24,9 +24,9 @@
         <div class="md:hidden mobile-bg"></div>
         <div class="flex flex-col md:flex-row h-auto md:h-16 text-black menu-items">
           <div class="mx-5 flex items-center menu-item">
-            <a href="./index.html">Home</a>
+            <a href="#">Home</a>
           </div>
-          <div class="mx-5 flex items-center menu-item relative product-underline active">
+          <div class="mx-5 flex items-center menu-item relative product-underline">
             <a href="./products-all.html">Product</a>
             <div
               class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
@@ -70,8 +70,7 @@
             <img class="h-4 cursor-pointer transition-all duration-300" id="langArrow"
               src="./images/icons/arrow-down.svg" alt="" />
           </div>
-          <div
-            class="absolute top-6 md:top-16 left-0 md:left-auto md:right-0 px-5 py-2 bg-white rounded-md hidden shadow-lg lang-items">
+          <div class="absolute top-6 md:top-16 left-0 md:left-auto md:right-0 px-5 py-2 bg-white rounded-md hidden shadow-lg lang-items">
             <div class="cursor-pointer py-1 hover:text-sky-500 border-b border-slate-300 lang-item text-sky-500"
               data-lang="en">
               English
@@ -91,230 +90,172 @@
         </div>
       </div>
       <div class="md:hidden flex items-center menu-burger">
-        <div>
-          <img id="menuBurger" class="h-8" src="./images/icons/menu.svg" alt="menu" />
-        </div>
+        <div><img id="menuBurger" class="h-8" src="./images/icons/menu.svg" alt="menu" /></div>
       </div>
     </div>
   </div>
   <div class="relative z-10 w-full scroll-section">
-    <div class="relative w-full h-16 pointer-events-none"></div>
+    <!-- <div class="relative w-full h-16 pointer-events-none"></div> -->
     <div class="relative w-full home-wrapper">
-      <!-- product category swiper -->
-      <div class="pt-8 pb-12 w-full border-b border-[#ccc]">
 
-        <div class="swiper product-cats-swiper h-fit text-white">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a class="block relative px-0.5" href="#">
-                <div class="w-full"><img class="w-full" src="./images/products/Product-All-Products_03.png" /></div>
-                <div class="text-center w-full absolute h-12 bottom-4">MOBILE COMPUTERS</div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a class="block relative px-0.5" href="#">
-                <div class="w-full"><img class="w-full" src="./images/products/Product-All-Products_05.png" /></div>
-                <div class="text-center w-full absolute h-12 bottom-4">TABLETS</div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a class="block relative px-0.5" href="#">
-                <div class="w-full"><img class="w-full" src="./images/products/Product-All-Products_07.png" /></div>
-                <div class="text-center w-full absolute h-12 bottom-4">bARCODE SCANNERS</div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a class="block relative px-0.5" href="#">
-                <div class="w-full"><img class="w-full" src="./images/products/Product-All-Products_09.png" /></div>
-                <div class="text-center w-full absolute h-12 bottom-4">PRINTERS</div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a class="block relative px-0.5" href="#">
-                <div class="w-full"><img class="w-full" src="./images/products/Product-All-Products_11.png" /></div>
-                <div class="text-center w-full absolute h-12 bottom-4">PRINTTING CONSUMABLES (LABEL AND RIBBON)</div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a class="block relative px-0.5" href="#">
-                <div class="w-full"><img class="w-full" src="./images/products/Product-All-Products_13.png" /></div>
-                <div class="text-center w-full absolute h-12 bottom-4">LABEL DESIGN SOFTWARE</div>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a class="block relative px-0.5" href="#">
-                <div class="w-full"><img width="w-full" src="./images/products/Product-All-Products_15.jpg" /></div>
-                <div class="text-center w-full absolute h-12 bottom-4">RFID</div>
-              </a>
-            </div>
+      <!-- 首屏 -->
+      <div ani-gsap-bg class="w-full h-[calc(100vh-4rem)] md:h-[calc-4rem] bg-top bg-no-repeat" style="background-image: url(./images/full-solution.jpg);">
+        <div class="w-11/12 mx-auto h-full flex flex-col justify-betweens  text-white">
+          <div class="flex-auto flex flex-col items-center justify-center">
+            <div data-banner-title class="font-bold text-5xl">WAREHOUSE MANAGEMENT SYSTEM (WMS)</div>
+            <div data-banner-icon class="text-base mt-2">Streamline day-to-day warehouse operations and workflows to maximize resources utilization</div>
           </div>
-          <div
-            class="hidden md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch f swiper-button-prev">
-            <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
-          </div>
-          <div
-            class="hidden md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch swiper-button-next">
-            <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
+          <div class="site-breadcrumb site-banner mb-8 hidden md:flex items-center gap-2 text-sm h-12 border-b border-white flow-up">
+            <img class="h-[1.5em]" src="./images/icons/home-white.svg" />
+            <a href="./index.html">Home</a>
+            <img class="h-[.4em]" src="./images/icons//arrow-right-white.svg" />
+            <a href="javascript:void(0)">Solution</a>
+            <img class="h-[.4em]" src="./images/icons//arrow-right-white.svg" />
+            <a href="javascript:void(0)">WAREHOUSE MANAGEMENT SYSTEM (WMS)</a>
           </div>
         </div>
       </div>
 
-      <div class="w-full my-8 relative">
-        <div class="w-11/12 mx-auto flex flex-col md:flex-row gap-2 md:gap-6">
-          <div class="flex-none w-full md:w-[28.5%]">
-            <div class="site-breadcrumb mb-8 hidden md:flex items-center gap-2 text-sm h-8">
-              <img class="h-[1.5em]" src="./images/icons/home-black.svg" />
-              <a href="#">Home</a>
-              <img class="h-[.4em]" src="./images/icons/arrow-right-bold.svg" />
-              <a href="#">Product</a>
-              <img class="h-[.4em]" src="./images/icons/arrow-right-bold.svg" />
-              <a href="#">Barcode Scanners</a>
+      <div class="solutions-wrapper w-full bg-white py-16">
+        <div class="solutions-section w-11/12 mx-auto">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-8 h-fit">
+            <div class="w-full md:w-[38rem]">
+              <img class="w-full h-auto" src="./images/solutions/Solution-details-_03.jpg" alt="">
             </div>
-            <div>
-              <div class="clear-btn">Clear</div>
-            </div>
-            <!-- 产品分类 -->
-            <div class="bg-white mb-2 rounded-lg px-6 py-3 product-category-wrap">
-              <div class="py-2 font-bold flex justify-between product-category-toggle">
-                <span>Barcode Scanners</span>
-                <span class="category-toggle">
-                  <img class="w-4 h-4" src="./images/icons/arrow-down-black.svg" />
-                </span>
-              </div>
-              <div class="rounded-md p-6 mt-4 mb-6 bg-[#fcfcfc] text-[#666666] product-category-list">
-                <div class="product-category-item">
-                  <a href="#">Handler Barcode Scanners</a>
-                </div>
-                <div class="product-category-item">
-                  <a href="#">Hands-free Barcode Scanners</a>
-                </div>
-              </div>
-            </div>
-            <div class="bg-white mb-2 rounded-lg px-6 py-3 product-category-wrap">
-              <div class="py-2 font-bold flex justify-between product-category-toggle">
-                <span>Brand</span>
-                <span class="category-toggle">
-                  <img class="w-4 h-4" src="./images/icons/arrow-down-black.svg" />
-                </span>
-              </div>
-              <div class="rounded-md p-6 mt-4 mb-6 bg-[#fcfcfc] text-[#666666] product-category-list">
-                <div class="product-category-item">
-                  <a href="#">Desktop Printers</a>
-                </div>
-                <div class="product-category-item">
-                  <a href="#">Industrial Printers</a>
-                </div>
-                <div class="product-category-item">
-                  <a href="#">Kiosk Printers</a>
-                </div>
-                <div class="product-category-item">
-                  <a href="#">Mobile Printers</a>
-                </div>
-                <div class="product-category-item">
-                  <a href="#">Card Printers</a>
-                </div>
-              </div>
-            </div>
-            <div class="bg-white mb-2 rounded-lg px-6 py-3 product-category-wrap">
-              <div class="py-2 font-bold flex justify-between product-category-toggle">
-                <span>Operating System</span>
-                <span class="category-toggle">
-                  <img class="w-4 h-4" src="./images/icons/arrow-down-black.svg" />
-                </span>
-              </div>
-              <div class="rounded-md p-6 mt-4 mb-6 bg-[#fcfcfc] text-[#666666] product-category-list">
-                <div class="product-category-item">
-                  <a href="#">Desktop Printers</a>
-                </div>
-                <div class="product-category-item">
-                  <a href="#">Industrial Printers</a>
-                </div>
-                <div class="product-category-item">
-                  <a href="#">Kiosk Printers</a>
-                </div>
-                <div class="product-category-item">
-                  <a href="#">Mobile Printers</a>
-                </div>
-                <div class="product-category-item">
-                  <a href="#">Card Printers</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="flex-auto">
-            <div class="product-cat-name mb-8 flex items-center gap-2 text-2xl h-8">
-              <img class="h-[1em]" src="./images/icons/control-black.png" />
-              <a href="javascript:void(0)" class="font-bold">Barcode Scanners</a>
-            </div>
-          
-            <div class="flow-up flex gap-4 mt-4 products-section flex-col md:flex-row md:flex-wrap">
-
-              <div class="w-full md:flex-none md:w-[calc(33.33%-0.72rem)] md:flex-auto bg-white rounded-md flex flex-col items-center hover:shadow-lg p-6">
-                <div class="text-xl product-title mt-2">
-                  MOBILE COMPUTER
-                </div>
-                <a class="flex justify-end mt-6" href="./product-detail.html">
-                  <img class="w-48" src="./images/products/p1.jpg" />
-                </a>
-              </div>
-              <div class="w-full md:flex-none md:w-[calc(33.33%-0.72rem)] md:flex-auto bg-white rounded-md flex flex-col items-center hover:shadow-lg p-6">
-                <div class="text-xl product-title mt-2">
-                  MOBILE COMPUTER
-                </div>
-                <a class="flex justify-end mt-6" href="./product-detail.html">
-                  <img class="w-48" src="./images/products/p2.jpg" />
-                </a>
-              </div>
-              <div class="w-full md:flex-none md:w-[calc(33.33%-0.72rem)] md:flex-auto bg-white rounded-md flex flex-col items-center hover:shadow-lg p-6">
-                <div class="text-xl product-title mt-2">
-                  MOBILE COMPUTER
-                </div>
-                <a class="flex justify-end mt-6" href="./product-detail.html">
-                  <img class="w-48" src="./images/products/p3.jpg" />
-                </a>
-              </div>
-              <div class="w-full md:flex-none md:w-[calc(33.33%-0.72rem)] md:flex-auto bg-white rounded-md flex flex-col items-center hover:shadow-lg p-6">
-                <div class="text-xl product-title mt-2">
-                  MOBILE COMPUTER
-                </div>
-                <a class="flex justify-end mt-6" href="./product-detail.html">
-                  <img class="w-48" src="./images/products/p4.jpg" />
-                </a>
-              </div>
-              <div class="w-full md:flex-none md:w-[calc(33.33%-0.72rem)] md:flex-auto bg-white rounded-md flex flex-col items-center hover:shadow-lg p-6">
-                <div class="text-xl product-title mt-2">
-                  MOBILE COMPUTER
-                </div>
-                <a class="flex justify-end mt-6" href="./product-detail.html">
-                  <img class="w-48" src="./images/products/p1.jpg" />
-                </a>
-              </div>
-              <div class="w-full md:flex-none md:w-[calc(33.33%-0.72rem)] md:flex-auto bg-white rounded-md flex flex-col items-center hover:shadow-lg p-6">
-                <div class="text-xl product-title mt-2">
-                  MOBILE COMPUTER
-                </div>
-                <a class="flex justify-end mt-6" href="./product-detail.html">
-                  <img class="w-48" src="./images/products/p1.jpg" />
-                </a>
+            <div class="w-full md:flex-auto">
+              <h2 class="text-3xl font-bold">SUMMARY</h2>
+              <div class="mt-6 solution-detail-content text-sm">
+                <p>Imprecise information of inventory level and redundant processes can lead to affect productivity, shipment schedule, stock availability and customer satisfactions for warehouses or distribution centers. Maximized space utilization, optimized route plan operations and timely accurate information is critical to success in today’s competitive market of warehouse management.</p>
+                <p>Therefore, a sophisticated Warehouse Management System (WMS) is vital, it can provide a solid foundation of industry best practices for receiving, put-away, inventory management, order processing, replenishment, picking / packing as well as loading and shipping. With the use of wireless infrastructure, voice directed picking, and Auto-ID technologies, it enables automated operation processes and real-time visibility of inventory resulting in timely accurate information for better business decision-making.</p>
+                <p>In addition, the enablement of EDI helps facilitate timely exchange of purchase orders, invoices, advance ship notices (ASNs) and other business transactions with ERP, accounting or other business systems connected seamlessly via electronic means. Various aspects on warehouse operations such as inventory tracking, order processing and goods return can be benefited owing to the improvement of information accuracy, operation efficiency and costs reduction.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="w-full bg-[#eef1f4]">
+        <div class="solution-tab flow-up flex h-36 items-center justify-center gap-6 text-3xl font-bold font-semi-bold">
+          <span class="relative active">SOFTWARE</span>
+          <span class="relative ">HARDWARE</span>
+        </div>
+        <div class="flow-up pb-16 w-11/12 mx-auto">
+
+          <div class="swiper solutions-swiper h-fit text-white md:overflow-visible">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a class="block relative" href="#">
+                  <div class="w-full"><img class="w-full rounded-md" src="./images/solutions/Solution-details-_11.jpg" /></div>
+                  <div class="text-left w-full absolute bottom-0 py-4 px-6">
+                    <div class="text-2xl">INTEGRATION WITH</div>
+                    <div class="text-lg">SAP/Oracle/ERP/Legacy System</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="block relative" href="#">
+                  <div class="w-full"><img class="w-full rounded-md" src="./images/solutions/Solution-details-_13.jpg" /></div>
+                  <div class="text-left w-full absolute bottom-0 py-4 px-6">
+                    <div class="text-2xl">WEB-BASED SYSTEM HANDHELP APPLICATION</div>
+                    <div class="text-lg">Planning/Scheduling/Yerd Management</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="block relative" href="#">
+                  <div class="w-full"><img class="w-full rounded-md" src="./images/solutions/Solution-details-_15.jpg" /></div>
+                  <div class="text-left w-full absolute bottom-0 py-4 px-6">
+                    <div class="text-2xl"></div>
+                    <div class="text-lg">Directed picking/Quality Control/Lot Control/Cross Docking</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="block relative" href="#">
+                  <div class="w-full"><img class="w-full rounded-md" src="./images/solutions/Solution-details-_15.jpg" /></div>
+                  <div class="text-left w-full absolute bottom-0 py-4 px-6">
+                    <div class="text-2xl">INTEGRATION WITH</div>
+                    <div class="text-lg">SAP/Oracle/ERP/Legacy System</div>
+                  </div>
+                </a>
+              </div>
+              
+            </div>
+            <div
+              class="hidden md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch f swiper-button-prev">
+              <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
+            </div>
+            <div
+              class="hidden md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch swiper-button-next">
+              <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
+            </div>
+          </div>
+
+          <div class="hidden swiper solutions-swiper h-fit text-white md:overflow-visible">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a class="block relative" href="#">
+                  <div class="w-full"><img class="w-full rounded-md" src="./images/solutions/Solution-details-_11.jpg" /></div>
+                  <div class="text-left w-full absolute bottom-0 py-4 px-6">
+                    <div class="text-2xl">INTEGRATION WITH</div>
+                    <div class="text-lg">SAP/Oracle/ERP/Legacy System</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="block relative" href="#">
+                  <div class="w-full"><img class="w-full rounded-md" src="./images/solutions/Solution-details-_13.jpg" /></div>
+                  <div class="text-left w-full absolute bottom-0 py-4 px-6">
+                    <div class="text-2xl">WEB-BASED SYSTEM HANDHELP APPLICATION</div>
+                    <div class="text-lg">Planning/Scheduling/Yerd Management</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="block relative" href="#">
+                  <div class="w-full"><img class="w-full rounded-md" src="./images/solutions/Solution-details-_15.jpg" /></div>
+                  <div class="text-left w-full absolute bottom-0 py-4 px-6">
+                    <div class="text-2xl"></div>
+                    <div class="text-lg">Directed picking/Quality Control/Lot Control/Cross Docking</div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a class="block relative" href="#">
+                  <div class="w-full"><img class="w-full rounded-md" src="./images/solutions/Solution-details-_15.jpg" /></div>
+                  <div class="text-left w-full absolute bottom-0 py-4 px-6">
+                    <div class="text-2xl">INTEGRATION WITH</div>
+                    <div class="text-lg">SAP/Oracle/ERP/Legacy System</div>
+                  </div>
+                </a>
+              </div>
+              
+            </div>
+            <div
+              class="hidden md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch f swiper-button-prev">
+              <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
+            </div>
+            <div
+              class="hidden md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch swiper-button-next">
+              <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
 
       <div class="h-72 bg-cover bg-center bg-no-repeat text-white mt-2"
         style="background-image: url('./images/n4.jpg')">
         <div class="w-11/12 mx-auto h-full flex flex-col md:flex-row justify-center md:justify-between md:items-center">
           <div class="footer-theme-section flex flex-col">
-            <h1 class="font-bold text-5xl font-semi-bold text-center md:text-left">
-              GET OUT ADVICE
-            </h1>
+            <h1 class="font-bold text-5xl font-semi-bold text-center md:text-left">GET OUT ADVICE</h1>
             <span class="text-xl font-bold mt-3">Subscribe now to receive exclusive discounts and product
               updates</span>
           </div>
           <div class="footer-links flex mt-12 md:mt-0">
-            <a href="#"
-              class="pr-1 py-1.5 rounded-full bg-white flex items-center link-btn bigger w-fit text-[#999999]">
+            <a href="#" class="pr-1 py-1.5 rounded-full bg-white flex items-center link-btn bigger w-fit text-[#999999]">
               <span class="text-xs scale-75">Contact us immediately</span>
               <i class="rounded-full h-4 w-4 flex items-center justify-center ml-2 sm-arrow"><img class="h-2"
                   src="./images/icons/arrow-right-white.svg" alt="" /></i>
@@ -328,22 +269,19 @@
     <div class="hidden md:block relative w-full h-16 pointer-events-none"></div>
     <div class="w-11/12 mx-auto flex flex-col md:flex-row pt-4 md:pt-16">
       <div class="flex-none w-full md:w-[26%]">
-        <div class="hidden md:block">
-          <img src="./images/footer-logo.png" />
-        </div>
+        <div class="hidden md:block"><img src="./images/footer-logo.png" /></div>
         <div class="hidden md:flex mt-4 medias-section">
           <a class="media-item" href="tel:0123456789"><img src="./images/icons/phone-white.svg" /></a>
           <a class="media-item" href="#"><img src="./images/icons/facebook-white.svg" /></a>
           <a class="media-item instagram" href="#" target="_blank"><img src="./images/icons/instagram.svg" /></a>
           <a class="media-item relative ani-pop-code" href="#" target="_blank">
             <img src="./images/icons/wechat-white.svg" />
-            <div
-              class="hidden absolute top-[1.5rem] left-[-2.5rem] w-[6rem] h-[6rem] bg-white rounded-lg p-4 shadow-lg pop-code">
+            <div class="hidden absolute top-[1.5rem] left-[-2.5rem] w-[6rem] h-[6rem] bg-white rounded-lg p-4 shadow-lg pop-code">
               <img class="!w-full" src="./images/footer-logo.png" />
             </div>
           </a>
         </div>
-
+        
         <div class="mt-4 text-base">NEWSLETTER</div>
         <div class="mt-2 text-xs text-[#666666]">
           Keep updated with our latest news, articles and resources.
@@ -460,8 +398,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="relative w-11/12 mx-auto flex flex-col md:flex-row md:items-center justify-between md:justify-start mt-12 py-8 border-t border-[#cccccc]">
+    <div class="relative w-11/12 mx-auto flex flex-col md:flex-row md:items-center justify-between md:justify-start mt-12 py-8 border-t border-[#cccccc]">
       <div class="flex-none w-full md:w-[36%]">
         <p>Copyright 2023 Powered by Manfulls Technology.</p>
       </div>
@@ -478,8 +415,7 @@
     <a class="media-item instagram" href="#" target="_blank"><img src="./images/icons/instagram-white.svg" /></a>
     <a class="media-item relative ani-pop-code" href="#" target="_blank">
       <img src="./images/icons/wechat-blue.svg" />
-      <div
-        class="hidden absolute top-[-2.5rem] left-[-6.5rem] w-[6rem] h-[6rem] bg-white rounded-lg p-4 shadow-lg pop-code">
+      <div class="hidden absolute top-[-2.5rem] left-[-6.5rem] w-[6rem] h-[6rem] bg-white rounded-lg p-4 shadow-lg pop-code">
         <img class="!w-full" src="./images/footer-logo.png" />
       </div>
     </a>
@@ -489,8 +425,8 @@
       <div class="flex-auto">
         <div class="font-bold text-base">We value you privacy</div>
         <p class="text-xs">
-          We use cookies to enhance you browsing exprience serve persionalized
-          ads or content,and analyze our traffc.
+          We use cookies to enhance you browsing exprience serve
+          persionalized ads or content,and analyze our traffc.
         </p>
         <p class="text-xs">
           By clicking "Accept All", you consent to our use of cookies.
@@ -498,9 +434,7 @@
       </div>
       <div class="flex-none flex flex-row items-center gap-2">
         <div class="privacy-btn" data-type="reject">Reject All</div>
-        <div class="privacy-btn btn-ani primary" data-type="accept">
-          Accept All
-        </div>
+        <div class="privacy-btn btn-ani primary" data-type="accept">Accept All</div>
       </div>
     </div>
   </div>
@@ -520,8 +454,8 @@
   gsap.registerPlugin(ScrollTrigger, SplitText);
 </script>
 
-<script src="./scripts/homeBannerSwiper.js" type="text/javascript"></script>
 <script src="./scripts/public.js" type="text/javascript"></script>
-<script src="./scripts/product.js" type="text/javascript"></script>
+<script src="./scripts/solution.js" type="text/javascript"></script>
+
 
 </html>

@@ -66,15 +66,80 @@ function controlNavbar() {
   $(window).scroll(function (event) {
     const st = $(this).scrollTop(); // 当前滚动的位置
     if (st == 0) {
-      $(".header_wrapper").removeClass("header_wrapper_scroll");
+      $(".header_wrapper")
+        .removeClass("header_wrapper_scroll")
+        .removeClass("header_wrapper_scroll_out");
       return;
     }
     if (st > lastScrollTop) {
-      $(".header_wrapper").removeClass("header_wrapper_scroll");
+      $(".header_wrapper")
+        .removeClass("header_wrapper_scroll")
+        .addClass("header_wrapper_scroll_out");
     } else {
-      $(".header_wrapper").addClass("header_wrapper_scroll");
+      $(".header_wrapper")
+        .removeClass("header_wrapper_scroll_out")
+        .addClass("header_wrapper_scroll");
     }
     lastScrollTop = st;
+  });
+}
+
+function gasp_bg_ani() {
+  $("[ani-gsap-bg]").each(function () {
+    console.log(this, '...this')
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: this,
+        pin: false,
+        markers: false,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 0.3,
+      },
+    });
+    tl.fromTo(
+      this,
+      {
+        "background-position": "0% 0%",
+      },
+      {
+        "background-position": "0% 100%",
+      }
+    );
+
+    const titleTarget = $(this).find("[data-banner-title]");
+    const iconTarget = $(this).find("[data-banner-icon]");
+
+    const timeline = gsap.timeline()
+    timeline.fromTo(
+      titleTarget.eq(0),
+      {
+        autoAlpha: 0,
+        transform: "translateY(3rem)",
+      },
+      {
+        autoAlpha: 1,
+        transform: "translateY(0)",
+        duration: .6,
+        ease: "power1.out",
+      }
+    );
+    timeline.fromTo(
+      iconTarget.eq(0),
+      {
+        autoAlpha: 0,
+        transform: "translateY(3rem)",
+      },
+      {
+        autoAlpha: 1,
+        transform: "translateY(0)",
+        duration: .6,
+        ease: "power1.out",
+      }
+    );
+
+
+
   });
 }
 
@@ -147,4 +212,5 @@ $(document).ready(function () {
 
   showPolicy();
   pageWrapFlowUp();
+  gasp_bg_ani()
 });

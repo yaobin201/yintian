@@ -45,6 +45,15 @@ body{
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+.header_wrapper.header_wrapper_scroll_out{
+  position:fixed;
+  top:0;
+  left:0;
+  opacity: 1;
+  animation: slowUpAni ease .3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
 @keyframes slowDownAni {
   0% {
@@ -55,6 +64,17 @@ body{
   100% {
     opacity: 1;
     top:0;
+  }
+}
+@keyframes slowUpAni {
+  0% {
+    opacity: 1;
+    top:0;
+  }
+
+  100% {
+    opacity: 0;
+    top:-4rem;
   }
 }
 
@@ -707,4 +727,36 @@ body{
   padding:.8rem 1rem;
   align-items: center;
   width:fit-content;
+}
+
+.solutions-section .solution-item:nth-child(2n){
+  flex-direction: row-reverse;
+}
+.solution-detail-content > p,
+.solution-detail-content > div{
+  margin-bottom: 1.5rem;
+}
+.solution-tab span{
+  cursor: pointer;
+}
+.solution-tab span::before{
+  width:1em;
+  height:1rem;
+  display: block;
+  content: '';
+  background: url(../images/yicon.jpg) no-repeat center center;
+  position:absolute;
+  bottom:-1rem;
+  left: calc(50% - 0.5em);
+  background-size: 100%;
+  display: none;
+}
+.solution-tab span.active{
+  color: var(--primary-color);
+}
+.solution-tab span.active::before{
+  display: block;
+  animation: fadeInAnimation ease .3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
