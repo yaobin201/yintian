@@ -31,6 +31,15 @@ body {
 body{
   overflow-x:hidden;
 }
+.t-primary{
+  color: var(--primary-color);
+}
+.t-gray{
+  color: #666;
+}
+.back-gray{
+  background:#eef1f4;
+}
 
 .font-semi-bold {
   font-family: Poppins-SemiBold, Arial, sans-serif;
@@ -789,10 +798,45 @@ body{
   width: 16vw;
   max-width: 80%;
   position: absolute;
-  bottom: .4rem;
+  bottom: 1rem;
   left: 1rem;
   color:#fff;
-  height:4.2rem;
+}
+.flexing .industry-sitem.on .msg{
+  width: 100%;
+}
+.flexing .industry-sitem .msg .wc{
+  transition: all .3s 'easy';
+  transition-delay: .2s;
+  font-size:1.2rem;
+  width:7.6125vw;
+}
+.flexing .industry-sitem .msg .end.wc{
+  display:none;
+  opacity: 0;
+  width: 30.75vw;
+}
+.flexing .industry-sitem.on .msg .wc{
+  font-size:1.2rem;
+  opacity: 0;
+  display: none;
+}
+.flexing .industry-sitem.on .msg .end.wc{
+  display: block;
+  opacity: 1;
+}
+.flexing .industry-sitem .msg p.wcc{
+  font-size:.8rem;
+  display: none;
+  opacity: 0;
+  width: 50vw;
+}
+.flexing .industry-sitem.on .msg p.wcc{
+  display: block;
+  animation: fadeInAnimation ease .3s;
+  animation-iteration-count: 1;
+  animation-delay: .4s;
+  animation-fill-mode: forwards;
 }
 .flexing .industry-sitem .pic{
   /* filter: grayscale(); */
@@ -822,4 +866,26 @@ body{
 }
 .flexing .industry-sitem.on .pic{
   /* filter: grayscale(0); */
+}
+.phoneSwiper{
+  width:20vw;
+  aspect-ratio: 1/2;
+}
+.phone-react{
+  background-image: url(../images/phone.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  aspect-ratio: 1/2;
+  width:20vw;
+  position: absolute;
+  top:0;
+  left:50%;
+  transform: translateX(-10vw);
+  z-index:10;
+  pointer-events: none;
+}
+.text-bani-timeline,
+.industry-ani1{
+  opacity: 0;
 }
