@@ -473,6 +473,9 @@ body{
 .swiper-slide:hover img{
   transform: scale(1.1);
 }
+.noscale .swiper-slide:hover img{
+  transform:none;
+}
 .industry-swiper .swiper-slide {
   transform: rotate(3deg) scale(1.05);
   position: relative;
@@ -555,6 +558,9 @@ body{
   color: var(--main-color);
   font-size: 5.125rem;
   width:15rem;
+}
+.absoutus-wrods .count-wrap{
+  color:white;
 }
 .ani-numaber-box{
   position: relative;
@@ -972,7 +978,7 @@ body{
   transform: var(--try);
 }
 .img-wrap{
-      height: auto;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -988,5 +994,93 @@ body{
 .normal-section .img img{
   width: 100%;
   height:100%;
+  object-fit: cover;
+}
+.aboutus-counter{
+  border-top:1px solid #ccc;
+}
+.a-count-1{
+  flex: 1;
+}
+.a-count-2{
+  flex: 2;
+}
+.bor-1{
+  border-right:1px solid #ccc;
+}
+.a-count-2.bor-flex{
+  display: flex;
+  justify-content: center;
+}
+.a-count-1.bor-flex{
+  display: flex;
+  justify-content: end;
+}
+.bor-wrap .count-wrap{
+  width: auto;
+}
+.bor-flex .count-wrap{
+  font-size:3rem;
+}
+.structure-p p{
+  margin-bottom:1rem;
+}
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-cline{
+  width:100%;
+  display: flex;
+  padding-left:4.5rem;
+  height:20px;
+  bottom:2.5rem;
+}
+.historys-swiper .swiper-pagination-bullet{
+  flex:1 1 auto;
+  width:auto;
+  height:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  background: transparent;
+  opacity: 1;
+}
+.swiper-pagination-cline .line{
+  flex:1 1 auto;
+  height:2px;
+  background:#dfdfdf;
+}
+.swiper-pagination-bullet-active .line{
+  background:var(--swiper-theme-color);
+}
+.historys-swiper .swiper-pagination-bullet .dot{
+  width:8px;
+  height:8px;
+  border-radius: 50%;
+  display: block;
+  transition: all .3s ease-in-out;
+  background:#dfdfdf;
+  margin-right:8px;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active .dot{
+  width:16px;
+  height:16px;
+  background:var(--primary-color);
+}
+.joinus-card,
+.joinus-card p{
+  transition: all .3s ease-in-out;
+}
+.joinus-card:hover{
+  background-color: var(--primary-color);
+}
+.joinus-card:hover p{
+  color: white!important;
+}
+.cover-bg .img{
+  width:100%;
+  height:100%;
+}
+.cover-bg .img img{
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }

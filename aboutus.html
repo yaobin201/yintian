@@ -1,0 +1,621 @@
+<html lang="en" class="text-[14px] md:text-[1.1vw]">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./scripts/jquery.animateNumber.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./style/public.css" />
+</head>
+
+<body>
+  <div class="relative z-20 w-full bg-[#eef1f4] header_wrapper">
+    <div class="relative w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
+      <div class="header-left-column flex-initial">
+        <img class="h-14 header-logo" src="./images/logo.png" alt="logo" />
+      </div>
+      <div class="hidden md:flex flex-row justify-end flex-auto header-right-column">
+        <div class="md:hidden mobile-mask"></div>
+        <div class="md:hidden mobile-bg"></div>
+        <div class="flex flex-col md:flex-row h-auto md:h-16 text-black menu-items">
+          <div class="mx-5 flex items-center menu-item">
+            <a href="#">Home</a>
+          </div>
+          <div class="mx-5 flex items-center menu-item relative product-underline">
+            <a href="./products-all.html">Product</a>
+            <div
+              class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
+              <div class="py-2 category-item">
+                <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
+              </div>
+              <div class="py-2 category-item">
+                <a href="./products-barcode-scanner.html" class="category-link">Tablet PC</a>
+              </div>
+              <div class="py-2 category-item">
+                <a href="./products-barcode-scanner.html" class="category-link">Bar code scanner</a>
+              </div>
+              <div class="py-2 category-item">
+                <a href="./products-barcode-scanner.html" class="category-link">Printer</a>
+              </div>
+              <div class="py-2 category-item">
+                <a href="./products-barcode-scanner.html" class="category-link">Category 1</a>
+              </div>
+            </div>
+          </div>
+          <div class="mx-5 flex items-center menu-item">
+            <a href="./solution.html">Solution</a>
+          </div>
+          <div class="mx-5 flex items-center menu-item">
+            <a href="./industry.html">Industry</a>
+          </div>
+          <div class="mx-5 flex items-center menu-item">
+            <a href="#">Service</a>
+          </div>
+          <div class="mx-5 flex items-center menu-item">
+            <a href="./news.html">News</a>
+          </div>
+          <div class="mx-5 flex items-center menu-item">
+            <a href="#">About Us</a>
+          </div>
+        </div>
+        <div class="ml-24 flex items-center lang-sections relative">
+          <div class="flex items-center lang-local">
+            <img class="h-4" src="./images/icons/language.svg" alt="" />
+            <span class="mx-2">EN</span>
+            <img class="h-4 cursor-pointer transition-all duration-300" id="langArrow"
+              src="./images/icons/arrow-down.svg" alt="" />
+          </div>
+          <div class="absolute top-6 md:top-16 left-0 md:left-auto md:right-0 px-5 py-2 bg-white rounded-md hidden shadow-lg lang-items">
+            <div class="cursor-pointer py-1 hover:text-sky-500 border-b border-slate-300 lang-item text-sky-500"
+              data-lang="en">
+              English
+            </div>
+            <div class="cursor-pointer py-1 hover:text-sky-500 lang-item" data-lang="fanti">
+              繁体
+            </div>
+          </div>
+        </div>
+        <div class="ml-6 flex items-center search-entry">
+          <a class="flex items-center search-txt cursor-pointer" href="#">
+            <img class="h-4" src="./images/icons/search.svg" alt="search" />
+          </a>
+        </div>
+        <div class="ml-6 flex items-center contact-entry">
+          <a class="px-5 py-2 rounded-full text-white bg-sky-500 cursor-pointer" href="#">Contact us</a>
+        </div>
+      </div>
+      <div class="md:hidden flex items-center menu-burger">
+        <div><img id="menuBurger" class="h-8" src="./images/icons/menu.svg" alt="menu" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="relative z-10 w-full scroll-section">
+    <!-- <div class="relative w-full h-16 pointer-events-none"></div> -->
+    <div class="relative w-full home-wrapper">
+
+      <!-- 首屏 -->
+      <div ani-gsap-bg class="w-full h-[calc(100vh-4rem)] md:h-[calc-4rem] bg-top bg-no-repeat" style="background-image: url(./images/aboutus/About-Us-_02.jpg);">
+        <div class="w-11/12 mx-auto h-full flex flex-col justify-betweens  text-white">
+          <div class="flex-auto flex flex-col items-center justify-center">
+            <div data-banner-title class="font-bold text-5xl">ABOUT US</div>
+            <div data-banner-icon class="text-base mt-2"><img src="./images/p001.png"></div>
+          </div>
+          <div class="site-breadcrumb site-banner mb-8 hidden md:flex items-center gap-2 text-sm h-12 border-b border-white flow-up">
+            <img class="h-[1.5em]" src="./images/icons/home-white.svg" />
+            <a href="./index.html">Home</a>
+            <img class="h-[.4em]" src="./images/icons//arrow-right-white.svg" />
+            <a href="javascript:void(0)">about us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <section id="aboutusPpt" class="aboutus-ppt w-full relative z-1" >
+
+          <div class="gsap-page w-full h-[100vh] sticky z-1 cover-bg top-0">
+            <div class="fixed-bg absolute top-0 left-0 w-full h-[100vh]">
+              <div class="img"><img src="./images/aboutus/About-Us-_02-02.jpg" /></div>
+            </div>
+            <div class="absoutus-wrods h-full w-11/12 mx-auto text-white relative flex flex-col justify-between py-24">
+              <div class="w-full text-center md:flex flex-col items-center">
+                <div class="text-3xl font-bold font-semi-bold">Schmidt ID-TECH Limited</div>
+                <div class="text-sm mt-6 w-full md:w-[80%]">
+                  <p>Schmidt ID-TECH Limited is a premier Automatic Identification and Data Capture (AIDC) system integrator in Asia. We specialize in deploying a diverse range of technology platforms—including Barcode, RFID, Voice Recognition, Mobile Computing, Wireless Communications and Robotics—to streamline business processes and enhance everyday life. Our solutions are designed to drive operational efficiency and deliver practical benefits across industries.</p>
+                </div>
+              </div>
+              <div class="flex aboutus-counter">
+                <div class="a-count-1 bor-1 bor-flex">
+                  <div class="w-full">
+                    <div class="count-wrap">
+                      <div class="ani-numaber-box">
+                        <span class="ani-numaber font-semi-bold" data-number="50">50</span><i class="text-lg">+</i>
+                      </div>
+                    </div>
+                    <div class="font-bold">STAFF</div>
+                  </div>
+                </div>
+                <div class="a-count-2 bor-1 bor-flex">
+                  <div class="bor-wrap">
+                    <div class="count-wrap">
+                      <div class="ani-numaber-box">
+                        <span class="ani-numaber font-semi-bold" data-number="200">200</span><i class="text-lg">+</i>
+                      </div>
+                    </div>
+                    <div class="font-bold">
+                      HAPPY <br />
+                      CLIENTS
+                    </div>
+
+                  </div>
+  
+                </div>
+                <div class="a-count-2 bor-1 bor-flex">
+                  <div class="bor-wrap">
+                    <div class="count-wrap">
+                      <div class="ani-numaber-box">
+                        <span class="ani-numaber font-semi-bold" data-number="20">20</span><i class="text-lg">+</i>
+                      </div>
+                    </div>
+                    <div class="font-bold">
+                      YEARS <br />
+                      EXPERIENCE
+                    </div>
+
+                  </div>
+                </div>
+                <div class="a-count-1 bor-flex">
+                  <div class="bor-wrap">
+                    <div class="count-wrap">
+                      <div class="ani-numaber-box">
+                        <span class="ani-numaber n-base font-semi-bold" data-number="500">500</span><i class="text-lg">+</i>
+                      </div>
+                    </div>
+                    <div class="font-bold">
+                      FINISHED <br />
+                      PROJECTS
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gsap-page w-full h-[100vh] sticky top-0 relative z-10 cover-bg">
+            <div class="fixed-bg absolute top-0 left-0 w-full h-[100vh] overflow-hidden">
+              <div class="img"><img src="./images/aboutus/About-Us-_04.jpg" /></div>
+            </div>
+            <div class="absoutus-wrods h-full w-11/12 mx-auto text-white relative flex items-center">
+              <div class="flex">
+                <div class="text-3xl font-bold font-semi-bold flex-[0_0_auto] w-[50%]">COMPANY STRUCTURE</div>
+                <div class="text-sm structure-p">
+                  <p>Schmidt ID-TECH Limited maintains a strong and strategic presence across the Asia Pacific region, with regional offices in Australia, China, Macau, Malaysia, Singapore, Taiwan, and Thailand.</p>
+                  <p>Our head office is based in Hong Kong, one of the world’s leading international financial hubs. From here, we drive corporate strategy, ensure compliance, and provide operational support for all other regional offices.</p>
+                  <p>We operate through a simple yet effective management structure, organized into three core areas that work in close synergy to deliver seamless, end-to-end solutions for our customers.</p>
+                  <p>We specialize in innovative solutions of Barcoding, RFID and Mobile Computing. It distributes and integrates applications for many world-class vendors such as Zebra, Honeywell, Datalogic, Urovo and Geek+ in Asia. We also develop its own range of proprietary software for asset tracking and management, warehouse management, route sales management, mobile proof of delivery and software solutions for customized applications.</p>
+                  <p>The Competence Centre is established to harness new technologies and integrate them into our existing platform. The Centre has a well-established team of highly skilled professionals working on RFID hardware and software development and recently has extended its expertise in voice-directed applications and Robotics businesses.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="gsap-page w-full h-[100vh] sticky top-0 relative z-20 cover-bg" >
+            <div class="text-3xl font-bold font-semi-bold absolute top-[4rem] left-[4.5rem] z-10">MILESTONES</div>
+            <div class="history-stores noscale">
+              <div class="swiper historys-swiper h-fit text-black">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide w-[80%] h-[100vh] bg-[#f6eeee] px-20">
+                    <div class="w-full relative history-content h-full flex items-center pt-12">
+                      <div class="flex">
+                        <div class="img1 relative w-[28rem] aspect-[14.8/10] flex-[0_0_auto]">
+                          <img data-swiper-parallax-x="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500" class="w-full h-full" src="./images/aboutus/发展历程_03.jpg" />
+                          <span data-swiper-parallax-x="-280" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800" class="absolute top-[-1rem] left-[80%] font-bold font-semi-bold text-black text-[7rem]">2006</span>
+                        </div>
+                        <div class="content1 flex:auto pl-16 " style="transform: translateY(10rem);">
+                          <p data-swiper-parallax-x="-380" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">Schmidt ID-TECH Limited began operations in 2006 under the name ID-TECH (Hong Kong) Limited. The company initially focused on providing Auto-ID equipment and solutions to clients across various sectors in Hong Kong—including retail, logistics, construction, and government institutions. Starting with just five employees, the company rapidly expanded and quickly established a strong foothold in the Auto-ID industry, securing a significant share of the market.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide w-[80%] h-[100vh] bg-white px-20">
+                    <div class="w-full relative history-content h-full flex items-center pt-12">
+                      <div class="flex">
+                        <div class="img1 relative w-[28rem] aspect-[14.8/10] flex-[0_0_auto]">
+                          <img data-swiper-parallax-x="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500" class="w-full h-full" src="./images/aboutus/发展历程_05.jpg" />
+                          <span data-swiper-parallax-x="-280" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800" class="absolute top-[-1.8rem] left-[75%] font-bold font-semi-bold text-black text-[7rem]">2016</span>
+                        </div>
+                        <div class="content1 flex:auto pl-16" style="transform: translateY(8rem);">
+                          <p data-swiper-parallax-x="-380" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">In 2016, Schmidt Electronics Group Limited acquired ID-TECH (Hong Kong) Limited to strengthen its data capture and information management business in the region. Following the acquisition, the company was rebranded as Schmidt ID-TECH Limited.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide w-[80%] h-[100vh] bg-[#f6eeee] px-20">
+                    <div class="w-full relative history-content h-full flex items-center pt-12">
+                      <div class="flex">
+                        <div class="img1 relative w-[28rem] aspect-[14.8/10] flex-[0_0_auto]">
+                          <img data-swiper-parallax-x="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500" class="w-full h-full" src="./images/aboutus/发展历程_07.jpg" />
+                          <span data-swiper-parallax-x="-280" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800" class="absolute top-[10rem] left-[85%] font-bold font-semi-bold text-black text-[7rem]">2023</span>
+                        </div>
+                        <div class="content1 flex:auto pl-16" style="transform: translateY(18.5rem);">
+                          <p data-swiper-parallax-x="-380" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">In 2023, Schmidt ID-TECH Limited officially spun off to become an independent entity, solely focused on the Auto-ID business.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide w-[80%] h-[100vh] bg-white px-20">
+                    <div class="w-full relative history-content h-full flex items-center pt-12">
+                      <div class="flex">
+                        <div class="img1 relative w-[28rem] aspect-[14.8/10] flex-[0_0_auto]">
+                          <img data-swiper-parallax-x="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500" class="w-full h-full" src="./images/aboutus/发展历程_10.jpg" />
+                          <span data-swiper-parallax-x="-280" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800" class="absolute top-[-1.8rem] left-[75%] font-bold font-semi-bold text-black text-[7rem]">2025</span>
+                        </div>
+                        <div class="content1 flex:auto pl-16 " style="transform: translateY(8rem);">
+                          <p data-swiper-parallax-x="-380" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">Today, Schmidt ID-TECH Limited is more than a distributor or reseller—it is a technically-driven company with a strong engineering foundation and extensive capabilities. The company now delivers integrated IT solutions that enhance operational efficiency and improve everyday life across industries.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide w-[80%] h-[100vh] bg-[#f6eeee] px-20">
+                    <div class="w-full relative history-content h-full flex items-center pt-12">
+                      <div class="flex">
+                        <div class="img1 relative w-[28rem] aspect-[14.8/10] flex-[0_0_auto]">
+                          <img data-swiper-parallax-x="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500" class="w-full h-full" src="./images/aboutus/发展历程_13.jpg" />
+                          <span data-swiper-parallax-x="-280" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800" class="absolute  top-[8rem] left-[85%] font-bold font-semi-bold text-black text-[7rem]">2025</span>
+                        </div>
+                        <div class="content1 flex:auto pl-16" style="transform: translateY(16.5rem);">
+                          <p data-swiper-parallax-x="-380" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">With over 50 staff members located throughout Asia, Schmidt ID-TECH Limited continues to embrace innovation by staying at the forefront of technology. We are committed to delivering advanced solutions that respond to the evolving needs of the global market and provide exceptional value to our customers.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-cline"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="gsap-page w-full h-[100vh] relative z-30 bg-center bg-cover cover-bg" style="background: url(./images/aboutus/About-Us-_06.jpg);">
+            <div class="w-11/12 mx-auto h-full">
+              <div class="text-3xl font-bold font-semi-bold text-white py-20">COMPANY HONORS</div>
+              <div class="company-honors noscale relative mt-10">
+                <div class="swiper honor-swiper h-fit text-black">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide border-t border-white pt-4">
+                      <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
+                      <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
+                      <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
+                    </div>
+                    <div class="swiper-slide border-t border-white pt-4">
+                      <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
+                      <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
+                      <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
+                    </div>
+                    <div class="swiper-slide border-t border-white pt-4">
+                      <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
+                      <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
+                      <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
+                    </div>
+                    <div class="swiper-slide border-t border-white pt-4">
+                      <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
+                      <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
+                      <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative hidden md:flex gap-[6rem] mt-6 justify-center items-center h-8">
+                  <div
+                    class="hidden relative mt-0 md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch f swiper-button-prev">
+                    <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
+                  </div>
+                  <div
+                    class="hidden relative mt-0 md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch swiper-button-next">
+                    <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+
+        
+        <div class="w-full relative z-1">
+          <div class="w-11/12 mx-auto py-20">
+            <div class="text-3xl font-bold font-semi-bold text-black">JOIN US</div>
+            <div class="join-us w-full noscale relative mt-20 md:flex gap-6">
+              <div class="joinus-text md:flex-[0_0_auto] md:w-[30%]">
+                <p class="text-4xl font-semi-bold t-primary">IT'S BETTER</p>
+                <p class="text-4xl font-semi-bold t-primary">TO DARE</p>
+                <p class="text-4xl font-semi-bold t-primary">TO EXPLORE THAN</p>
+                <p class="text-4xl font-semi-bold t-primary">TO SIGN</p>
+                <p class="mt-4 t-gray">Instead of focusing on others' highlights, it's better to explore our own new routes and work together with us to create the possibility of technological change and explore the boundaries of future travel</p>
+              </div>
+              <div class="swiper joinus-swiper h-fit text-white flex-auto">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="joinus-card px-6 py-4 rounded-md bg-white">
+                      <div class="joinus-time">
+                        <p class="text-lg font-semi-bold text-black">R&D TECHNICIANS</p>
+                        <p class="text-md mt-2 t-gray">Released on August 22, 2023</p>
+                      </div>
+                      <div class="joinus-time mt-12">
+                        <p class="text-lg font-semi-bold text-black">DEMAND</p>
+                        <p class="text-md mt-4 t-gray">HONG KONG, CHAIN | Software | Master | 3-5years</p>
+                      </div>
+                      <div class="joinus-time mt-12">
+                        <p class="text-lg font-semi-bold text-black">RESUME SUBMISSION EMAIL</p>
+                        <p class="text-md mb-4 t-gray">sales@schmidtidtech.com</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="joinus-card px-6 py-4 rounded-md bg-white">
+                      <div class="joinus-time">
+                        <p class="text-lg font-semi-bold text-black">R&D TECHNICIANS</p>
+                        <p class="text-md mt-2 t-gray">Released on August 22, 2023</p>
+                      </div>
+                      <div class="joinus-time mt-12">
+                        <p class="text-lg font-semi-bold text-black">DEMAND</p>
+                        <p class="text-md mt-4 t-gray">HONG KONG, CHAIN | Software | Master | 3-5years</p>
+                      </div>
+                      <div class="joinus-time mt-12">
+                        <p class="text-lg font-semi-bold text-black">RESUME SUBMISSION EMAIL</p>
+                        <p class="text-md mb-4 t-gray">sales@schmidtidtech.com</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="joinus-card px-6 py-4 rounded-md bg-white">
+                      <div class="joinus-time">
+                        <p class="text-lg font-semi-bold text-black">R&D TECHNICIANS</p>
+                        <p class="text-md mt-2 t-gray">Released on August 22, 2023</p>
+                      </div>
+                      <div class="joinus-time mt-12">
+                        <p class="text-lg font-semi-bold text-black">DEMAND</p>
+                        <p class="text-md mt-4 t-gray">HONG KONG, CHAIN | Software | Master | 3-5years</p>
+                      </div>
+                      <div class="joinus-time mt-12">
+                        <p class="text-lg font-semi-bold text-black">RESUME SUBMISSION EMAIL</p>
+                        <p class="text-md mb-4 t-gray">sales@schmidtidtech.com</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="absolute md:flex gap-[3rem] top-[-5rem] right-0 justify-center items-center h-8">
+                <div
+                  class="hidden relative mt-0 md:flex w-12 h-12 border border-[#333333] rounded-full items-center justify-center industry-switch f swiper-button-prev">
+                  <img class="w-4 h-4" src="./images/icons/arrow-half-black.svg" />
+                </div>
+                <div
+                  class="hidden relative mt-0 md:flex w-12 h-12 border border-[#333333] rounded-full items-center justify-center industry-switch swiper-button-next">
+                  <img class="w-4 h-4" src="./images/icons/arrow-half-black.svg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="h-72 bg-cover bg-center bg-no-repeat text-white mt-2"
+        style="background-image: url('./images/n4.jpg')">
+        <div class="w-11/12 mx-auto h-full flex flex-col md:flex-row justify-center md:justify-between md:items-center">
+          <div class="footer-theme-section flex flex-col">
+            <h1 class="font-bold text-5xl font-semi-bold text-center md:text-left">GET OUT ADVICE</h1>
+            <span class="text-xl font-bold mt-3">Subscribe now to receive exclusive discounts and product
+              updates</span>
+          </div>
+          <div class="footer-links flex mt-12 md:mt-0">
+            <a href="#" class="pr-1 py-1.5 rounded-full bg-white flex items-center link-btn bigger w-fit text-[#999999]">
+              <span class="text-xs scale-75">Contact us immediately</span>
+              <i class="rounded-full h-4 w-4 flex items-center justify-center ml-2 sm-arrow"><img class="h-2"
+                  src="./images/icons/arrow-right-white.svg" alt="" /></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="relative md:fixed z-0 bottom-0 w-screen h-auto md:h-screen overflow-hidden bg-white">
+    <div class="hidden md:block relative w-full h-16 pointer-events-none"></div>
+    <div class="w-11/12 mx-auto flex flex-col md:flex-row pt-4 md:pt-16">
+      <div class="flex-none w-full md:w-[26%]">
+        <div class="hidden md:block"><img src="./images/footer-logo.png" /></div>
+        <div class="hidden md:flex mt-4 medias-section">
+          <a class="media-item" href="tel:0123456789"><img src="./images/icons/phone-white.svg" /></a>
+          <a class="media-item" href="#"><img src="./images/icons/facebook-white.svg" /></a>
+          <a class="media-item instagram" href="#" target="_blank"><img src="./images/icons/instagram.svg" /></a>
+          <a class="media-item relative ani-pop-code" href="#" target="_blank">
+            <img src="./images/icons/wechat-white.svg" />
+            <div class="hidden absolute top-[1.5rem] left-[-2.5rem] w-[6rem] h-[6rem] bg-white rounded-lg p-4 shadow-lg pop-code">
+              <img class="!w-full" src="./images/footer-logo.png" />
+            </div>
+          </a>
+        </div>
+        
+        <div class="mt-4 text-base">NEWSLETTER</div>
+        <div class="mt-2 text-xs text-[#666666]">
+          Keep updated with our latest news, articles and resources.
+        </div>
+        <form>
+          <div class="mt-4">
+            <div class="text-sm">E-mail*</div>
+            <div class="mt-3 cus-input">
+              <input placeholder="Input you e-mail..." type="email" />
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="text-sm">Country*</div>
+            <div class="mt-3 cus-input">
+              <select name="country" id="country" placeholder="Select or type">
+                <option value="">Select or type</option>
+                <option value="1">US</option>
+                <option value="2">FA</option>
+                <option value="3">China</option>
+              </select>
+            </div>
+          </div>
+          <p class="mt-4 text-xs">
+            I have read and agree to this site's Privacy Policy
+          </p>
+          <div class="mt-4">
+            <div class="privacy-btn primary btn-ani">Submit</div>
+          </div>
+        </form>
+      </div>
+      <div class="flex-none hidden md:block w-[10%]"></div>
+      <div class="flex-auto">
+        <div class="flex flex-wrap footer-cats">
+          <div class="flex-none mb-4 md:mb-0 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">PRODUCT</div>
+            <div class="mt-1.5 text-base md:h-[12rem]">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Mobile terminal</a>
+                <a href="#">Tablet PC</a>
+                <a href="#">Bar code scanner</a>
+                <a href="#">Printer</a>
+                <a href="#">Printing consumables (label carbon tape)</a>
+                <a href="#">Other1</a>
+                <a href="#">Other2</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">INDUSTRY</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">FMCG/Retail</a>
+                <a href="#">Logistics & Transportation</a>
+                <a href="#">Manufacturing</a>
+                <a href="#">Health Care</a>
+                <a href="#">Education</a>
+                <a href="#">Utilities</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">NEWS</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Company News</a>
+                <a href="#">Industry News</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">About</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Company Profile</a>
+                <a href="#">Company structure</a>
+                <a href="#">Milestones</a>
+                <a href="#">Company Honors</a>
+                <a href="#">Join Us</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">CONTACT</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Contact Information</a>
+                <a href="#">Online Message</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 mt-0 md:mt-6 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">SOLUTION</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Automation</a>
+                <a href="#">Mobility</a>
+                <a href="#">Traceable</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex-none mb-4 md:mb-0 mt-0 md:mt-6 w-[50%] md:w-[20%]">
+            <div class="text-sm pl-[0.8rem]">SERVICES SUPPORT</div>
+            <div class="mt-1.5 text-base scroll-content">
+              <div class="text-xs text-[#666666] flex flex-col scroll-menus">
+                <a href="#">Project management</a>
+                <a href="#">Maintenance support</a>
+                <a href="#">Consulting service</a>
+                <a href="#">Program development</a>
+                <a href="#">Label printing</a>
+                <a href="#">Professional training</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative w-11/12 mx-auto flex flex-col md:flex-row md:items-center justify-between md:justify-start mt-12 py-8 border-t border-[#cccccc]">
+      <div class="flex-none w-full md:w-[36%]">
+        <p>Copyright 2023 Powered by Manfulls Technology.</p>
+      </div>
+      <div class="flex-auto pl-0 md:pl-4">
+        <a href="#">Privacy Policy</a>
+        <a class="ml-[8rem]" href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+  <div class="hidden md:block relative w-full h-screen pointer-events-none z-0"></div>
+  <div class="medias-section media-absolute">
+    <a class="media-item" href="tel:0123456789"><img src="./images/icons/phone-blue.svg" /></a>
+    <a class="media-item" href="#"><img src="./images/icons/facebook-blue.svg" /></a>
+    <a class="media-item instagram" href="#" target="_blank"><img src="./images/icons/instagram-white.svg" /></a>
+    <a class="media-item relative ani-pop-code" href="#" target="_blank">
+      <img src="./images/icons/wechat-blue.svg" />
+      <div class="hidden absolute top-[-2.5rem] left-[-6.5rem] w-[6rem] h-[6rem] bg-white rounded-lg p-4 shadow-lg pop-code">
+        <img class="!w-full" src="./images/footer-logo.png" />
+      </div>
+    </a>
+  </div>
+  <div id="data-policy" class="w-full fixed bottom-0 left-0 z-50 bg-[#f7f7f7]">
+    <div class="w-11/12 mx-auto flex flex-row py-4">
+      <div class="flex-auto">
+        <div class="font-bold text-base">We value you privacy</div>
+        <p class="text-xs">
+          We use cookies to enhance you browsing exprience serve
+          persionalized ads or content,and analyze our traffc.
+        </p>
+        <p class="text-xs">
+          By clicking "Accept All", you consent to our use of cookies.
+        </p>
+      </div>
+      <div class="flex-none flex flex-row items-center gap-2">
+        <div class="privacy-btn" data-type="reject">Reject All</div>
+        <div class="privacy-btn btn-ani primary" data-type="accept">Accept All</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- 引入malihu custom scrollbar CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+<!-- 引入malihu custom scrollbar JS -->
+<script src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"
+  type="text/javascript"></script>
+
+<script src="./scripts/gsap/3.13.0/gsap.min.js" type="text/javascript"></script>
+<script src="./scripts/gsap/3.13.0/ScrollTrigger.min.js" type="text/javascript"></script>
+<script src="./scripts/gsap/3.13.0/SplitText.min.js" type="text/javascript"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger, SplitText);
+</script>
+
+<script src="./scripts/public.js" type="text/javascript"></script>
+<script src="./scripts/aboutus.js" type="text/javascript"></script>
+
+
+</html>
