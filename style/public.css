@@ -889,3 +889,62 @@ body{
 .industry-ani1{
   opacity: 0;
 }
+.news-list{
+  gap: 1.2rem;
+  padding: 4rem 0;
+}
+.news-list .news-list-item{
+  width: calc(33% - 0.6rem);
+  cursor: pointer;
+}
+.news-list .news-list-item:nth-child(1),
+.news-list .news-list-item:nth-child(2) {
+  width:calc(50% - 0.6rem);
+}
+.news-list .news-list-item .news-list-img{
+  width:100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  border-radius: .5rem;
+  object-fit: cover;
+  margin-bottom:.6rem;
+  background-position:center;
+  background-size: 100% 100%;
+  transition: all .3s ease-in-out;
+}
+.news-list .news-list-item:hover .news-list-img{
+  background-size: 110% 110%;
+}
+.news-list .news-list-item:hover{
+  color:var(--primary-color);
+}
+.news-list .news-list-item .news-list-title{
+  margin-bottom:2rem;
+}
+.news-pagination{
+  border-top:1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:2rem 0;
+}
+.news-pagination:hover{
+  color:var(--primary-color);
+}
+.news-pagination > a{
+  display: inline-block;
+  position:relative;
+}
+.news-pagination > a::after{
+  content: "";
+  position: absolute;
+  bottom: -.6em;
+  left: 50%;
+  width:1em;
+  height:1rem;
+  transform: translateX(-0.5em);
+  background-image: url(../images/yicon-black.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
