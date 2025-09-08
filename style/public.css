@@ -948,3 +948,45 @@ body{
   background-position: center;
   background-repeat: no-repeat;
 }
+.contact-form input[type="text"]{
+  width: 100%;
+  padding: .8rem 1rem;
+  border-radius: .3rem;
+  background:#f5f5f5;
+}
+.c-lable{
+  margin-top:.5rem;
+}
+.c-input{
+  margin-top:.4rem;
+}
+.section-bg{
+  background-position: 0% 100%;
+  background-size: cover;
+}
+.normal-section .img{
+  width:100%;
+  height:100vh;
+  position:relative;
+  z-index:1;
+  transform: var(--try);
+}
+.img-wrap{
+      height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+    background: #000;
+}
+.normal-section .img img{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
