@@ -1,7 +1,7 @@
 $(document).ready(function () {
   let historySwiper = new Swiper(".historys-swiper", {
-    slidesPerView: "auto",
-    autoplay: true,
+    slidesPerView: 1,
+    autoplay: false,
     parallax: true,
     loop: true, // 循环模式选项
     pagination: {
@@ -13,7 +13,7 @@ $(document).ready(function () {
     },
   });
   let honorSwiper = new Swiper(".honor-swiper", {
-    slidesPerView: 4,
+    slidesPerView: 1,
     autoplay: true,
     spaceBetween: 20,
     loop: true, // 循环模式选项
@@ -21,15 +21,27 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+      768: {
+        //当屏幕宽度大于等于768
+        slidesPerView: 4,
+      },
+    },
   });
   let joinusSwiper = new Swiper(".joinus-swiper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     autoplay: true,
     spaceBetween: 20,
     loop: true, // 循环模式选项
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        //当屏幕宽度大于等于768
+        slidesPerView: 3,
+      },
     },
   });
 

@@ -6,7 +6,7 @@ function sectionBgAni() {
     start: 'top top',
     end: 'bottom 50%',
     scrub: true,
-    markers: true,
+    markers: false,
     pin: true,
   });
 }

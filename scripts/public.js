@@ -142,6 +142,47 @@ function gasp_bg_ani() {
   });
 }
 
+// 文字动效
+function initHighlightText() {
+  let splitHeadingTargets = document.querySelectorAll("[data-r-text]");
+  if(!splitHeadingTargets.length) {
+    return;
+  }
+  splitHeadingTargets.forEach((heading) => {
+    const scrollStart =
+      heading.getAttribute("data-highlight-scroll-start") || "top 75%";
+
+    const scrollEnd =
+      heading.getAttribute("data-highlight-scroll-end") || "bottom 75%";
+    const fadedValue = heading.getAttribute("data-highlight-fade") || 0.2;
+
+    const staggerValue = heading.getAttribute("data-highlight-stagger") || 0.05;
+
+    new SplitText(heading, {
+      type: "words, chars",
+      autoSplit: true,
+      onSplit(self) {
+        let ctx = gsap.context(() => {
+          let tl = gsap.timeline({
+            scrollTrigger: {
+              scrub: true,
+              trigger: heading,
+              start: scrollStart,
+              end: scrollEnd,
+            },
+          });
+          tl.from(self.chars, {
+            autoAlpha: fadedValue,
+            stagger: staggerValue,
+            ease: "linear",
+          });
+        });
+        return ctx;
+      },
+    });
+  });
+}
+
 $(document).ready(function () {
   // 处理导航
   $("#menuBurger").click(function () {
@@ -209,6 +250,7 @@ $(document).ready(function () {
     autoHideScrollbar: true,
   });
 
+  initHighlightText()
   showPolicy();
   pageWrapFlowUp();
   gasp_bg_ani()

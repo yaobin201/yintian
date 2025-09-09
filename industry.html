@@ -14,83 +14,85 @@
 </head>
 
 <body>
-  <div class="relative z-20 w-full bg-[#eef1f4] header_wrapper">
-    <div class="relative w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
-      <div class="header-left-column flex-initial">
-        <img class="h-14 header-logo" src="./images/logo.png" alt="logo" />
-      </div>
-      <div class="hidden md:flex flex-row justify-end flex-auto header-right-column">
-        <div class="md:hidden mobile-mask"></div>
-        <div class="md:hidden mobile-bg"></div>
-        <div class="flex flex-col md:flex-row h-auto md:h-16 text-black menu-items">
-          <div class="mx-5 flex items-center menu-item">
-            <a href="#">Home</a>
+  <div class="relative z-20 w-full h-16">
+    <div class="w-full  bg-[#eef1f4] header_wrapper">
+      <div class="relative w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
+        <div class="header-left-column flex-initial">
+          <img class="h-14 header-logo" src="./images/logo.png" alt="logo" />
+        </div>
+        <div class="hidden md:flex flex-row justify-end flex-auto header-right-column">
+          <div class="md:hidden mobile-mask"></div>
+          <div class="md:hidden mobile-bg"></div>
+          <div class="flex flex-col md:flex-row h-auto md:h-16 text-black menu-items">
+            <div class="mx-5 flex items-center menu-item">
+              <a href="#">Home</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item relative product-underline">
+              <a href="./products-all.html">Product</a>
+              <div
+                class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Tablet PC</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Bar code scanner</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Printer</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Category 1</a>
+                </div>
+              </div>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./solution.html">Solution</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./industry.html">Industry</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./service.html">Service</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./news.html">News</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./aboutus.html">About Us</a>
+            </div>
           </div>
-          <div class="mx-5 flex items-center menu-item relative product-underline">
-            <a href="./products-all.html">Product</a>
-            <div
-              class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
+          <div class="ml-24 flex items-center lang-sections relative">
+            <div class="flex items-center lang-local">
+              <img class="h-4" src="./images/icons/language.svg" alt="" />
+              <span class="mx-2">EN</span>
+              <img class="h-4 cursor-pointer transition-all duration-300" id="langArrow"
+                src="./images/icons/arrow-down.svg" alt="" />
+            </div>
+            <div class="absolute top-6 md:top-16 left-0 md:left-auto md:right-0 px-5 py-2 bg-white rounded-md hidden shadow-lg lang-items">
+              <div class="cursor-pointer py-1 hover:text-sky-500 border-b border-slate-300 lang-item text-sky-500"
+                data-lang="en">
+                English
               </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Tablet PC</a>
-              </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Bar code scanner</a>
-              </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Printer</a>
-              </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Category 1</a>
+              <div class="cursor-pointer py-1 hover:text-sky-500 lang-item" data-lang="fanti">
+                繁体
               </div>
             </div>
           </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="./solution.html">Solution</a>
+          <div class="ml-6 flex items-center search-entry">
+            <a class="flex items-center search-txt cursor-pointer" href="#">
+              <img class="h-4" src="./images/icons/search.svg" alt="search" />
+            </a>
           </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="./industry.html">Industry</a>
-          </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="#">Service</a>
-          </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="#">News</a>
-          </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="#">About Us</a>
+          <div class="ml-6 flex items-center contact-entry">
+            <a class="px-5 py-2 rounded-full text-white bg-sky-500 cursor-pointer" href="./contactus.html">Contact us</a>
           </div>
         </div>
-        <div class="ml-24 flex items-center lang-sections relative">
-          <div class="flex items-center lang-local">
-            <img class="h-4" src="./images/icons/language.svg" alt="" />
-            <span class="mx-2">EN</span>
-            <img class="h-4 cursor-pointer transition-all duration-300" id="langArrow"
-              src="./images/icons/arrow-down.svg" alt="" />
-          </div>
-          <div class="absolute top-6 md:top-16 left-0 md:left-auto md:right-0 px-5 py-2 bg-white rounded-md hidden shadow-lg lang-items">
-            <div class="cursor-pointer py-1 hover:text-sky-500 border-b border-slate-300 lang-item text-sky-500"
-              data-lang="en">
-              English
-            </div>
-            <div class="cursor-pointer py-1 hover:text-sky-500 lang-item" data-lang="fanti">
-              繁体
-            </div>
-          </div>
+        <div class="md:hidden flex items-center menu-burger">
+          <div><img id="menuBurger" class="h-8" src="./images/icons/menu.svg" alt="menu" /></div>
         </div>
-        <div class="ml-6 flex items-center search-entry">
-          <a class="flex items-center search-txt cursor-pointer" href="#">
-            <img class="h-4" src="./images/icons/search.svg" alt="search" />
-          </a>
-        </div>
-        <div class="ml-6 flex items-center contact-entry">
-          <a class="px-5 py-2 rounded-full text-white bg-sky-500 cursor-pointer" href="#">Contact us</a>
-        </div>
-      </div>
-      <div class="md:hidden flex items-center menu-burger">
-        <div><img id="menuBurger" class="h-8" src="./images/icons/menu.svg" alt="menu" /></div>
       </div>
     </div>
   </div>
@@ -119,48 +121,48 @@
         <div class="text-bani w-11/14 flex items-center flex-col py-20">
           <div data-delay-step="0.2" class="text-bani-timeline  font-bold font-semi-bold text-black text-3xl text-center">FMCG/RETAIL</div>
           <div data-delay-step="0.4" class="text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">The rapid growth of the retail / FMCG industry and the increase in customer demand led to evolve a new edge shopping experience – Omni-channel Retailing. </div>
-          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">More products<img src="images/icons/arrow-right.svg" /><img
+          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">Learn more<img src="images/icons/arrow-right.svg" /><img
                 src="images/icons/arrow-right-blue.svg" /></a>
         </div>
   
         <div class="industry-wrapper w-full bg-white pb-16">
           <div class="industry-ani1 font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
           <div class="industry-section w-11/12 mx-auto">
-            <div class="industryFlag w-full flex h-24vh md:h-[36vw] flexing">
+            <div class="industryFlag w-full flex h-[32vh] md:h-[36vw] flexing">
               <div data-delay="0" class="industry-sitem on">
                 <div class="msg">
                   <div class="wc">INVENTORY MANAGEMENT SYSTEM</div>
                   <div class="end wc">INVENTORY MANAGEMENT SYSTEM</div>
                 </div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i1.jpg');"></div>
               </div>
               <div data-delay="0.1" class="industry-sitem">
                 <div class="msg">
                   <div class="wc">MOBILE POINT-OF-SALES(MPOS)</div>
                   <div class="end wc">MOBILE POINT-OF-SALES(MPOS)</div>
                 </div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i2.jpg');"></div>
               </div>
               <div data-delay="0.2" class="industry-sitem">
                 <div class="msg">
                   <div class="wc">VOICE DIRECTED PICKING</div>
                   <div class="end wc">VOICE DIRECTED PICKING</div>
                 </div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i3.jpg');"></div>
               </div>
               <div data-delay="0.3" class="industry-sitem">
                 <div class="msg">
                   <div class="wc">SUPPLY CHAIN TRACK AND TRACE</div>
                   <div class="end wc">SUPPLY CHAIN TRACK AND TRACE</div>
                 </div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i4.jpg');"></div>
               </div>
               <div data-delay="0.4" class="industry-sitem">
                 <div class="msg">
                   <div class="wc">WAREHOUSE MANAGEMENT SYSTEM(WMS)</div>
                   <div class="end wc">WAREHOUSE MANAGEMENT SYSTEM(WMS)</div>
                 </div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i5.jpg');"></div>
               </div>
             </div>
           </div>
@@ -169,14 +171,14 @@
         <div class="text-bani w-11/14 flex items-center flex-col pb-20">
           <div data-delay-step="0.2" class="text-bani-timeline  font-bold font-semi-bold text-black text-3xl text-center">LOGISTICS & TRANSPORTATION</div>
           <div data-delay-step="0.4" class="text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">Globalization rapidly transforms the landscape of transportation and logistics industry. It accelerates the demand of complexity in business-related requirements and variety of support services...</div>
-          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">More products<img src="images/icons/arrow-right.svg" /><img
+          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">Learn more<img src="images/icons/arrow-right.svg" /><img
                 src="images/icons/arrow-right-blue.svg" /></a>
         </div>
 
         <div class="text-bani industry-wrap2 w-full bg-white pb-16">
           <div class="text-bani-timeline font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
           <div class="text-bani-timeline industry-section w-11/12 mx-auto">
-            <div id="industryWrap2" class="swiper rounded-md h-20vh md:h-[36vw]">
+            <div id="industryWrap2" class="swiper rounded-md h-[32vh] md:h-[36vw]">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img class="w-full h-full object-cover" src="./images/solution-1.jpg" />
@@ -200,64 +202,45 @@
         <div class="text-bani w-11/14 flex items-center flex-col pb-20">
           <div data-delay-step="0.2" class="text-bani-timeline  font-bold font-semi-bold text-black text-3xl text-center">LOGISTICS & TRANSPORTATION</div>
           <div data-delay-step="0.4" class="text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">Globalization rapidly transforms the landscape of transportation and logistics industry. It accelerates the demand of complexity in business-related requirements and variety of support services...</div>
-          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">More products<img src="images/icons/arrow-right.svg" /><img
+          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">Learn more<img src="images/icons/arrow-right.svg" /><img
                 src="images/icons/arrow-right-blue.svg" /></a>
         </div>
 
         <div class="industry-wrapper w-full bg-white pb-16">
           <div class="industry-ani1 font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
           <div class="industry-section w-11/12 mx-auto">
-            <div class="industryFlag w-full flex h-20vh md:h-[30vw] flexing">
+            <div class="industryFlag w-full flex h-[32vh] md:h-[30vw] flexing">
               <div data-delay="0" class="industry-sitem on">
                 <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i6.jpg');"></div>
               </div>
               <div data-delay="0.1" class="industry-sitem">
                 <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i7.jpg');"></div>
               </div>
               <div data-delay="0.2" class="industry-sitem">
                 <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i8.jpg');"></div>
               </div>
             </div>
           </div>
         </div>
+        
         <div class="text-bani w-11/14 flex items-center flex-col pb-20">
           <div data-delay-step="0.2" class="text-bani-timeline  font-bold font-semi-bold text-black text-3xl text-center">LOGISTICS & TRANSPORTATION</div>
           <div data-delay-step="0.4" class="text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">Globalization rapidly transforms the landscape of transportation and logistics industry. It accelerates the demand of complexity in business-related requirements and variety of support services...</div>
-          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">More products<img src="images/icons/arrow-right.svg" /><img
+          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">Learn more<img src="images/icons/arrow-right.svg" /><img
                 src="images/icons/arrow-right-blue.svg" /></a>
-        </div>
-
-        <div class="industry-wrapper w-full bg-white pb-16">
-          <div class="industry-ani1 font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
-          <div class="industry-section w-11/12 mx-auto">
-            <div class="industryFlag w-full flex h-20vh md:h-[30vw] flexing">
-              <div data-delay="0" class="industry-sitem on">
-                <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
-              </div>
-              <div data-delay="0.1" class="industry-sitem">
-                <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
-              </div>
-              <div data-delay="0.2" class="industry-sitem">
-                <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
-              </div>
-            </div>
-          </div>
         </div>
 
 
         <div class="industry-wrapper w-full pb-16 back-gray">
-          <div class="industry-phone-wrap h-[100vh] flex items-center w-11/12 mx-auto py-[15vh]">
-            <div class="w-[33%]  flex items-center">
+          <div class="industry-phone-wrap h-[auto] md:h-[100vh] flex items-center w-11/12 flex-col md:flex-row mx-auto py-[15vh]">
+            <div class="w-full md:w-[33%]  flex items-center justify-center">
               <span class="text-5xl font-bold font-semi-bold">HEALTH CARE</span>
             </div>
-            <div class="w-[33%] relative">
-              <div class="swiper phoneSwiper" style="background-color: red;">
+            <div class="w-full mt-12 md:mt-0 md:w-[33%] relative">
+              <div class="swiper phoneSwiper w-[60vw] md:w-[20vw]">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide"><img src="./images/full-solution.jpg" /></div>
                   <div class="swiper-slide">Slide 2</div>
@@ -271,9 +254,9 @@
                 </div>
               </div>
               <div class="swiper-pagination"></div>
-              <div class="phone-react"></div>
+              <div class="phone-react  w-[60vw] md:w-[20vw] translate-x-[-30vw] md:translate-x-[-10vw]"></div>
             </div>
-            <div class="w-[33%] flex items-center pl-24 t-gray text-base">
+            <div class="w-full mt-12 md:mt-0 md:w-[33%] flex items-center md:pl-24 t-gray text-base">
               <p>eHealth Record Sharing System was officially launched in 2016. An eHR Sharing System provides an information infrastructure </p>
             </div>
           </div>
@@ -281,10 +264,10 @@
           <div class="industry-section w-11/12 mx-auto relative md:flex gap-6">
             
             <div class="flex-[0_0_auto] md:w-[40%]">
-              <div class="flex md:h-full md:flex-col justify-between">
+              <div class="flex md:h-full flex-col justify-between">
                 <div>
                   <div class="company-head flex items-center gap-4">
-                    <div class="log w-24 h-24 bg-white rounded-[2.5rem] p-4 overflow-hidden"><img class="w-full" src="./images/Industry_logo.png" /></div>
+                    <div class="log w-24 h-24 bg-white rounded-[2.5rem] p-4 overflow-hidden"><img class="w-full" src="./images/industry//Industry_logo.png" /></div>
                     <div class="company-name t-primary">
                       <div class="zh text-xl">电子将抗记录交互系统</div>
                       <div class="en text-xs">Electronic Health Record Sharing System</div>
@@ -301,14 +284,14 @@
               </div>
             </div>
 
-            <div class="industryFlag w-full md:fkex-auto flex h-20vh md:h-[30vw] flexing">
+            <div class="industryFlag w-full md:fkex-auto mt-6 md:mt-0 flex h-[32vh] md:h-[30vw] flexing">
               <div data-delay="0" class="industry-sitem on">
                 <div class="msg">
                   <div class="wc">PATIENT BENEFITS</div>
                   <div class="end wc">PATIENT BENEFITS</div>
                   <p class="wcc">Improve disease suveillance and monitoring of public health. Help gatther more comprehensive statistics for formulating public health policy. Bring efficiency agin in total health penditure.</p>
                 </div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i9.jpg');"></div>
               </div>
               <div data-delay="0.1" class="industry-sitem">
                 <div class="msg">
@@ -316,7 +299,7 @@
                   <div class="end wc">CLINICIAN BENEFITS</div>
                   <p class="wcc">Improve disease suveillance and monitoring of public health. Help gatther more comprehensive statistics for formulating public health policy. Bring efficiency agin in total health penditure.</p>
                 </div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i10.jpg');"></div>
               </div>
               <div data-delay="0.2" class="industry-sitem">
                   <div class="msg">
@@ -324,7 +307,7 @@
                     <div class="end wc">SOCIETY BENEFITS</div>
                     <p class="wcc">Improve disease suveillance and monitoring of public health. Help gatther more comprehensive statistics for formulating public health policy. Bring efficiency agin in total health penditure.</p>
                   </div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i11.jpg');"></div>
               </div>
             </div>
           </div>
@@ -333,7 +316,7 @@
         <div class="text-bani w-11/14 flex items-center flex-col py-20">
           <div data-delay-step="0.2" class="text-bani-timeline  font-bold font-semi-bold text-black text-3xl text-center">EDUCATION</div>
           <div data-delay-step="0.4" class="text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">For library services, there are significant numbers of in/out records of books needed to manage every day. For physical assets, it is difficult to control and identify ever-growing asset in comples environments.</div>
-          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">More products<img src="images/icons/arrow-right.svg" /><img
+          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">Learn more<img src="images/icons/arrow-right.svg" /><img
                 src="images/icons/arrow-right-blue.svg" /></a>
         </div>
 
@@ -341,7 +324,7 @@
         <div class="text-bani industry-wrap2 w-full bg-white pb-16">
           <div class="text-bani-timeline font-bold text-2xl text-black py-16 text-center opacity-0">PFID PRODUCTS</div>
           <div class="text-bani-timeline industry-section w-11/12 mx-auto  opacity-0">
-            <div id="industryWrap2" class="swiper rounded-md h-20vh md:h-[36vw]">
+            <div id="industryWrap2" class="swiper rounded-md h-[32vh] md:h-[36vw]">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img class="w-full h-full object-cover" src="./images/solution-1.jpg" />
@@ -373,7 +356,7 @@
           <div class="text-bani w-11/14 flex items-center flex-col pb-20">
             <div data-delay-step="0.2" class="text-bani-timeline  font-bold font-semi-bold text-black text-3xl text-center">UTILITIES</div>
             <div data-delay-step="0.4" class="text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">Utilities industry covers a wide range of public services including supply of eletriciry, gas and water to both residential and commercial user. Today, aging infrastruture and workface</div>
-            <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">More products<img src="images/icons/arrow-right.svg" /><img
+            <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn" href="#">Learn more<img src="images/icons/arrow-right.svg" /><img
                   src="images/icons/arrow-right-blue.svg" /></a>
           </div>
         </div>
@@ -381,20 +364,20 @@
         <div class="industry-wrapper w-full bg-white pb-16">
           <div class="industry-ani1 font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
           <div class="industry-section w-11/12 mx-auto">
-            <div class="industryFlag w-full flex h-20vh md:h-[30vw] flexing">
+            <div class="industryFlag w-full flex h-[32vh] md:h-[30vw] flexing">
               <div data-delay="0" class="industry-sitem on">
                 <div class="msg">
                   <div class="wc">ASSET MANAGEMENT SYSTEM</div>
                   <div class="end wc">ASSET MANAGEMENT SYSTEM</div>
                   </div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i12.jpg');"></div>
               </div>
               <div data-delay="0.1" class="industry-sitem">
                 <div class="msg">
                   <div class="wc">PATIENT BENEFITS</div>
                   <div class="end wc">FIELD SERVICE AND WORKFACE MOBILITY</div>
                 </div>
-                <div class="pic" style="background-image: url('https://assets.dotfashion.cn/webassets/recruitment-global-front/44524/39404/spptl.jpg');"></div>
+                <div class="pic" style="background-image: url('./images/industry/i13.jpg');"></div>
               </div>
             </div>
           </div>

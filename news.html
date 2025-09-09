@@ -14,83 +14,85 @@
 </head>
 
 <body>
-  <div class="relative z-20 w-full bg-[#eef1f4] header_wrapper">
-    <div class="relative w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
-      <div class="header-left-column flex-initial">
-        <img class="h-14 header-logo" src="./images/logo.png" alt="logo" />
-      </div>
-      <div class="hidden md:flex flex-row justify-end flex-auto header-right-column">
-        <div class="md:hidden mobile-mask"></div>
-        <div class="md:hidden mobile-bg"></div>
-        <div class="flex flex-col md:flex-row h-auto md:h-16 text-black menu-items">
-          <div class="mx-5 flex items-center menu-item">
-            <a href="#">Home</a>
+  <div class="relative z-20 w-full h-16">
+    <div class="w-full  bg-[#eef1f4] header_wrapper">
+      <div class="relative w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
+        <div class="header-left-column flex-initial">
+          <img class="h-14 header-logo" src="./images/logo.png" alt="logo" />
+        </div>
+        <div class="hidden md:flex flex-row justify-end flex-auto header-right-column">
+          <div class="md:hidden mobile-mask"></div>
+          <div class="md:hidden mobile-bg"></div>
+          <div class="flex flex-col md:flex-row h-auto md:h-16 text-black menu-items">
+            <div class="mx-5 flex items-center menu-item">
+              <a href="#">Home</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item relative product-underline">
+              <a href="./products-all.html">Product</a>
+              <div
+                class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Tablet PC</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Bar code scanner</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Printer</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Category 1</a>
+                </div>
+              </div>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./solution.html">Solution</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./industry.html">Industry</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./service.html">Service</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./news.html">News</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./aboutus.html">About Us</a>
+            </div>
           </div>
-          <div class="mx-5 flex items-center menu-item relative product-underline">
-            <a href="./products-all.html">Product</a>
-            <div
-              class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
+          <div class="ml-24 flex items-center lang-sections relative">
+            <div class="flex items-center lang-local">
+              <img class="h-4" src="./images/icons/language.svg" alt="" />
+              <span class="mx-2">EN</span>
+              <img class="h-4 cursor-pointer transition-all duration-300" id="langArrow"
+                src="./images/icons/arrow-down.svg" alt="" />
+            </div>
+            <div class="absolute top-6 md:top-16 left-0 md:left-auto md:right-0 px-5 py-2 bg-white rounded-md hidden shadow-lg lang-items">
+              <div class="cursor-pointer py-1 hover:text-sky-500 border-b border-slate-300 lang-item text-sky-500"
+                data-lang="en">
+                English
               </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Tablet PC</a>
-              </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Bar code scanner</a>
-              </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Printer</a>
-              </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Category 1</a>
+              <div class="cursor-pointer py-1 hover:text-sky-500 lang-item" data-lang="fanti">
+                繁体
               </div>
             </div>
           </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="./solution.html">Solution</a>
+          <div class="ml-6 flex items-center search-entry">
+            <a class="flex items-center search-txt cursor-pointer" href="#">
+              <img class="h-4" src="./images/icons/search.svg" alt="search" />
+            </a>
           </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="./industry.html">Industry</a>
-          </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="#">Service</a>
-          </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="./news.html">News</a>
-          </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="#">About Us</a>
+          <div class="ml-6 flex items-center contact-entry">
+            <a class="px-5 py-2 rounded-full text-white bg-sky-500 cursor-pointer" href="./contactus.html">Contact us</a>
           </div>
         </div>
-        <div class="ml-24 flex items-center lang-sections relative">
-          <div class="flex items-center lang-local">
-            <img class="h-4" src="./images/icons/language.svg" alt="" />
-            <span class="mx-2">EN</span>
-            <img class="h-4 cursor-pointer transition-all duration-300" id="langArrow"
-              src="./images/icons/arrow-down.svg" alt="" />
-          </div>
-          <div class="absolute top-6 md:top-16 left-0 md:left-auto md:right-0 px-5 py-2 bg-white rounded-md hidden shadow-lg lang-items">
-            <div class="cursor-pointer py-1 hover:text-sky-500 border-b border-slate-300 lang-item text-sky-500"
-              data-lang="en">
-              English
-            </div>
-            <div class="cursor-pointer py-1 hover:text-sky-500 lang-item" data-lang="fanti">
-              繁体
-            </div>
-          </div>
+        <div class="md:hidden flex items-center menu-burger">
+          <div><img id="menuBurger" class="h-8" src="./images/icons/menu.svg" alt="menu" /></div>
         </div>
-        <div class="ml-6 flex items-center search-entry">
-          <a class="flex items-center search-txt cursor-pointer" href="#">
-            <img class="h-4" src="./images/icons/search.svg" alt="search" />
-          </a>
-        </div>
-        <div class="ml-6 flex items-center contact-entry">
-          <a class="px-5 py-2 rounded-full text-white bg-sky-500 cursor-pointer" href="#">Contact us</a>
-        </div>
-      </div>
-      <div class="md:hidden flex items-center menu-burger">
-        <div><img id="menuBurger" class="h-8" src="./images/icons/menu.svg" alt="menu" /></div>
       </div>
     </div>
   </div>
@@ -99,17 +101,17 @@
     <div class="relative w-full home-wrapper">
 
       <!-- 首屏 -->
-      <div ani-gsap-bg class="w-full h-[calc(100vh-4rem)] md:h-[calc-4rem] bg-top bg-no-repeat" style="background-image: url(./images/News_02.jpg);">
+      <div ani-gsap-bg class="w-full h-[25vh] md:h-[calc(100vh-4rem)] bg-top bg-no-repeat bg-cover" style="background-image: url(./images/News_02.jpg);">
         <div class="w-11/12 mx-auto h-full flex flex-col justify-betweens  text-white">
           <div class="flex-auto flex flex-col items-center justify-center">
-            <div data-banner-title class="font-bold text-5xl">CONTACT US</div>
-            <div data-banner-icon class="text-base mt-2"><img src="./images/p001.png"></div>
+            <div data-banner-title class="font-bold text-3xl md:text-5xl">NEWS</div>
+            <div data-banner-icon class="text-base mt-2"><img class="w-16 md:w-28" src="./images/p001.png"></div>
           </div>
           <div class="site-breadcrumb site-banner mb-8 hidden md:flex items-center gap-2 text-sm h-12 border-b border-white flow-up">
             <img class="h-[1.5em]" src="./images/icons/home-white.svg" />
             <a href="./index.html">Home</a>
             <img class="h-[.4em]" src="./images/icons//arrow-right-white.svg" />
-            <a href="javascript:void(0)">contact us</a>
+            <a href="javascript:void(0)">news</a>
           </div>
         </div>
       </div>
@@ -120,31 +122,31 @@
 
           <div class="news-list flex flex-wrap">
 
-            <a class="news-list-item">
+            <a class="news-list-item w-full md:w-[calc(50%-0.6rem)]" href="./news-detail.html">
               <div class="news-list-img" style="background-image: url(./images/full-solution.jpg);"></div>
               <div class="news-list-title">PROFESSIONALL SERVICES CENTER</div>
             </a>            
-            <a class="news-list-item">
+            <a class="news-list-item w-full md:w-[calc(50%-0.6rem)]" href="./news-detail.html">
               <div class="news-list-img" style="background-image: url(./images/full-solution.jpg);"></div>
               <div class="news-list-title">PROFESSIONALL SERVICES CENTER</div>
             </a>            
-            <a class="news-list-item">
+            <a class="news-list-item w-full md:w-[calc(33%-0.6rem)]" href="./news-detail.html">
               <div class="news-list-img" style="background-image: url(./images/full-solution.jpg);"></div>
               <div class="news-list-title">PROFESSIONALL SERVICES CENTER</div>
             </a>            
-            <a class="news-list-item">
+            <a class="news-list-item w-full md:w-[calc(33%-0.6rem)]" href="./news-detail.html">
               <div class="news-list-img" style="background-image: url(./images/full-solution.jpg);"></div>
               <div class="news-list-title">PROFESSIONALL SERVICES CENTER</div>
             </a>            
-            <a class="news-list-item">
+            <a class="news-list-item w-full md:w-[calc(33%-0.6rem)]" href="./news-detail.html">
               <div class="news-list-img" style="background-image: url(./images/full-solution.jpg);"></div>
               <div class="news-list-title">PROFESSIONALL SERVICES CENTER</div>
             </a>            
-            <a class="news-list-item">
+            <a class="news-list-item w-full md:w-[calc(33%-0.6rem)]" href="./news-detail.html">
               <div class="news-list-img" style="background-image: url(./images/full-solution.jpg);"></div>
               <div class="news-list-title">PROFESSIONALL SERVICES CENTER</div>
             </a>            
-            <a class="news-list-item">
+            <a class="news-list-item w-full md:w-[calc(33%-0.6rem)]" href="./news-detail.html">
               <div class="news-list-img" style="background-image: url(./images/full-solution.jpg);"></div>
               <div class="news-list-title">PROFESSIONALL SERVICES CENTER</div>
             </a>            

@@ -14,91 +14,93 @@
 </head>
 
 <body>
-  <div class="fixed z-20 top-0 left-0 w-screen bg-slate-100 header_wrapper">
-    <div class="w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
-      <div class="header-left-column flex-initial">
-        <img class="h-14 header-logo" src="./images/logo.png" alt="logo" />
-      </div>
-      <div class="hidden md:flex flex-row justify-end flex-auto header-right-column">
-        <div class="md:hidden mobile-mask"></div>
-        <div class="md:hidden mobile-bg"></div>
-        <div class="flex flex-col md:flex-row h-auto md:h-16 text-black menu-items">
-          <div class="mx-5 flex items-center menu-item">
-            <a href="./index.html">Home</a>
+  <div class="relative z-20 w-full h-16">
+    <div class="w-full  bg-[#eef1f4] header_wrapper">
+      <div class="w-11/12 mx-auto h-16 flex flex-row justify-between items-center text-sm header-container">
+        <div class="header-left-column flex-initial">
+          <img class="h-14 header-logo" src="./images/logo.png" alt="logo" />
+        </div>
+        <div class="hidden md:flex flex-row justify-end flex-auto header-right-column">
+          <div class="md:hidden mobile-mask"></div>
+          <div class="md:hidden mobile-bg"></div>
+          <div class="flex flex-col md:flex-row h-auto md:h-16 text-black menu-items">
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./index.html">Home</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item relative product-underline active">
+              <a href="./products-all.html">Product</a>
+              <div
+                class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Tablet PC</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Bar code scanner</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Printer</a>
+                </div>
+                <div class="py-2 category-item">
+                  <a href="./products-barcode-scanner.html" class="category-link">Category 1</a>
+                </div>
+              </div>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./solution.html">Solution</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./industry.html">Industry</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./service.html">Service</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./news.html">News</a>
+            </div>
+            <div class="mx-5 flex items-center menu-item">
+              <a href="./aboutus.html">About Us</a>
+            </div>
           </div>
-          <div class="mx-5 flex items-center menu-item relative product-underline active">
-            <a href="./products-all.html">Product</a>
-            <div
-              class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
+          <div class="ml-24 flex items-center lang-sections relative">
+            <div class="flex items-center lang-local">
+              <img class="h-4" src="./images/icons/language.svg" alt="" />
+              <span class="mx-2">EN</span>
+              <img class="h-4 cursor-pointer transition-all duration-300" id="langArrow"
+                src="./images/icons/arrow-down.svg" alt="" />
+            </div>
+            <div class="absolute top-6 md:top-16 left-0 md:left-auto md:right-0 px-5 py-2 bg-white rounded-md hidden shadow-lg lang-items">
+              <div class="cursor-pointer py-1 hover:text-sky-500 border-b border-slate-300 lang-item text-sky-500"
+                data-lang="en">
+                English
               </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Tablet PC</a>
-              </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Bar code scanner</a>
-              </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Printer</a>
-              </div>
-              <div class="py-2 category-item">
-                <a href="./products-barcode-scanner.html" class="category-link">Category 1</a>
+              <div class="cursor-pointer py-1 hover:text-sky-500 lang-item" data-lang="fanti">
+                繁体
               </div>
             </div>
           </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="./solution.html">Solution</a>
+          <div class="ml-6 flex items-center search-entry">
+            <a class="flex items-center search-txt cursor-pointer" href="#">
+              <img class="h-4" src="./images/icons/search.svg" alt="search" />
+            </a>
           </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="./industry.html">Industry</a>
-          </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="#">Service</a>
-          </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="#">News</a>
-          </div>
-          <div class="mx-5 flex items-center menu-item">
-            <a href="#">About Us</a>
+          <div class="ml-6 flex items-center contact-entry">
+            <a class="px-5 py-2 rounded-full text-white bg-sky-500 cursor-pointer" href="./contactus.html">Contact us</a>
           </div>
         </div>
-        <div class="ml-24 flex items-center lang-sections relative">
-          <div class="flex items-center lang-local">
-            <img class="h-4" src="./images/icons/language.svg" alt="" />
-            <span class="mx-2">EN</span>
-            <img class="h-4 cursor-pointer transition-all duration-300" id="langArrow"
-              src="./images/icons/arrow-down.svg" alt="" />
-          </div>
-          <div class="absolute top-6 md:top-16 left-0 md:left-auto md:right-0 px-5 py-2 bg-white rounded-md hidden shadow-lg lang-items">
-            <div class="cursor-pointer py-1 hover:text-sky-500 border-b border-slate-300 lang-item text-sky-500"
-              data-lang="en">
-              English
-            </div>
-            <div class="cursor-pointer py-1 hover:text-sky-500 lang-item" data-lang="fanti">
-              繁体
-            </div>
-          </div>
+        <div class="md:hidden flex items-center menu-burger">
+          <div><img id="menuBurger" class="h-8" src="./images/icons/menu.svg" alt="menu" /></div>
         </div>
-        <div class="ml-6 flex items-center search-entry">
-          <a class="flex items-center search-txt cursor-pointer" href="#">
-            <img class="h-4" src="./images/icons/search.svg" alt="search" />
-          </a>
-        </div>
-        <div class="ml-6 flex items-center contact-entry">
-          <a class="px-5 py-2 rounded-full text-white bg-sky-500 cursor-pointer" href="#">Contact us</a>
-        </div>
-      </div>
-      <div class="md:hidden flex items-center menu-burger">
-        <div><img id="menuBurger" class="h-8" src="./images/icons/menu.svg" alt="menu" /></div>
       </div>
     </div>
   </div>
   <div class="relative z-10 w-full scroll-section">
     <div class="relative w-full h-16 pointer-events-none"></div>
-    <div class="relative w-full home-wrapper pt-16">
+    <div class="relative w-full home-wrapper pt-4 md:pt-16">
       <!-- detail start -->
-       <div class="w-11/12 mx-auto site-breadcrumb mb-8 flex items-center gap-2 text-sm h-12 border-t border-[#ccc]">
+       <div class="w-11/12 mx-auto site-breadcrumb mb-8 hidden md:flex items-center gap-2 text-sm h-12 border-t border-[#ccc]">
           <img class="h-[1.5em]" src="./images/icons/home-black.svg" />
           <a href="./index.html">Home</a>
           <img class="h-[.4em]" src="./images/icons/arrow-right-bold.svg" />
