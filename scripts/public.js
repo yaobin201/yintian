@@ -8,19 +8,23 @@ function pageWrapFlowUp() {
           entry.target,
           {
             autoAlpha: 0,
-            transform: "translateY(6rem)",
+            transform: "translateY(50px)",
           },
           {
             autoAlpha: 1,
             transform: "translateY(0)",
-            delay: 0.3 + delay,
-            duration: 0.3 + delay,
+            delay: 1,
+            duration: 0.5 + delay,
             ease: "power1.out",
           }
         );
-        ob.unobserve(entry.target);
+        // ob.unobserve(entry.target);
+      } else {
+        // $(entry.target).css('opacity', 0)
       }
     });
+  }, {
+    rootMargin: '100px'
   });
 
   pageWraps.forEach((pageWrap) => {
@@ -80,6 +84,41 @@ function controlNavbar() {
         .addClass("header_wrapper_scroll");
     }
     lastScrollTop = st;
+  });
+}
+
+function normalWrapAni() {
+  if(!$(".text-bani").length) {
+    return
+  }
+  $(".text-bani").each(function () {
+    const _this = $(this);
+    ScrollTrigger.create({
+      trigger: _this,
+      start: "top 75%",
+      end: "bottom 75%",
+      scrub: true,
+      // markers: true,
+      onEnter: () => {
+        _this.find(".text-bani-timeline").each(function (index) {
+          const dataDelay = +$(this).attr("data-delay-step") || 0;
+          gsap.fromTo(
+            this,
+            {
+              autoAlpha: 0,
+              transform: "translateY(6rem)",
+            },
+            {
+              autoAlpha: 1,
+              transform: "translateY(0)",
+              delay: 0.1 + dataDelay,
+              duration: 0.5,
+              ease: "power1.out",
+            }
+          );
+        });
+      },
+    });
   });
 }
 
@@ -249,7 +288,7 @@ $(document).ready(function () {
     theme: "dark", // 选择一个主题，如 "dark", "light", "light-3" 等
     autoHideScrollbar: true,
   });
-
+  normalWrapAni();
   initHighlightText()
   showPolicy();
   pageWrapFlowUp();

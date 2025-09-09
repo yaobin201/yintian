@@ -88,35 +88,7 @@ function flexCardAni() {
       },
     });
   });
-  $(".text-bani").each(function () {
-    const _this = $(this);
-    ScrollTrigger.create({
-      trigger: _this,
-      start: "top 75%",
-      end: "bottom 75%",
-      scrub: true,
-      markers: false,
-      onEnter: () => {
-        _this.find(".text-bani-timeline").each(function (index) {
-          const dataDelay = +$(this).attr("data-delay-step");
-          gsap.fromTo(
-            this,
-            {
-              autoAlpha: 0,
-              transform: "translateY(6rem)",
-            },
-            {
-              autoAlpha: 1,
-              transform: "translateY(0)",
-              delay: 0.1 + dataDelay,
-              duration: 0.5,
-              ease: "power1.out",
-            }
-          );
-        });
-      },
-    });
-  });
+  
 }
 
 function execIndustrySwiper() {

@@ -34,8 +34,8 @@ $(document).ready(function () {
     spaceBetween: 20,
     loop: true, // 循环模式选项
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next-join",
+      prevEl: ".swiper-button-prev-join",
     },
     breakpoints: {
       768: {

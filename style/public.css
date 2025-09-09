@@ -99,6 +99,15 @@ body{
   }
 }
 
+.flow-up{
+  opacity: 0;
+}
+.flow-up-t{
+  color:transparent!important;
+  background-clip: text;
+  background-image: linear-gradient(109deg, #000000 7%, #6f6f6f 91%);
+}
+
 
 .banner-wrapper .cus-swiper-pages{
   font-family: Poppins-SemiBold, Arial, sans-serif;
