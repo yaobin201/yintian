@@ -165,19 +165,38 @@ body{
 .mobile-menus .contact-entry{
   margin-top:2rem;
 }
-
+.menu-item{
+  position: relative;
+}
 .mobile-menus .menu-item{
   padding:1.25rem;
 }
-.menu-item.active > a{
-  color:var(--primary-color);
-  font-weight: 600;
-}
+.menu-item.active > a,
 .menu-item:hover > a{
-  color: var(--primary-color);
+  color:var(--primary-color);
 }
-.menu-item.active{
-  border-bottom: 2px solid var(--primary-color);
+.menu-item.active::before{
+  content: '';
+  position: absolute;
+  bottom: 0.2rem;
+  width: 1.8rem;
+  height: 1rem;
+  background:url('../images/yicon-png.png') center center no-repeat;
+  background-size:contain;
+  z-index: 1;
+  left:2.5rem;
+  margin-left:0;
+}
+@media (max-width: 768px) {
+  .menu-item.active.product-underline::before{
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .menu-item.active::before{
+    left: 50%;
+    margin-left:-0.9rem;
+  }
 }
 
 .mobile-menus .product-underline{
