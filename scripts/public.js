@@ -18,7 +18,7 @@ function pageWrapFlowUp() {
             ease: "power1.out",
           }
         );
-        // ob.unobserve(entry.target);
+        ob.unobserve(entry.target);
       } else {
         // $(entry.target).css('opacity', 0)
       }
