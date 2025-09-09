@@ -1,5 +1,4 @@
 var bannerSwiper = new Swiper(".swiper-banner", {
-  direction: "vertical", // 垂直切换选项
   autoplay:true,
   parallax: true,
   loop: true, // 循环模式选项
