@@ -1,5 +1,16 @@
+
+function isMobileDevice() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  // 检查设备是否为移动设备
+  return /iPad|iPhone|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(
+    userAgent
+  );
+}
+
 function pageWrapFlowUp() {
+  const isMobel = isMobileDevice()
   const pageWraps = document.querySelectorAll(".flow-up");
+  const _delay = isMobel ? '0.3' : '1'
   const ob = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -13,7 +24,7 @@ function pageWrapFlowUp() {
           {
             autoAlpha: 1,
             transform: "translateY(0)",
-            delay: 1,
+            delay: _delay,
             duration: 0.5 + delay,
             ease: "power1.out",
           }
@@ -24,7 +35,7 @@ function pageWrapFlowUp() {
       }
     });
   }, {
-    rootMargin: '100px'
+    rootMargin: isMobel ? '10px' : '100px'
   });
 
   pageWraps.forEach((pageWrap) => {
@@ -53,13 +64,6 @@ function showPolicy() {
   });
 }
 
-function isMobileDevice() {
-  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  // 检查设备是否为移动设备
-  return /iPad|iPhone|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(
-    userAgent
-  );
-}
 
 function controlNavbar() {
   if (isMobileDevice()) {
