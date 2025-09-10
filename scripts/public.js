@@ -53,31 +53,56 @@ function showPolicy() {
   })
 }
 
+// 防抖方法
+function AntiShake(fn,wait){
+    var timer = null;
+    return function(){
+        if(timer !== null){
+            clearTimeout(timer);
+        }
+        timer = setTimeout(fn,wait);
+    };
+}
+// 节流方法
+function AntiThrottle(fn,delay){
+  let throttleTimer = null;
+  return () => {
+    if(throttleTimer) return;
+    throttleTimer = setTimeout(() =>{
+        fn.call(this);
+        clearTimeout(throttleTimer);
+        throttleTimer = null;
+    }, delay);
+  }
+}
+
+
+var lastScrollTop = 0; // 上一次滚动的位置
+function pageNavScroll() {
+  const st = $(this).scrollTop(); // 当前滚动的位置
+    if (st == 0) {
+    $(".header_wrapper")
+      .removeClass("header_wrapper_scroll")
+      .removeClass("header_wrapper_scroll_out");
+    return;
+  }
+  if (st > lastScrollTop) {
+    $(".header_wrapper")
+      .removeClass("header_wrapper_scroll")
+      .addClass("header_wrapper_scroll_out");
+  } else {
+    $(".header_wrapper")
+      .removeClass("header_wrapper_scroll_out")
+      .addClass("header_wrapper_scroll");
+  }
+  lastScrollTop = st;
+}
 
 function controlNavbar() {
   if (isMobileDevice()) {
     return;
   }
-  let lastScrollTop = 0; // 上一次滚动的位置
-  $(window).scroll(function (event) {
-    const st = $(this).scrollTop(); // 当前滚动的位置
-    if (st == 0) {
-      $(".header_wrapper")
-        .removeClass("header_wrapper_scroll")
-        .removeClass("header_wrapper_scroll_out");
-      return;
-    }
-    if (st > lastScrollTop) {
-      $(".header_wrapper")
-        .removeClass("header_wrapper_scroll")
-        .addClass("header_wrapper_scroll_out");
-    } else {
-      $(".header_wrapper")
-        .removeClass("header_wrapper_scroll_out")
-        .addClass("header_wrapper_scroll");
-    }
-    lastScrollTop = st;
-  });
+  $(window).scroll(AntiThrottle(pageNavScroll, 1000));
 }
 
 function normalWrapAni() {
@@ -214,6 +239,25 @@ function initHighlightText() {
     });
   });
 }
+
+const lenis = new Lenis({
+  lerp: 0.05,
+  autoRaf: true,
+  smoothWheel: true,
+  smoothTouch: true
+});
+// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+lenis.on('scroll', ScrollTrigger.update);
+
+// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// This ensures Lenis's smooth scroll animation updates on each GSAP tick
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+});
+
+// Disable lag smoothing in GSAP to prevent any delay in scroll animations
+gsap.ticker.lagSmoothing(0);
+
 
 $(document).ready(function () {
   // 处理导航

@@ -4,7 +4,6 @@ function startNumberSwitch() {
     $(".ani-numaber").each(function () {
       const $this = $(this);
       const target = parseInt($this.attr("data-number"));
-      console.log($this.animateNumber);
       $this.animateNumber(
         {
           number: target,
