@@ -29,7 +29,7 @@
             <div class="mx-5 flex items-center menu-item relative product-underline">
               <a href="./products-all.html">Product</a>
               <div
-                class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
+                class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md categorys-list">
                 <div class="py-2 category-item">
                   <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
                 </div>
@@ -81,12 +81,14 @@
             </div>
           </div>
           <div class="ml-6 flex items-center search-entry">
-            <a class="flex items-center search-txt cursor-pointer" href="./search.html">
-              <img class="h-4" src="./images/icons/search.svg" alt="search" />
-            </a>
+            <span class="flex items-center search-txt cursor-pointer">
+              <img id="openSearchIcon" class="h-4" src="./images/icons/search.svg" alt="search" />
+              <span id="searchTxt" class="hidden"><input id="headerSearchInput" type="text" placeholder="Enter your infomation..."></span>
+              <img id="closeSearchIcon" class="h-4 hidden" src="./images/icons/close.svg" alt="search" />
+            </span>
           </div>
           <div class="ml-6 flex items-center contact-entry">
-            <a class="px-5 py-2 rounded-full text-white bg-sky-500 cursor-pointer" href="./contactus.html">Contact us</a>
+            <a class="px-5 py-2 rounded-full text-white cbg-primary  btn-ani cursor-pointer" href="./contactus.html">Contact us</a>
           </div>
         </div>
         <div class="md:hidden flex items-center menu-burger">
@@ -98,39 +100,38 @@
   <div class="relative z-10 w-full scroll-section">
     <div class="relative w-full home-wrapper">
       <!-- banner start -->
-      <div class="banner-container w-full overflow-x-hidden ">
-        <div class="w-11/12 relative mx-auto banner-wrapper">
-          <div class="swiper-banner swiper w-full aspect-video md:aspect-auto md:h-[calc(100vh-4rem)]">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="h-full w-full flex items-center justify-center flex-col bg-center bg-no-repeat bg-cover rounded-md hover:rounded-none"
-                  style="background-image: url(./images/full-solution.jpg)">
-                  <div class="text-[#c7f0ff] text-center text-2xl md:text-4xl font-semi-bold font-bold" data-swiper-parallax-y="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">PROFESSIONAL AUTOMATIC</div>
-                  <div class="text-white text-center text-2xl md:text-4xl font-semi-bold mt-4 font-bold" data-swiper-parallax-y="-240" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800">ID ENTIFICATION & DATA CAPTURE (AIDC)</div>
-                  <div class="text-white text-center text-base md:text-2xl font-semi-bold font-bold mt-8" data-swiper-parallax-y="-300"  data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000">Solutions Provider</div>
-                </div>
-                <img class="h-full invisible" src="./images/full-solution.jpg" alt="banner1" />
+      <div class="banner-container w-full relative mx-auto banner-wrapper overflow-hidden">
+        <div class="swiper-banner swiper w-full aspect-video md:aspect-auto md:h-[calc(100vh-4rem)]">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="h-full w-full flex items-center justify-center flex-col bg-center bg-no-repeat bg-cover rounded-md hover:rounded-none"
+                style="background-image: url(./images/full-solution.jpg)">
+                <div class="text-[#c7f0ff] text-center text-2xl md:text-4xl font-semi-bold font-bold" data-swiper-parallax-y="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">PROFESSIONAL AUTOMATIC</div>
+                <div class="text-white text-center text-2xl md:text-4xl font-semi-bold mt-4 font-bold" data-swiper-parallax-y="-240" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800">ID ENTIFICATION & DATA CAPTURE (AIDC)</div>
+                <div class="text-white text-center text-base md:text-2xl font-semi-bold font-bold mt-8" data-swiper-parallax-y="-300"  data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000">Solutions Provider</div>
               </div>
-              <div class="swiper-slide">
-                <div class="h-full w-full flex items-center justify-center flex-col bg-center bg-no-repeat bg-cover rounded-md hover:rounded-none"
-                  style="background-image: url(./images/full-solution.jpg)">
-                  <div class="text-[#c7f0ff] text-center  text-2xl md:text-4xl font-semi-bold font-bold" data-swiper-parallax-y="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">PROFESSIONAL AUTOMATIC</div>
-                  <div class="text-white text-center text-2xl md:text-4xl font-semi-bold mt-4 font-bold" data-swiper-parallax-y="-240" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800">ID ENTIFICATION & DATA CAPTURE (AIDC)</div>
-                  <div class="text-white text-center text-base md:text-2xl font-semi-bold font-bold mt-8" data-swiper-parallax-y="-300"  data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000">Solutions Provider</div>
-                </div>
-                <img class="h-full invisible" src="./images/full-solution.jpg" alt="banner1" />
-              </div>
-              <!-- <div class="swiper-slide">
-                <div class="h-full w-full rounded-md overflow-hidden hover:rounded-none">
-                  <video class="w-full" autoplay muted loop>
-                    <source src="./images/banner/33.mp4" type="video/mp4" />
-                  </video>
-                </div>
-              </div> -->
+              <img class="h-full invisible" src="./images/full-solution.jpg" alt="banner1" />
             </div>
+            <div class="swiper-slide">
+              <div class="h-full w-full flex items-center justify-center flex-col bg-center bg-no-repeat bg-cover rounded-md hover:rounded-none"
+                style="background-image: url(./images/full-solution.jpg)">
+                <div class="text-[#c7f0ff] text-center  text-2xl md:text-4xl font-semi-bold font-bold" data-swiper-parallax-y="-180" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="500">PROFESSIONAL AUTOMATIC</div>
+                <div class="text-white text-center text-2xl md:text-4xl font-semi-bold mt-4 font-bold" data-swiper-parallax-y="-240" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="800">ID ENTIFICATION & DATA CAPTURE (AIDC)</div>
+                <div class="text-white text-center text-base md:text-2xl font-semi-bold font-bold mt-8" data-swiper-parallax-y="-300"  data-swiper-parallax-opacity="0" data-swiper-parallax-duration="1000">Solutions Provider</div>
+              </div>
+              <img class="h-full invisible" src="./images/full-solution.jpg" alt="banner1" />
+            </div>
+            <!-- <div class="swiper-slide">
+              <div class="h-full w-full rounded-md overflow-hidden hover:rounded-none">
+                <video class="w-full" autoplay muted loop>
+                  <source src="./images/banner/33.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div> -->
           </div>
-          <div class="swiper-pagination cus-swiper-pages "></div>
-      </div>
+          <div class="swiper-pagination cus-swiper-pages"></div>
+        </div>
+        <div class="scroll-flag"></div>
       </div>
       <!-- banner end -->
 
@@ -140,7 +141,7 @@
           PRODUCT
         </div>
         <div class="flow-up flex gap-2 products-section flex-wrap md:flex-nowrap">
-          <div class="flex-auto w-full md:w-auto bg-white rounded-md flex flex-col items-center hover:shadow-lg">
+          <div class="flex-auto w-full md:w-auto bg-white rounded-md flex flex-col items-center pro-card-hover">
             <div class="text-2xl font-bold mt-16 product-title">
               MOBILE COMPUTER
             </div>
@@ -151,7 +152,7 @@
               <img class="w-72 h-72" src="./images/products/p1.jpg" />
             </a>
           </div>
-          <div class="flex-auto w-full md:w-auto bg-white rounded-md flex flex-col items-center hover:shadow-lg">
+          <div class="flex-auto w-full md:w-auto bg-white rounded-md flex flex-col items-center pro-card-hover">
             <div class="text-2xl font-bold mt-16 product-title">TABLETS</div>
             <div class="mt-1.5">Imprecise infomation of inventory level</div>
             <a class="mt-6 cus-link-btn" href="./product-detail.html">Learn more <img src="images/icons/arrow-right.svg" /><img
@@ -160,7 +161,7 @@
               <img class="w-72 h-72" src="./images/products/p2.jpg" />
             </a>
           </div>
-          <div class="flex-auto w-full md:w-auto bg-white rounded-md flex flex-col items-center hover:shadow-lg">
+          <div class="flex-auto w-full md:w-auto bg-white rounded-md flex flex-col items-center pro-card-hover">
             <div class="flow-uptext-2xl font-bold mt-16 product-title">
               BARCODE SCANNER
             </div>
@@ -173,7 +174,7 @@
           </div>
         </div>
 
-        <div class="flow-up flex gap-2 products-section bg-white mt-2 flex-wrap md:flex-nowrap">
+        <div class="flow-up flex gap-2 products-section bg-white rounded-md mt-2 flex-wrap md:flex-nowrap full-pro-cards">
           <div class="flex-auto w-full md:w-auto bg-white rounded-md flex flex-col items-center">
             <div class="text-2xl font-bold mt-16 product-title">PRINTERS</div>
             <div class="mt-1.5">Imprecise infomation of inventory level</div>
@@ -290,7 +291,7 @@
       <!-- solution end -->
 
       <!-- industry start -->
-      <div class="w-11/12 relative mx-auto product-wrapper">
+      <div class="w-full relative mx-auto product-wrapper">
         <div class="flow-up flex h-36 items-center justify-center text-5xl font-bold font-semi-bold">
           INDUSTRY
         </div>
@@ -487,28 +488,28 @@
         <a class="flow-up mt-8 cus-link-btn" href="./service.html">Learn more <img src="images/icons/arrow-right-white.svg" /><img
             src="images/icons/arrow-right-blue.svg" /></a>
       </div>
-      <!-- service-support end -->
-      <div class="flow-up h-72 bg-cover bg-center bg-no-repeat text-white mt-2"
-        style="background-image: url('./images/n4.jpg')">
-        <div class="w-11/12 mx-auto h-full flex flex-col md:flex-row justify-center md:justify-between md:items-center">
-          <div class="footer-theme-section flex flex-col">
-            <h1 class="flow-up font-bold text-5xl font-semi-bold text-center md:text-left">GET OUT ADVICE</h1>
-            <span class="flow-up text-xl font-bold mt-3">Subscribe now to receive exclusive discounts and product
-              updates</span>
-          </div>
-          <div class="footer-links flex mt-12 md:mt-0">
-            <a href="#" class="flow-up pr-1 py-1.5 rounded-full bg-white flex items-center link-btn bigger w-fit text-[#999999]">
-              <span class="text-xs scale-75">Contact us immediately</span>
-              <i class="rounded-full h-4 w-4 flex items-center justify-center ml-2 sm-arrow"><img class="h-2"
-                  src="./images/icons/arrow-right-white.svg" alt="" /></i>
-            </a>
-          </div>
+    </div>
+  </div>
+  <!-- footer start -->
+  <div class="relative w-full bg-white">
+    <!-- service-support end -->
+    <div class="flow-up h-72 bg-cover bg-center bg-no-repeat text-white mt-2"
+      style="background-image: url('./images/n4.jpg')">
+      <div class="w-11/12 mx-auto h-full flex flex-col md:flex-row justify-center md:justify-between md:items-center">
+        <div class="footer-theme-section flex flex-col">
+          <h1 class="flow-up font-bold text-5xl font-semi-bold text-center md:text-left">GET OUT ADVICE</h1>
+          <span class="flow-up text-xl font-bold mt-3">Subscribe now to receive exclusive discounts and product
+            updates</span>
+        </div>
+        <div class="footer-links flex mt-12 md:mt-0">
+          <a href="#" class="flow-up pr-1 py-1.5 rounded-full bg-white flex items-center link-btn bigger w-fit text-[#999999]">
+            <span class="text-xs scale-75">Contact us immediately</span>
+            <i class="rounded-full h-4 w-4 flex items-center justify-center ml-2 sm-arrow"><img class="h-2"
+                src="./images/icons/arrow-right-white.svg" alt="" /></i>
+          </a>
         </div>
       </div>
     </div>
-  </div>
-  <div class="relative md:fixed z-0 bottom-0 w-screen h-auto md:h-screen overflow-hidden bg-white">
-    <div class="hidden md:block relative w-full h-16 pointer-events-none"></div>
     <div class="w-11/12 mx-auto flex flex-col md:flex-row pt-4 md:pt-16">
       <div class="flex-none w-full md:w-[26%]">
         <div class="hidden md:block"><img src="./images/footer-logo.png" /></div>
@@ -650,7 +651,6 @@
       </div>
     </div>
   </div>
-  <div class="hidden md:block relative w-full h-screen pointer-events-none z-0"></div>
   <div class="medias-section media-absolute">
     <a class="media-item" href="tel:0123456789"><img src="./images/icons/phone-blue.svg" /></a>
     <a class="media-item" href="#"><img src="./images/icons/facebook-blue.svg" /></a>

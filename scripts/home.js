@@ -72,15 +72,28 @@ function bannerScaleAni() {
   if (isMobileDevice()) {
     return;
   }
-  ScrollTrigger.create({
-    trigger: ".banner-container",
-    start: "top top",
-    end: `+=1100`,
-    scrub: true,
-    // markers: true,
-    pin: true,
-    animation: gsap.to(".banner-wrapper", { width: "100%" }),
-  });
+  let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.scroll-flag',
+        pin: false,
+        markers: true,
+        start: "top 75%",
+        end: "bottom 25%",
+        scrub: 0.3,
+      },
+    });
+    tl.fromTo(
+      '.banner-wrapper',
+      {
+        "transform": "scale(1)",
+        "border-radius": "0rem",
+      },
+      {
+        "transform":  "scale(0.9)",
+        "border-radius": "0.5rem",
+      }
+    );
+
 }
 
 $(document).ready(function () {

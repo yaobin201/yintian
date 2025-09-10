@@ -59,6 +59,27 @@ function fontFlowUp(target, isHide) {
   }
 }
 
+function solutionItemScroll() {
+  if(!$(".solution-item").length) return;
+  $(".solution-item").each(function () {
+    const _this = $(this);
+    ScrollTrigger.create({
+      trigger: _this,
+      start: "top 20%",
+      end: "top 20%",
+      scrub: .3,
+      markers: true,
+      pin: false,
+      onEnter: () => {
+        _this.addClass('on')
+      },
+      onLeaveBack: () => {
+        _this.removeClass('on') 
+      },
+    });
+  })
+}
+
 function swiperSlide() {
   if(!$('.solutions-swiper').length) return;
   new Swiper(".solutions-swiper", {
@@ -90,16 +111,17 @@ function solutionSwiperTab() {
 }
 
 $(document).ready(function () {
-  $(".solution-content").hover(
-    function () {
-      sectionFlowUp(this, true);
-      fontFlowUp(this, true);
-    },
-    function () {
-      sectionFlowUp(this, false);
-      fontFlowUp(this, false);
-    }
-  );
+  // $(".solution-content").hover(
+  //   function () {
+  //     sectionFlowUp(this, true);
+  //     fontFlowUp(this, true);
+  //   },
+  //   function () {
+  //     sectionFlowUp(this, false);
+  //     fontFlowUp(this, false);
+  //   }
+  // );
+  solutionItemScroll()
   swiperSlide();
   solutionSwiperTab();
 });

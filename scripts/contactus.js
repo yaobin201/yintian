@@ -13,7 +13,8 @@ function sectionBgAni() {
 
 function contactListToggle() {
   $('#contactusList .product-category-toggle').click(function(){
-    $(this).next().toggle();
+    $(this).next().toggle(300);
+    $('.product-category-toggle').not(this).next().hide(300);
     contactSroller.refresh()
   })
 }

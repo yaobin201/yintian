@@ -118,6 +118,7 @@ function normalWrapAni() {
       scrub: true,
       // markers: true,
       onEnter: () => {
+        console.log('enter')
         _this.find(".text-bani-timeline").each(function (index) {
           const dataDelay = +$(this).attr("data-delay-step") || 0;
           gsap.fromTo(
@@ -247,7 +248,7 @@ const lenis = new Lenis({
   smoothTouch: true
 });
 // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
-lenis.on('scroll', ScrollTrigger.update);
+// lenis.on('scroll', ScrollTrigger.update);
 
 // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
 // This ensures Lenis's smooth scroll animation updates on each GSAP tick
@@ -278,6 +279,24 @@ $(document).ready(function () {
   $(".mobile-menus .product-underline").click(function () {
     $(this).find(".categorys-list").toggle();
   });
+
+  $("#openSearchIcon").click(function () {
+    $(".search-entry .search-txt").addClass("active");
+    $('#searchTxt').show(300);
+    $("#closeSearchIcon").show(300);
+  });
+  $("#closeSearchIcon").click(function () {
+    $(".search-entry .search-txt").removeClass("active");
+    $('#searchTxt').hide(300);
+    $("#closeSearchIcon").hide(300);
+  });
+  $('#headerSearchInput').on('keyup', function(event) {
+    if(event.key == 'Enter' || event.keyCode == 13 || event.which == 13) {
+      const val = $(this).val().trim()
+      if(!val) return;
+      window.location.href = `./search.html?keyword=${val}`
+    }
+  })
 
   controlNavbar();
 

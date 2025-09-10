@@ -30,7 +30,7 @@
             <div class="mx-5 flex items-center menu-item relative product-underline">
               <a href="./products-all.html">Product</a>
               <div
-                class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
+                class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md categorys-list">
                 <div class="py-2 category-item">
                   <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
                 </div>
@@ -82,12 +82,14 @@
             </div>
           </div>
           <div class="ml-6 flex items-center search-entry">
-            <a class="flex items-center search-txt cursor-pointer" href="./search.html">
-              <img class="h-4" src="./images/icons/search.svg" alt="search" />
-            </a>
+            <span class="flex items-center search-txt cursor-pointer">
+              <img id="openSearchIcon" class="h-4" src="./images/icons/search.svg" alt="search" />
+              <span id="searchTxt" class="hidden"><input id="headerSearchInput" type="text" placeholder="Enter your infomation..."></span>
+              <img id="closeSearchIcon" class="h-4 hidden" src="./images/icons/close.svg" alt="search" />
+            </span>
           </div>
           <div class="ml-6 flex items-center contact-entry">
-            <a class="px-5 py-2 rounded-full text-white bg-sky-500 cursor-pointer" href="./contactus.html">Contact us</a>
+            <a class="px-5 py-2 rounded-full text-white cbg-primary  btn-ani cursor-pointer" href="./contactus.html">Contact us</a>
           </div>
         </div>
         <div class="md:hidden flex items-center menu-burger">
@@ -97,7 +99,6 @@
     </div>
   </div>
   <div class="relative z-10 w-full scroll-section">
-    <!-- <div class="relative w-full h-16 pointer-events-none"></div> -->
     <div class="relative w-full home-wrapper">
 
       <!-- 首屏 -->
@@ -115,7 +116,6 @@
           </div>
         </div>
       </div>
-
       <div class="w-full">
         <section id="aboutusPpt" class="aboutus-ppt w-full relative z-1" >
 
@@ -310,7 +310,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="relative hidden md:flex gap-[6rem] mt-6 justify-center items-center h-8">
+                <div class="relative hidden md:flex gap-[3rem] mt-6 justify-center items-center h-8">
                   <div
                     class="hidden relative mt-0 md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch f swiper-button-prev">
                     <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
@@ -327,7 +327,7 @@
         </section>
 
         
-        <div class="w-full relative z-1">
+        <div class="flow-up  relative z-1">
           <div class="w-11/12 mx-auto py-20">
             <div class="text-3xl font-bold font-semi-bold text-black">JOIN US</div>
             <div class="join-us w-full noscale relative mt-20 md:flex gap-6">
@@ -347,11 +347,11 @@
                         <p class="text-md mt-2 t-gray">Released on August 22, 2023</p>
                       </div>
                       <div class="joinus-time mt-12">
-                        <p class="text-lg font-semi-bold text-black">DEMAND</p>
+                        <p class="text-md t-default font-semi-bold">DEMAND</p>
                         <p class="text-md mt-4 t-gray">HONG KONG, CHAIN | Software | Master | 3-5years</p>
                       </div>
                       <div class="joinus-time mt-12">
-                        <p class="text-lg font-semi-bold text-black">RESUME SUBMISSION EMAIL</p>
+                        <p class="text-md t-default font-semi-bold">RESUME SUBMISSION EMAIL</p>
                         <p class="text-md mb-4 t-gray">sales@schmidtidtech.com</p>
                       </div>
                     </div>
@@ -363,11 +363,11 @@
                         <p class="text-md mt-2 t-gray">Released on August 22, 2023</p>
                       </div>
                       <div class="joinus-time mt-12">
-                        <p class="text-lg font-semi-bold text-black">DEMAND</p>
+                        <p class="text-md t-default font-semi-bold">DEMAND</p>
                         <p class="text-md mt-4 t-gray">HONG KONG, CHAIN | Software | Master | 3-5years</p>
                       </div>
                       <div class="joinus-time mt-12">
-                        <p class="text-lg font-semi-bold text-black">RESUME SUBMISSION EMAIL</p>
+                        <p class="text-md t-default font-semi-bold">RESUME SUBMISSION EMAIL</p>
                         <p class="text-md mb-4 t-gray">sales@schmidtidtech.com</p>
                       </div>
                     </div>
@@ -379,18 +379,18 @@
                         <p class="text-md mt-2 t-gray">Released on August 22, 2023</p>
                       </div>
                       <div class="joinus-time mt-12">
-                        <p class="text-lg font-semi-bold text-black">DEMAND</p>
+                        <p class="text-md t-default font-semi-bold">DEMAND</p>
                         <p class="text-md mt-4 t-gray">HONG KONG, CHAIN | Software | Master | 3-5years</p>
                       </div>
                       <div class="joinus-time mt-12">
-                        <p class="text-lg font-semi-bold text-black">RESUME SUBMISSION EMAIL</p>
+                        <p class="text-md t-default font-semi-bold">RESUME SUBMISSION EMAIL</p>
                         <p class="text-md mb-4 t-gray">sales@schmidtidtech.com</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="absolute md:flex gap-[3rem] top-[-5rem] right-0 justify-center items-center h-8">
+              <div class="absolute md:flex gap-[1.5rem] top-[-5rem] right-0 justify-center items-center h-8">
                 <div
                   class="hidden relative mt-0 md:flex w-12 h-12 border border-[#333333] rounded-full items-center justify-center industry-switch f swiper-button-prev-join">
                   <img class="w-4 h-4" src="./images/icons/arrow-half-black.svg" />
@@ -404,30 +404,28 @@
           </div>
         </div>
       </div>
-
-
-      <div class="h-72 bg-cover bg-center bg-no-repeat text-white mt-2"
-        style="background-image: url('./images/n4.jpg')">
-        <div class="w-11/12 mx-auto h-full flex flex-col md:flex-row justify-center md:justify-between md:items-center">
-          <div class="footer-theme-section flex flex-col">
-            <h1 class="font-bold text-5xl font-semi-bold text-center md:text-left">GET OUT ADVICE</h1>
-            <span class="text-xl font-bold mt-3">Subscribe now to receive exclusive discounts and product
-              updates</span>
-          </div>
-          <div class="footer-links flex mt-12 md:mt-0">
-            <a href="#" class="pr-1 py-1.5 rounded-full bg-white flex items-center link-btn bigger w-fit text-[#999999]">
-              <span class="text-xs scale-75">Contact us immediately</span>
-              <i class="rounded-full h-4 w-4 flex items-center justify-center ml-2 sm-arrow"><img class="h-2"
-                  src="./images/icons/arrow-right-white.svg" alt="" /></i>
-            </a>
-          </div>
+    </div>
+  </div>
+  
+  <div class="relative w-full bg-white">
+    <div class="flow-up h-72 bg-cover bg-center bg-no-repeat text-white mt-2"
+      style="background-image: url('./images/n4.jpg')">
+      <div class="w-11/12 mx-auto h-full flex flex-col md:flex-row justify-center md:justify-between md:items-center">
+        <div class="footer-theme-section flex flex-col">
+          <h1 class="font-bold text-5xl font-semi-bold text-center md:text-left">GET OUT ADVICE</h1>
+          <span class="text-xl font-bold mt-3">Subscribe now to receive exclusive discounts and product
+            updates</span>
+        </div>
+        <div class="footer-links flex mt-12 md:mt-0">
+          <a href="#" class="pr-1 py-1.5 rounded-full bg-white flex items-center link-btn bigger w-fit text-[#999999]">
+            <span class="text-xs scale-75">Contact us immediately</span>
+            <i class="rounded-full h-4 w-4 flex items-center justify-center ml-2 sm-arrow"><img class="h-2"
+                src="./images/icons/arrow-right-white.svg" alt="" /></i>
+          </a>
         </div>
       </div>
     </div>
-  </div>
-  <div class="relative md:fixed z-0 bottom-0 w-screen h-auto md:h-screen overflow-hidden bg-white">
-    <div class="hidden md:block relative w-full h-16 pointer-events-none"></div>
-    <div class="w-11/12 mx-auto flex flex-col md:flex-row pt-4 md:pt-16">
+    <div class="flow-up w-11/12 mx-auto flex flex-col md:flex-row pt-4 md:pt-16">
       <div class="flex-none w-full md:w-[26%]">
         <div class="hidden md:block"><img src="./images/footer-logo.png" /></div>
         <div class="hidden md:flex mt-4 medias-section">
@@ -568,7 +566,6 @@
       </div>
     </div>
   </div>
-  <div class="hidden md:block relative w-full h-screen pointer-events-none z-0"></div>
   <div class="medias-section media-absolute">
     <a class="media-item" href="tel:0123456789"><img src="./images/icons/phone-blue.svg" /></a>
     <a class="media-item" href="#"><img src="./images/icons/facebook-blue.svg" /></a>

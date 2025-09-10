@@ -12,7 +12,7 @@ function flexCardAni() {
       start: "top 75%",
       end: "bottom 75%",
       scrub: true,
-      markers: false,
+      // markers: false,
       onEnter: () => {
         _this.find(".industry-sitem").each(function () {
           $(this).css("opacity", 0).css("transform", "translate(30px,0)");
@@ -92,7 +92,7 @@ function flexCardAni() {
 }
 
 function execIndustrySwiper() {
-  const bannerSwiper = new Swiper("#industryWrap2", {
+  const bannerSwiper2 = new Swiper("#industryWrap2", {
     autoplay: true,
     effect: "fade",
   });
@@ -100,7 +100,17 @@ function execIndustrySwiper() {
   $("#cusSwiperNav1 > div").click(function () {
     if ($(this).hasClass("on")) return;
     $(this).addClass("on").siblings().removeClass("on");
-    bannerSwiper.slideTo($(this).index());
+    bannerSwiper2.slideTo($(this).index());
+  });
+  const bannerSwiper3 = new Swiper("#industryWrap3", {
+    autoplay: true,
+    effect: "fade",
+  });
+
+  $("#cusSwiperNav3 > div").click(function () {
+    if ($(this).hasClass("on")) return;
+    $(this).addClass("on").siblings().removeClass("on");
+    bannerSwiper3.slideTo($(this).index());
   });
 }
 
@@ -119,4 +129,9 @@ $(document).ready(function () {
   flexCardAni();
   execIndustrySwiper();
   execPhoneSwiper();
+
+  $(".toggle-text-btn").click(function () {
+    $(this).prev().slideToggle(300);
+    $(this).hide(300);
+  })
 });

@@ -23,7 +23,7 @@ $(document).ready(function () {
 
   // 产品分类处理
   $(".product-category-list").hide();
-  $(".product-category-toggle:eq(0)").addClass("active").next().show();
+  // $(".product-category-toggle:eq(0)").addClass("active").next().show();
   $(".product-category-toggle").click(function () {
     if ($(this).next().is(":hidden")) {
       $(".product-category-toggle").removeClass("active").next().slideUp();

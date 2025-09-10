@@ -30,7 +30,7 @@
             <div class="mx-5 flex items-center menu-item relative product-underline">
               <a href="./products-all.html">Product</a>
               <div
-                class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md bg-sky-500 hidden categorys-list">
+                class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md categorys-list">
                 <div class="py-2 category-item">
                   <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
                 </div>
@@ -82,12 +82,14 @@
             </div>
           </div>
           <div class="ml-6 flex items-center search-entry">
-            <a class="flex items-center search-txt cursor-pointer" href="./search.html">
-              <img class="h-4" src="./images/icons/search.svg" alt="search" />
-            </a>
+            <span class="flex items-center search-txt cursor-pointer">
+              <img id="openSearchIcon" class="h-4" src="./images/icons/search.svg" alt="search" />
+              <span id="searchTxt" class="hidden"><input id="headerSearchInput" type="text" placeholder="Enter your infomation..."></span>
+              <img id="closeSearchIcon" class="h-4 hidden" src="./images/icons/close.svg" alt="search" />
+            </span>
           </div>
           <div class="ml-6 flex items-center contact-entry">
-            <a class="px-5 py-2 rounded-full text-white bg-sky-500 cursor-pointer" href="./contactus.html">Contact us</a>
+            <a class="px-5 py-2 rounded-full text-white cbg-primary  btn-ani cursor-pointer" href="./contactus.html">Contact us</a>
           </div>
         </div>
         <div class="md:hidden flex items-center menu-burger">
@@ -119,106 +121,110 @@
       <div class="solutions-wrapper w-full bg-white">
         <div class="solutions-section w-11/12 mx-auto">
 
-          <div class="solution-item w-full md:flex flex-col md:flex-row md:h-[80vh] py-16 gap-4">
-            <div data-fade-out class="text-bani w-full md:flex md:w-[40%] md:flex-none flex flex-col items-start justify-center">
-              <h1 data-delay-step="0.2" class="text-bani-timeline text-4xl font-bold font-semi-bold text-black">WAREHOUSE MANAGEMENT SYSTEM (WMS)</h1>
-              <p data-delay-step="0.4" class="text-bani-timeline text-[#666] mt-4">Streamline day-to-day warehouse operations and workflows to maximize resources utilization</p>
-              <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn text-sm" href="./solution-detail.html">Learn More<img src="images/icons/arrow-right.svg" /><img
-              src="images/icons/arrow-right-blue.svg" /></a>
-            </div>
-            <div class="solution-content w-full h-[24vh] md:h-auto md:w-auto md:flex-auto mt-6 md:mt-0 relative overflow-hidden">
-              <div data-fade-bg class="w-full h-full bg-center bg-no-repeat bg-cover absolute top-0 left-0 rounded-md" style="background-image: url(./images/solution-1.jpg);"></div>
-              <div class="hidden md:flex flex-col justify-end relative z-10 h-full items-center text-white pb-16">
-                <h1 data-fade-title class="text-4xl font-bold font-semi-bold text-center opacity-0 translate-y-16 scale-50">WAREHOUSE MANAGEMENT SYSTEM (WMS)</h1>
-                <p data-fade-desc class="mt-4 w-[40%] text-center opacity-0 translate-y-16 scale-50">Streamline day-to-day warehouse operations and workflows to maximize resources utilization</p>
-                <a data-fade-link class="mt-6 cus-link-btn text-sm dark-blue opacity-0 translate-y-16 scale-50" href="./solution-detail.html">Learn More<img src="images/icons/arrow-right-white.svg" /><img
-              src="images/icons/arrow-right-white.svg" /></a>
+          <div class="solution-item w-full h-[45vh] md:h-[80vh] py-16 relative">
+            <a class="block w-full h-full" href="./solution-detail.html">
+              <div style="background-image: url(./images/solutions/so01.jpg);" class="pic h-full"></div>
+              <div class="info">
+                <h1 class="text-4xl font-bold font-semi-bold">WAREHOUSE MANAGEMENT SYSTEM (WMS)</h1>
+                <p class="mt-4">Streamline day-to-day warehouse operations and workflows to maximize resources utilization</p>
+                <a class="mt-6 cus-link-btn text-sm hide-1" href="javascript:void(0);">
+                  Learn More
+                  <img src="images/icons/arrow-right.svg" />
+                  <img src="images/icons/arrow-right-blue.svg" />
+                </a>
+                <a class="mt-6 cus-link-btn text-sm dark-blue hide-2" href="javascript:void(0);">
+                  Learn More
+                  <img src="images/icons/arrow-right-white.svg" />
+                  <img src="images/icons/arrow-right-white.svg" />
+                </a>
               </div>
-            </div>
+            </a>
           </div>
-          
-          <div class="solution-item w-full md:flex flex-col md:flex-row md:h-[80vh] py-16 gap-4">
-            <div data-fade-out class="text-bani w-full md:flex md:w-[40%] md:flex-none flex flex-col items-start justify-center">
-              <h1 data-delay-step="0.2" class="text-bani-timeline text-4xl font-bold font-semi-bold text-black">WAREHOUSE MANAGEMENT SYSTEM (WMS)</h1>
-              <p data-delay-step="0.4" class="text-bani-timeline text-[#666] mt-4">Streamline day-to-day warehouse operations and workflows to maximize resources utilization</p>
-              <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn text-sm" href="./solution-detail.html">Learn More<img src="images/icons/arrow-right.svg" /><img
-              src="images/icons/arrow-right-blue.svg" /></a>
-            </div>
-            <div class="solution-content w-full h-[24vh] md:h-auto md:w-auto md:flex-auto mt-6 md:mt-0 relative overflow-hidden">
-              <div data-fade-bg class="w-full h-full bg-center bg-no-repeat bg-cover absolute top-0 left-0 rounded-md" style="background-image: url(./images/solution-1.jpg);"></div>
-              <div class="hidden md:flex flex-col justify-end relative z-10 h-full items-center text-white pb-16">
-                <h1 data-fade-title class="text-4xl font-bold font-semi-bold text-center opacity-0 translate-y-16 scale-50">WAREHOUSE MANAGEMENT SYSTEM (WMS)</h1>
-                <p data-fade-desc class="mt-4 w-[40%] text-center opacity-0 translate-y-16 scale-50">Streamline day-to-day warehouse operations and workflows to maximize resources utilization</p>
-                <a data-fade-link class="mt-6 cus-link-btn text-sm dark-blue opacity-0 translate-y-16 scale-50" href="./solution-detail.html">Learn More<img src="images/icons/arrow-right-white.svg" /><img
-              src="images/icons/arrow-right-white.svg" /></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="solution-item w-full md:flex flex-col md:flex-row md:h-[80vh] py-16 gap-4">
-            <div data-fade-out class="text-bani w-full md:flex md:w-[40%] md:flex-none flex flex-col items-start justify-center">
-              <h1 data-delay-step="0.2" class="text-bani-timeline text-4xl font-bold font-semi-bold text-black">WAREHOUSE MANAGEMENT SYSTEM (WMS)</h1>
-              <p data-delay-step="0.4" class="text-bani-timeline text-[#666] mt-4">Streamline day-to-day warehouse operations and workflows to maximize resources utilization</p>
-              <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn text-sm" href="./solution-detail.html">Learn More<img src="images/icons/arrow-right.svg" /><img
-              src="images/icons/arrow-right-blue.svg" /></a>
-            </div>
-            <div class="solution-content w-full h-[24vh] md:h-auto md:w-auto md:flex-auto mt-6 md:mt-0 relative overflow-hidden">
-              <div data-fade-bg class="w-full h-full bg-center bg-no-repeat bg-cover absolute top-0 left-0 rounded-md" style="background-image: url(./images/solution-1.jpg);"></div>
-              <div class="hidden md:flex flex-col justify-end relative z-10 h-full items-center text-white pb-16">
-                <h1 data-fade-title class="text-4xl font-bold font-semi-bold text-center opacity-0 translate-y-16 scale-50">WAREHOUSE MANAGEMENT SYSTEM (WMS)</h1>
-                <p data-fade-desc class="mt-4 w-[40%] text-center opacity-0 translate-y-16 scale-50">Streamline day-to-day warehouse operations and workflows to maximize resources utilization</p>
-                <a data-fade-link class="mt-6 cus-link-btn text-sm dark-blue opacity-0 translate-y-16 scale-50" href="./solution-detail.html">Learn More<img src="images/icons/arrow-right-white.svg" /><img
-              src="images/icons/arrow-right-white.svg" /></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="solution-item w-full md:flex flex-col md:flex-row md:h-[80vh] py-16 gap-4">
-            <div data-fade-out class="text-bani w-full md:flex md:w-[40%] md:flex-none flex flex-col items-start justify-center">
-              <h1 data-delay-step="0.2" class="text-bani-timeline text-4xl font-bold font-semi-bold text-black">WAREHOUSE MANAGEMENT SYSTEM (WMS)</h1>
-              <p data-delay-step="0.4" class="text-bani-timeline text-[#666] mt-4">Streamline day-to-day warehouse operations and workflows to maximize resources utilization</p>
-              <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn text-sm" href="./solution-detail.html">Learn More<img src="images/icons/arrow-right.svg" /><img
-              src="images/icons/arrow-right-blue.svg" /></a>
-            </div>
-            <div class="solution-content w-full h-[24vh] md:h-auto md:w-auto md:flex-auto mt-6 md:mt-0 relative overflow-hidden">
-              <div data-fade-bg class="w-full h-full bg-center bg-no-repeat bg-cover absolute top-0 left-0 rounded-md" style="background-image: url(./images/solution-1.jpg);"></div>
-              <div class="hidden md:flex flex-col justify-end relative z-10 h-full items-center text-white pb-16">
-                <h1 data-fade-title class="text-4xl font-bold font-semi-bold text-center opacity-0 translate-y-16 scale-50">WAREHOUSE MANAGEMENT SYSTEM (WMS)</h1>
-                <p data-fade-desc class="mt-4 w-[40%] text-center opacity-0 translate-y-16 scale-50">Streamline day-to-day warehouse operations and workflows to maximize resources utilization</p>
-                <a data-fade-link class="mt-6 cus-link-btn text-sm dark-blue opacity-0 translate-y-16 scale-50" href="./solution-detail.html">Learn More<img src="images/icons/arrow-right-white.svg" /><img
-              src="images/icons/arrow-right-white.svg" /></a>
-              </div>
-            </div>
-          </div>
-          
 
-          
+          <div class="solution-item w-full h-[45vh] md:h-[80vh] py-16 relative">
+            <a class="block w-full h-full" href="./solution-detail.html">
+              <div style="background-image: url(./images/solutions/so02.jpg);" class="pic h-full"></div>
+              <div class="info">
+                <h1 class="text-4xl font-bold font-semi-bold">Voice Direct Warehouse Picking</h1>
+                <p class="mt-4">Enable hands-free order picking to increase throughput and easy to adopt by operations</p>
+                <a class="mt-6 cus-link-btn text-sm hide-1" href="javascript:void(0);">
+                  Learn More
+                  <img src="images/icons/arrow-right.svg" />
+                  <img src="images/icons/arrow-right-blue.svg" />
+                </a>
+                <a class="mt-6 cus-link-btn text-sm dark-blue hide-2" href="javascript:void(0);">
+                  Learn More
+                  <img src="images/icons/arrow-right-white.svg" />
+                  <img src="images/icons/arrow-right-white.svg" />
+                </a>
+              </div>
+            </a>
+          </div>
 
+          <div class="solution-item w-full h-[45vh] md:h-[80vh] py-16 relative">
+            <a class="block w-full h-full" href="./solution-detail.html">
+              <div style="background-image: url(./images/solutions/so03.jpg);" class="pic h-full"></div>
+              <div class="info">
+                <h1 class="text-4xl font-bold font-semi-bold">Inventory Management Solution</h1>
+                <p class="mt-4">Streamline day-to-day warehouse operations and workflows to maximize resources utilization</p>
+                <a class="mt-6 cus-link-btn text-sm hide-1" href="javascript:void(0);">
+                  Learn More
+                  <img src="images/icons/arrow-right.svg" />
+                  <img src="images/icons/arrow-right-blue.svg" />
+                </a>
+                <a class="mt-6 cus-link-btn text-sm dark-blue hide-2" href="javascript:void(0);">
+                  Learn More
+                  <img src="images/icons/arrow-right-white.svg" />
+                  <img src="images/icons/arrow-right-white.svg" />
+                </a>
+              </div>
+            </a>
+          </div>
+          <div class="solution-item w-full h-[45vh] md:h-[80vh] py-16 relative">
+            <a class="block w-full h-full" href="./solution-detail.html">
+              <div style="background-image: url(./images/solutions/so04.jpg);" class="pic h-full"></div>
+              <div class="info">
+                <h1 class="text-4xl font-bold font-semi-bold">Library Management System (LMS)</h1>
+                <p class="mt-4">Enable hands-free order picking to increase throughput and easy to adopt by operations</p>
+                <a class="mt-6 cus-link-btn text-sm hide-1" href="javascript:void(0);">
+                  Learn More
+                  <img src="images/icons/arrow-right.svg" />
+                  <img src="images/icons/arrow-right-blue.svg" />
+                </a>
+                <a class="mt-6 cus-link-btn text-sm dark-blue hide-2" href="javascript:void(0);">
+                  Learn More
+                  <img src="images/icons/arrow-right-white.svg" />
+                  <img src="images/icons/arrow-right-white.svg" />
+                </a>
+              </div>
+            </a>
+          </div>
+          
         </div>
       </div>
 
-      <div class="h-72 bg-cover bg-center bg-no-repeat text-white mt-2"
-        style="background-image: url('./images/n4.jpg')">
-        <div class="w-11/12 mx-auto h-full flex flex-col md:flex-row justify-center md:justify-between md:items-center">
-          <div class="footer-theme-section flex flex-col">
-            <h1 class="font-bold text-5xl font-semi-bold text-center md:text-left">GET OUT ADVICE</h1>
-            <span class="text-xl font-bold mt-3">Subscribe now to receive exclusive discounts and product
-              updates</span>
-          </div>
-          <div class="footer-links flex mt-12 md:mt-0">
-            <a href="#" class="pr-1 py-1.5 rounded-full bg-white flex items-center link-btn bigger w-fit text-[#999999]">
-              <span class="text-xs scale-75">Contact us immediately</span>
-              <i class="rounded-full h-4 w-4 flex items-center justify-center ml-2 sm-arrow"><img class="h-2"
-                  src="./images/icons/arrow-right-white.svg" alt="" /></i>
-            </a>
-          </div>
+    </div>
+  </div>
+  <!-- footer start -->
+  <div class="relative w-full bg-white">
+    <div class="flow-up h-72 bg-cover bg-center bg-no-repeat text-white mt-2"
+      style="background-image: url('./images/n4.jpg')">
+      <div class="w-11/12 mx-auto h-full flex flex-col md:flex-row justify-center md:justify-between md:items-center">
+        <div class="footer-theme-section flex flex-col">
+          <h1 class="font-bold text-5xl font-semi-bold text-center md:text-left">GET OUT ADVICE</h1>
+          <span class="text-xl font-bold mt-3">Subscribe now to receive exclusive discounts and product
+            updates</span>
+        </div>
+        <div class="footer-links flex mt-12 md:mt-0">
+          <a href="#" class="pr-1 py-1.5 rounded-full bg-white flex items-center link-btn bigger w-fit text-[#999999]">
+            <span class="text-xs scale-75">Contact us immediately</span>
+            <i class="rounded-full h-4 w-4 flex items-center justify-center ml-2 sm-arrow"><img class="h-2"
+                src="./images/icons/arrow-right-white.svg" alt="" /></i>
+          </a>
         </div>
       </div>
     </div>
-  </div>
-  <div class="relative md:fixed z-0 bottom-0 w-screen h-auto md:h-screen overflow-hidden bg-white">
-    <div class="hidden md:block relative w-full h-16 pointer-events-none"></div>
-    <div class="w-11/12 mx-auto flex flex-col md:flex-row pt-4 md:pt-16">
+    <div class="flow-up w-11/12 mx-auto flex flex-col md:flex-row pt-4 md:pt-16">
       <div class="flex-none w-full md:w-[26%]">
         <div class="hidden md:block"><img src="./images/footer-logo.png" /></div>
         <div class="hidden md:flex mt-4 medias-section">
@@ -359,7 +365,6 @@
       </div>
     </div>
   </div>
-  <div class="hidden md:block relative w-full h-screen pointer-events-none z-0"></div>
   <div class="medias-section media-absolute">
     <a class="media-item" href="tel:0123456789"><img src="./images/icons/phone-blue.svg" /></a>
     <a class="media-item" href="#"><img src="./images/icons/facebook-blue.svg" /></a>
