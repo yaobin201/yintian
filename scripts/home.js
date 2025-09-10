@@ -33,7 +33,7 @@ function solutionAccording() {
   $(".accordion-section").bind("mouseenter", function () {
     const content = $(this).find(".accordion-content");
     if (content.hasClass("hidden")) {
-      content.stop(true, true).slideDown(200, function () {
+      content.stop(true, true).slideDown(600, function () {
         content.removeClass("hidden");
       });
       const imgUrl = $(this).attr("data-img");
@@ -43,7 +43,7 @@ function solutionAccording() {
       if (!$(this).is(content)) {
         $(this)
           .stop(true, true)
-          .slideUp(200, function () {
+          .slideUp(600, function () {
             $(this).addClass("hidden");
           });
       }
@@ -53,6 +53,11 @@ function solutionAccording() {
 
 // 新闻列表切换背景图片
 function newsBgSwitch() {
+  const first = $(".news-section>.bg-cover").eq(0)
+  const imgUrl = first.find('.news-bgsource').attr('src');
+  first.css("background-image", `url(${imgUrl})`);
+  first.addClass("active");
+
   $(".news-section>.bg-cover").bind("mouseenter", function () {
     const $this = $(this);
     if ($this.hasClass("active")) {
@@ -62,8 +67,7 @@ function newsBgSwitch() {
       .addClass("active")
       .siblings()
       .removeClass("active")
-      .css("background-image", "none");
-    const imgUrl = $this.attr("data-img");
+    const imgUrl = $this.find('.news-bgsource').attr('src');
     $this.css("background-image", `url(${imgUrl})`);
   });
 }
