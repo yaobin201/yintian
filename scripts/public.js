@@ -44,24 +44,13 @@ function pageWrapFlowUp() {
 }
 
 function showPolicy() {
-  const policy = $("#data-policy");
-  gsap.fromTo(
-    policy,
-    {
-      transform: "translateY(5rem)",
-    },
-    {
-      transform: "translateY(0)",
-      duration: 0.8,
-      ease: "power1.out",
-      delay: 1,
-    }
-  );
-  $(".privacy-btn").click(function () {
-    const type = $(this).attr("data-type");
-    console.log(type);
-    policy.hide();
-  });
+  $("#data-policy").cookieBar({
+    closeButton: '.privacy-btn',
+    name: 'mycookiename'
+  })
+  $("#data-policy").on('cookieBar-close', function() {
+    console.log('cookiebar关闭回调')
+  })
 }
 
 

@@ -16,7 +16,7 @@
 <body>
   <div class="relative z-20 w-full h-16">
     <div class="w-full  bg-[#eef1f4] header_wrapper">
-      <div class="relative w-11/12 mx-auto h-16 flex flex-row justify-between items-center header-container">
+      <div class="w-11/12 mx-auto h-16 flex flex-row justify-between items-center header-container">
         <div class="header-left-column flex-initial">
           <img class="h-14 header-logo" src="./images/logo.png" alt="logo" />
         </div>
@@ -25,7 +25,7 @@
           <div class="md:hidden mobile-bg"></div>
           <div class="flex flex-col md:flex-row h-auto md:h-16 text-black menu-items">
             <div class="mx-5 flex items-center menu-item">
-              <a href="#">Home</a>
+              <a href="./index.html">Home</a>
             </div>
             <div class="mx-5 flex items-center menu-item relative product-underline">
               <a href="./products-all.html">Product</a>
@@ -54,7 +54,7 @@
             <div class="mx-5 flex items-center menu-item">
               <a href="./industry.html">Industry</a>
             </div>
-            <div class="mx-5 flex items-center menu-item active">
+            <div class="mx-5 flex items-center menu-item">
               <a href="./service.html">Service</a>
             </div>
             <div class="mx-5 flex items-center menu-item">
@@ -97,70 +97,34 @@
     </div>
   </div>
   <div class="relative z-10 w-full scroll-section">
-    <!-- <div class="relative w-full h-16 pointer-events-none"></div> -->
-    <div class="relative w-full home-wrapper">
+    <div class="relative w-full home-wrapper pt-3 md:pt-4">
 
-      <!-- 首屏 -->
-      <div ani-gsap-bg class="w-full h-[calc(100vh-4rem)] bg-top bg-no-repeat bg-cover" style="background-image: url(./images/service/Service-Application-Development-and-System-Integration_02.jpg);">
-        <div class="w-11/12 mx-auto h-full flex flex-col justify-betweens  text-white">
-          <div class="flex-auto flex flex-col items-center justify-center">
-            <div data-banner-title class="font-bold text-5xl">Application Development and System Integration</div>
-            <div data-banner-icon class="text-base mt-4 text-center w-[75%]">
-              <p>Development service to meet enterprise business objectives and requirements. We support a wide spectrum of software development such as enterprise mobile applications, middleware, warehouse management, route accounting and asset tracking solutions, to name just a few. We also offer our know-how and resources to solutions partners and end users to co-develop new solutions and applications.</p>
-              <p>We have extensive and hands-on experience in rolling out large-scale, multi-site projects and integrating different types of data capture terminals in supply chain management and enterprise mobility.</p>
-            </div>
-          </div>
-          <div class="site-breadcrumb site-banner mb-8 hidden md:flex items-center gap-2 text-sm h-12 border-b border-white flow-up">
-            <img class="h-[1.5em]" src="./images/icons/home-white.svg" />
-            <a href="./index.html">Home</a>
-            <img class="h-[.4em]" src="./images/icons//arrow-right-white.svg" />
-            <a href="javascript:void(0)">service</a>
-            <img class="h-[.4em]" src="./images/icons//arrow-right-white.svg" />
-            <a href="javascript:void(0)">Application Development and  System Integration</a>
-          </div>
+       <div class="w-11/12 mx-auto site-breadcrumb mb-8 hidden md:flex items-center gap-2 text-sm h-12 border-t border-[#ccc]">
+          <img class="h-[1.5em]" src="./images/icons/home-black.svg" />
+          <a href="./index.html">Home</a>
+          <img class="h-[.4em]" src="./images/icons/arrow-right-bold.svg" />
+          <a href="javascript:void(0)">Search</a>
         </div>
-      </div>
 
-      <div class="w-full">
-
-        <div class="w-11/12 mx-auto flex gap-8 py-16 capitalize">
-          <div class="service-attr2 service-attrbg4 flex-[1]">
-            <div class="w-full aspect-[3/4] relative flex flex-col items-center justify-center">
-              <div class="flex-[1] flex items-end"><span class="attr-icon attr-icon-1"></span></div>
-              <span class="flex-[1] w-[80%] break-words text-center">Software design & development</span>
+        <div class="w-11/12 mx-auto bg-white rounded-md p-16">
+          <div class="contact-form search-form">
+            <div class="c-input flex bg-[#f5f5f5] rounded-md">
+              <input type="text" name="keywords" placeholder="Enter keywords">
+              <span class="privacy-btn primary btn-ani flex gap-2"><img class="h-6" src="./images/icons/search-white.svg" />Search</span>
             </div>
           </div>
-          <div class="service-attr2 service-attrbg4 flex-[1]">
-            <div class="w-full aspect-[3/4] relative flex flex-col items-center justify-center">
-              <div class="flex-[1] flex items-end"><span class="attr-icon attr-icon-2"></span></div>
-              <span class="flex-[1] w-[80%] break-words text-center">System integration and installation</span>
-            </div>
-          </div>
-          <div class="service-attr2 service-attrbg4 flex-[1]">
-            <div class="w-full aspect-[3/4] relative flex flex-col items-center justify-center">
-              <div class="flex-[1] flex items-end"><span class="attr-icon attr-icon-3"></span></div>
-              <span class="flex-[1] w-[80%] break-words text-center">Integration with host systems such as ERP, WMS</span>
-            </div>
-          </div>
-          <div class="service-attr2 service-attrbg4 flex-[1]">
-            <div class="w-full aspect-[3/4] relative flex flex-col items-center justify-center">
-              <div class="flex-[1] flex items-end"><span class="attr-icon attr-icon-4"></span></div>
-              <span class="flex-[1] w-[80%] break-words text-center">Pilot testing</span>
-            </div>
-          </div>
-          <div class="service-attr2 service-attrbg4 flex-[1]">
-            <div class="w-full aspect-[3/4] relative flex flex-col items-center justify-center">
-              <div class="flex-[1] flex items-end"><span class="attr-icon attr-icon-5"></span></div>
-              <span class="flex-[1] w-[80%] break-words text-center">User Training</span>
+          <div class="search-result w-full py-16">
+            <div class="search-nodata w-full flex flex-col items-center justify-center mt-16">
+              <img src="./images/icons/nodata.svg" alt="no data" />
+              <span class="text-xs t-gray mt-12">- No more -</span>
             </div>
           </div>
         </div>
-      </div>
-      <div class="w-11/12 mx-auto my-16">
-        <img class="w-full" src="./images/service/Service-Application-Development-and-System-Integration_05.jpg" />
-      </div>
+
+
 
       
+     
 
       <div class="h-72 bg-cover bg-center bg-no-repeat text-white mt-2"
         style="background-image: url('./images/n4.jpg')">
@@ -372,7 +336,5 @@
 
 <script src="./scripts/cookiebar.js" type="text/javascript"></script>
 <script src="./scripts/public.js" type="text/javascript"></script>
-<script src="./scripts/service.js" type="text/javascript"></script>
-
 
 </html>

@@ -959,6 +959,9 @@ body{
   align-items: center;
   padding:2rem 0;
 }
+.product-pagination {
+  border-top:1px solid #ccc;
+}
 .news-pagination:hover{
   color:var(--primary-color);
 }
@@ -990,6 +993,9 @@ body{
 }
 .c-input{
   margin-top:.4rem;
+}
+.search-form input:focus-visible{
+  outline: none;
 }
 .section-bg{
   background-position: 0% 100%;
