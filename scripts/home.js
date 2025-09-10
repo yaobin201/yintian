@@ -76,7 +76,6 @@ function bannerScaleAni() {
       scrollTrigger: {
         trigger: '.scroll-flag',
         pin: false,
-        markers: true,
         start: "top 75%",
         end: "bottom 25%",
         scrub: 0.3,
