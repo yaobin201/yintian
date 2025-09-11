@@ -1,26 +1,10 @@
 // 计数器效果
 function startNumberSwitch() {
-  function execNumberAni() {
-    $(".ani-numaber").each(function () {
-      const $this = $(this);
-      const target = parseInt($this.attr("data-number"));
-      $this.animateNumber(
-        {
-          number: target,
-          complete: function () {
-            $this.find("i").show();
-          },
-        },
-        2000
-      );
-    });
-  }
-
   const numberSwich = $("#numberSwich")[0];
   const ob = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        execNumberAni();
+        execNumberAni('numberSwich');
         ob.unobserve(entry.target);
       }
     });
