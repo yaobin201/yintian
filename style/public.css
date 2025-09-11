@@ -358,9 +358,6 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
-  .mt-10 {
-    margin-top: calc(var(--spacing) * 10);
-  }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
   }
@@ -1518,7 +1515,6 @@ html, body {
   min-height: 100%;
   margin: 0;
   background-color: var(--page-bg);
-  line-height: 125%;
   color: var(--content-color);
   font-family: Poppins-Regular, Arial, sans-serif;
 }
@@ -1937,6 +1933,7 @@ body {
   background: linear-gradient(to right, var(--primary-color) 20%, rgba(0, 0, 0, 0) 100%);
   display: block;
   z-index: -1;
+  border-radius: 0.375rem;
 }
 .active .cus-line-btn::before, .active .cus-line-btn::after {
   background-color: white;
@@ -2739,6 +2736,8 @@ body {
 }
 .service-attr > div:hover {
   color: var(--primary-color);
+  box-shadow: 0 1.5rem 3.2rem rgba(0,0,0,.5);
+  transform: translateY(-1rem);
 }
 .service-attr2 > div:hover {
   color: black;
@@ -2896,6 +2895,19 @@ body {
 }
 .service-attrbg4:hover .attr-icon-5 {
   background-position: -200px -50px;
+}
+.historys-swiper .swiper-slide {
+  height: 100vh;
+}
+.swiper-button-next, .swiper-button-prev {
+  width: 3rem;
+  height: 3rem;
+}
+.company-honors .swiper-button-next, .company-honors .swiper-button-prev {
+  position: relative;
+}
+.on {
+  font-weight: bold;
 }
 @property --tw-translate-x {
   syntax: "*";

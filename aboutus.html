@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>index</title>
   <script src="./scripts/jquery-3.7.1.min.js"></script>
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="./scripts/jquery.animateNumber.js"></script>
   <link rel="stylesheet" href="./scripts/swiper8/swiper-bundle.min.css" />
   <script src="./scripts/swiper8/swiper-bundle.min.js"></script>
@@ -101,7 +100,7 @@
     <div class="relative w-full home-wrapper">
 
       <!-- 首屏 -->
-      <div ani-gsap-bg class="w-full h-[calc(100vh-4rem)] bg-top bg-no-repeat" style="background-image: url(./images/aboutus/About-Us-_02.jpg);">
+      <div ani-gsap-bg class="w-full h-[calc(100vh-4rem)] bg-top bg-no-repeat bg-cover" style="background-image: url(./images/aboutus/About-Us-_02.jpg);">
         <div class="w-11/12 mx-auto h-full flex flex-col justify-betweens  text-white">
           <div class="flex-auto flex flex-col items-center justify-center">
             <div data-banner-title class="font-bold text-3xl md:text-5xl">ABOUT US</div>
@@ -281,42 +280,44 @@
           </div>
 
 
-          <div class="gsap-page w-full h-[100vh] relative z-30 bg-center bg-cover cover-bg" style="background: url(./images/aboutus/About-Us-_06.jpg);">
-            <div class="w-11/12 mx-auto h-full">
-              <div class="text-3xl font-bold font-semi-bold text-white py-20">COMPANY HONORS</div>
-              <div class="company-honors noscale relative mt-10">
-                <div class="swiper honor-swiper h-fit text-black">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide border-t border-white pt-4">
-                      <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
-                      <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
-                      <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
-                    </div>
-                    <div class="swiper-slide border-t border-white pt-4">
-                      <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
-                      <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
-                      <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
-                    </div>
-                    <div class="swiper-slide border-t border-white pt-4">
-                      <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
-                      <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
-                      <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
-                    </div>
-                    <div class="swiper-slide border-t border-white pt-4">
-                      <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
-                      <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
-                      <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
+          <div class="gsap-page w-full h-[100vh] relative z-30 bg-center bg-cover cover-bg" style="background-image: url(./images/aboutus/About-Us-_06.jpg);">
+            <div class="w-11/12 mx-auto h-full flex flex-col">
+              <div class="text-3xl font-bold font-semi-bold text-white py-20 flex-[0_0_auto]">COMPANY HONORS</div>
+              <div class="flex-auto flex items-center">
+                <div class="company-honors w-full noscale relative">
+                  <div class="swiper honor-swiper h-fit text-black">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide border-t border-white pt-4">
+                        <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
+                        <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
+                        <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
+                      </div>
+                      <div class="swiper-slide border-t border-white pt-4">
+                        <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
+                        <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
+                        <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
+                      </div>
+                      <div class="swiper-slide border-t border-white pt-4">
+                        <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
+                        <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
+                        <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
+                      </div>
+                      <div class="swiper-slide border-t border-white pt-4">
+                        <div class="honor-icon flex items-center justify-center"><img class="w-5" src="./images/icons/jiangbei.svg" /> </div>
+                        <div class="honor-title text-center text-white mt-2">THE NONORS WE HAVE RECEIVED</div>
+                        <div class="honor-img w-full bg-[#f7f7f7] aspect-[4/3] bg-white mt-12 rounded-md overflow-hidden"><img class="w-full h-full " src="./images/aboutus/honor1.jpg" /></div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="relative hidden md:flex gap-[3rem] mt-6 justify-center items-center h-8">
-                  <div
-                    class="hidden relative mt-0 md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch f swiper-button-prev">
-                    <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
-                  </div>
-                  <div
-                    class="hidden relative mt-0 md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch swiper-button-next">
-                    <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
+                  <div class="relative hidden md:flex gap-[3rem] mt-6 justify-center items-center h-8">
+                    <div
+                      class="hidden relative mt-0 md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch f swiper-button-prev">
+                      <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
+                    </div>
+                    <div
+                      class="hidden relative mt-0 md:flex w-12 h-12 border border-white rounded-full items-center justify-center industry-switch swiper-button-next">
+                      <img class="w-4 h-4" src="./images/icons/arrow-half-white.svg" />
+                    </div>
                   </div>
                 </div>
               </div>
