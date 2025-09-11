@@ -137,6 +137,9 @@ function normalWrapAni() {
           );
         });
       },
+      onLeaveBack: () => {
+        _this.find(".text-bani-timeline").css("opacity", 0);
+      }
     });
   });
 }
