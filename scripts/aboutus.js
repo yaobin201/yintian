@@ -1,9 +1,10 @@
 $(document).ready(function () {
   let historySwiper = new Swiper(".historys-swiper", {
     slidesPerView: 1,
-    autoplay: false,
+    autoplay: true,
     parallax: true,
     loop: true, // 循环模式选项
+    speed: 800,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -45,15 +46,60 @@ $(document).ready(function () {
     },
   });
 
-  // $('.gsap-page').each(function () {
-  //   const _this = $(this)
-  //   const maskBox = _this.find('.fixed-bg')
-  //   let to = gsap.timeline({
-  //             scrollTrigger: { trigger: _this, pin: maskBox, start: 'top top', end: 'bottom top', scrub: .1, 
-  //               // markers: {startColor: '#FF0000', endColor: '#FF0000', fontSize: '18px', fontWeight: 'bold', indent: 20 },
-  //             }
-  //           });
-  // })
+  $('.gsap-page').each(function () {
+    const _this = $(this)
+    const maskBox = _this.find('.fixed-bg')
+    if(maskBox.length) {
+      gsap.timeline({
+          scrollTrigger: { trigger: _this, pin: maskBox, start: 'top top', end: 'bottom top', scrub: .1, 
+        }
+      });
+    }
+    const aniPs = _this.find('.ani-p')
+    aniPs.css('opacity', 0)
+    gsap.timeline({
+        scrollTrigger: { trigger: _this, start: 'top 58%', end: 'bottom 58%', markers: true, scrub: .1, 
+          onEnter: () => {
+            aniPs.each(function () {
+              const dataDelay = +$(this).attr('data-delay-step') || 0
+              gsap.fromTo(
+                this,
+                {
+                  opacity: 0,
+                  transform: "translate(0,3rem)",
+                },
+                {
+                  opacity: 1,
+                  transform: "translate(0,0)",
+                  duration: 0.5,
+                  delay: 0.1 + dataDelay,
+                }
+              );
+            })
+            if(_this.find('.ani-numaber').length) {
+              execNumberAni('aboutusNumberAni')
+            }
+          },
+          onLeaveBack: () => {
+            aniPs.each(function () {
+              const dataDelay = +$(this).attr('data-delay-step') || 0
+              gsap.fromTo(
+                this,
+                {
+                  opacity: 1,
+                  transform: "translate(0,0)",
+                },
+                {
+                  opacity: 0,
+                  transform: "translate(0,3rem)",
+                  duration: 0.5,
+                }
+              );
+            })
+          }
+      }
+    });
+  })
 
 
   // ScrollTrigger.create({
