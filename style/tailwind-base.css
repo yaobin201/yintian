@@ -733,6 +733,11 @@ body{
   width:100%;
   background-color: #fff;
 }
+.cus-input select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 .sub-btn{
   color:white;
   background: var(--primary-color);
