@@ -128,7 +128,7 @@ function execIndustrySwiper() {
     },
   });
 
-  $("#cusSwiperNav2 > div").click(function () {
+  $("#cusSwiperNav2 > div").mouseenter(function () {
     if ($(this).hasClass("on")) return;
     $(this).addClass("on").siblings().removeClass("on");
     bannerSwiper2.slideTo($(this).index());
@@ -147,7 +147,7 @@ function execIndustrySwiper() {
     },
   });
 
-  $("#cusSwiperNav3 > div").click(function () {
+  $("#cusSwiperNav3 > div").mouseenter(function () {
     if ($(this).hasClass("on")) return;
     $(this).addClass("on").siblings().removeClass("on");
     bannerSwiper3.slideTo($(this).index());
