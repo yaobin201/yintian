@@ -221,7 +221,9 @@ function execNumberAni(flag) {
 }
 
 // 文字动效
-function initHighlightText() {
+function initHighlightText(flag) {
+  if(window[flag]) return;
+  window[flag] = true;
   let splitHeadingTargets = document.querySelectorAll("[data-r-text]");
   if(!splitHeadingTargets.length) {
     return;
@@ -365,7 +367,6 @@ $(document).ready(function () {
     autoHideScrollbar: true,
   });
   normalWrapAni();
-  initHighlightText()
   showPolicy();
   pageWrapFlowUp();
   gasp_bg_ani()
