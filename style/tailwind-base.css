@@ -731,6 +731,7 @@ body{
   font-size: .8rem;
   padding: .5rem 1rem;
   width:100%;
+  background-color: #fff;
 }
 .sub-btn{
   color:white;
