@@ -83,7 +83,21 @@ function bannerScaleAni() {
 
 }
 
+function whoweareAni() {
+  const _$whoWeAre = $('.who-we-are').eq(0)
+  ScrollTrigger.create({
+    trigger: _$whoWeAre,
+    start: 'top bottom',
+    end: 'bottom bottom',
+    scrub: 0.3,
+    onEnter: () => {
+      initHighlightText('home')
+    }
+  })
+}
+
 $(document).ready(function () {
+  whoweareAni();
   bannerScaleAni();
   solutionAccording();
   newsBgSwitch();
