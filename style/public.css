@@ -2756,7 +2756,7 @@ body {
 }
 .service-attr > div:hover {
   color: var(--primary-color);
-  box-shadow: 0 1.5rem 3.2rem rgba(0,0,0,.5);
+  box-shadow: 0 1.5rem 3.2rem rgba(0,0,0,.2);
   transform: translateY(-1rem);
 }
 .service-attr2 > div:hover {
