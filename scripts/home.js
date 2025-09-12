@@ -91,6 +91,7 @@ function whoweareAni() {
     end: 'bottom bottom',
     scrub: 0.3,
     onEnter: () => {
+      console.log('enter who we are')
       initHighlightText('home')
     }
   })
