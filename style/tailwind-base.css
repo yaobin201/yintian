@@ -61,7 +61,7 @@ body{
 }
 .pro-card-hover:hover{
   transform: translateY(-1rem);
-  box-shadow: 0 1.5rem 3.2rem rgba(0,0,0,.5);
+  box-shadow: 0 1.5rem 3.2rem rgba(0,0,0,.2);
 }
 .pro-card-hover:hover .flex img{
   transform: translateY(-1rem);

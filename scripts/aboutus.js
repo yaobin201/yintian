@@ -58,7 +58,7 @@ $(document).ready(function () {
     const aniPs = _this.find('.ani-p')
     aniPs.css('opacity', 0)
     gsap.timeline({
-        scrollTrigger: { trigger: _this, start: 'top 58%', end: 'bottom 58%', markers: true, scrub: .1, 
+        scrollTrigger: { trigger: _this, start: 'top 58%', end: 'bottom 58%', scrub: .1, 
           onEnter: () => {
             aniPs.each(function () {
               const dataDelay = +$(this).attr('data-delay-step') || 0
