@@ -68,7 +68,7 @@ function solutionItemScroll() {
       start: "top 20%",
       end: "top 20%",
       scrub: .3,
-      markers: true,
+      // markers: true,
       pin: false,
       onEnter: () => {
         _this.addClass('on')

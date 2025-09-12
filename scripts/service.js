@@ -148,6 +148,7 @@ function flexCardAni() {
 }
 
 $(document).ready(function() {
+  initHighlightText('service');
   execServiceScroller();
   flexCardAni();
 })

@@ -3,6 +3,7 @@ var bannerSwiper = new Swiper(".swiper-banner", {
   autoplay:true,
   parallax: true,
   loop: true, // 循环模式选项
+  speed: 1000,
   // 如果需要分页器
   pagination: {
     el: ".swiper-pagination",
