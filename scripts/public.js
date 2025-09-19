@@ -290,6 +290,7 @@ $(document).ready(function () {
       .show()
       .addClass("fade-in");
     $(".media-absolute").hide();
+    $('body').css('touch-action', 'none');
   });
   $(".mobile-mask").click(function () {
     $(".header-right-column")
@@ -297,6 +298,7 @@ $(document).ready(function () {
       .removeClass("fade-in")
       .removeClass("mobile-menus");
     $(".media-absolute").show();
+    $('body').css('touch-action', 'auto');
   });
   $(".mobile-menus .product-underline").click(function () {
     $(this).find(".categorys-list").toggle();

@@ -105,7 +105,7 @@
       <div ani-gsap-bg class="w-full h-[calc(100vh-4rem)] bg-top bg-no-repeat bg-cover" style="background-image: url(./images/service/Service-Project-Management_02.jpg);">
         <div class="w-11/12 mx-auto h-full flex flex-col justify-betweens  text-white">
           <div class="flex-auto flex flex-col items-center justify-center">
-            <div data-banner-title class="font-bold text-5xl">Application Development and System Integration</div>
+            <div data-banner-title class="font-bold text-5xl text-center">Application Development and System Integration</div>
             <div data-banner-icon class="text-base mt-4 text-center w-[75%]">
               <p>Our highly skilled and well-trained service team provides enterprise with all-round service support during and after the implementation. We provide a wide range of service support to meet your specific needs and budgets, from on-site support to mailing in depot repair, and from maintenance agreements to time based options. In addition, we also offer calibration and testing, spare parts and material replacement, troubleshooting, consultation, etc.</p>
             </div>
@@ -123,7 +123,7 @@
 
       <div class="w-full">
 
-        <div class="flow-up w-11/12 mx-auto flex gap-8 py-16 capitalize">
+        <div class="flow-up w-11/12 mx-auto grid grid-cols-3 md:flex gap-8 py-16 capitalize">
           <div class="service-attr flex-[1]">
             <div class="w-full aspect-square bg-white rounded-full relative flex items-center justify-center">
               <span class="inline-block w-[80%] break-words text-center">On-site Service</span>
@@ -167,13 +167,13 @@
         </div>
 
         <div class="flow-up w-11/14 mx-auto py-4">
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center text-center">
             <div class="text-center text-4xl font-semi-bold text-black uppercase">PCOMPREHEANSIVE HARDWRRE SERVICE</div>
             <a class="mt-4s t-gray capitalize" href="#">Factory Authorized Depot Service and Onsite Support Include</a>
           </div>
         </div>
 
-        <div class="flow-up w-11/12 mx-auto flex gap-8 py-16 capitalize">
+        <div class="flow-up w-11/12 mx-auto grid grid-cols-3 md:flex gap-8 py-16 capitalize">
           <div class="service-attr2 service-attrbg2 flex-[1]">
             <div class="w-full aspect-[3/4] relative flex flex-col items-center justify-center">
               <div class="flex-[1] flex items-end"><span class="attr-icon attr-icon-1"></span></div>
@@ -216,13 +216,13 @@
       
       <div class="w-full bg-white">
         <div class="flow-up w-11/14 mx-auto py-16">
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center text-center">
             <div class="text-center text-4xl font-semi-bold text-black uppercase">Software Assurance Service</div>
             <a class="mt-4s t-gray capitalize" href="#">Professional Helpdesk Service and Onsite Support Include:</a>
           </div>
         </div>
   
-        <div class="flow-up w-11/12 mx-auto flex gap-8 pb-16 capitalize">
+        <div class="flow-up w-11/12 mx-auto grid grid-cols-3 md:flex gap-8 pb-16 capitalize">
           <div class="service-attr2 service-attrbg3 flex-[1]">
             <div class="w-full aspect-[3/4] relative flex flex-col items-center justify-center">
               <div class="flex-[1] flex items-end"><span class="attr-icon attr-icon-1"></span></div>
@@ -264,9 +264,9 @@
       </div>
 
       <div class="industry-wrapper w-full py-16">
-        <div class="industry-section w-11/12 mx-auto">
-          <div class="industryFlag w-full flex h-[36vh] md:h-[36vw] flexing service1">
-            <div data-delay="0" class="industry-sitem on">
+        <div class="industry-section w-11/12 mx-auto h-[36vh] md:h-[36vw] swiper ins-industry-swiper">
+          <div class="industryFlag w-full swiper-wrapper flexing service1">
+            <div data-delay="0" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
               <div class="msg break-words">
                 <div class="wc">Service Level Agreement (SLA)</div>
                 <div class="end wc">Service Level Agreement (SLA)</div>
@@ -274,7 +274,7 @@
               </div>
               <div class="pic" style="background-image: url('./images/service/4441.jpg');"></div>
             </div>
-            <div data-delay="0.1" class="industry-sitem">
+            <div data-delay="0.1" class="industry-sitem  swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
               <div class="msg break-words">
                 <div class="wc">Preventive Maintenance Service</div>
                 <div class="end wc">Preventive Maintenance Service</div>
@@ -282,7 +282,7 @@
               </div>
               <div class="pic" style="background-image: url('./images/service/4441.jpg');"></div>
             </div>
-            <div data-delay="0.2" class="industry-sitem">
+            <div data-delay="0.2" class="industry-sitem  swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
               <div class="msg break-words">
                 <div class="wc">On-Demand Support Service</div>
                 <div class="end wc">On-Demand Support Service</div>
@@ -291,6 +291,7 @@
               <div class="pic" style="background-image: url('./images/service/4441.jpg');"></div>
             </div>
           </div>
+          <div class="md:hidden swiper-pagination cus-swiper-pages"></div>
         </div>
       </div>
     </div>

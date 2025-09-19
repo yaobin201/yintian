@@ -1,10 +1,15 @@
 function flexCardAni() {
-  $(".industry-sitem").mouseenter(function () {
-    $(this).addClass("on").siblings().removeClass("on");
-  });
-  $(".industry-sitem").each(function () {
-    $(this).css("opacity", 0).css("transform", "translate(30px,0)");
-  });
+  if(!isMobileDevice()) {
+    $(".industry-sitem").mouseenter(function () {
+      $(this).addClass("on").siblings().removeClass("on");
+    });
+    $(".industry-sitem").each(function () {
+      $(this).css("opacity", 0).css("transform", "translate(30px,0)");
+    });
+    $('.flexing').each(function () {
+      $(this).find('.industry-sitem').eq(0).addClass('on')
+    })
+  }
   $(".industry-wrapper").each(function () {
     const _this = $(this);
     ScrollTrigger.create({
@@ -14,9 +19,12 @@ function flexCardAni() {
       scrub: true,
       // markers: false,
       onEnter: () => {
-        _this.find(".industry-sitem").css("opacity", 0);
-        const _phonewrap = _this.find('.industry-phone-wrap')
-        _phonewrap.css("opacity", 0)
+        let _phonewrap = []
+        if(!isMobileDevice()) {
+          _this.find(".industry-sitem").css("opacity", 0);
+          _phonewrap = _this.find('.industry-phone-wrap')
+          _phonewrap.css("opacity", 0)
+        }
         gsap.fromTo(
           _this.find(".industry-ani1").eq(0),
           {
@@ -57,29 +65,32 @@ function flexCardAni() {
     });
   });
   // industryFlag
-  $(".industryFlag").each(function () {
-    const _this = $(this);
-    ScrollTrigger.create({
-      trigger: _this,
-      start: "top 75%",
-      end: "bottom 75%",
-      scrub: true,
-      markers: false,
-      onEnter: () => {
-        gsap.fromTo(
-          this,
-          {
-            opacity: 0,
-            transform: "translate(30px,0)",
-          },
-          {
-            opacity: 1,
-            transform: "translate(0,0)",
-            duration: 1.5,
-          }
-        );
-        _this.find(".industry-sitem").each(function (index) {
-          const dataDelay = +$(this).attr("data-delay");
+  if(isMobileDevice()) {
+    const swiperOption = {
+      direction: "horizontal",
+      autoplay:true,
+      parallax: true,
+      loop: true, // 循环模式选项
+      speed: 1000,
+      // 如果需要分页器
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    }
+    new Swiper(".ins-industry-swiper", swiperOption);
+    new Swiper(".ins-industry-swiper2", swiperOption);
+    new Swiper(".ins-industry-swiper3", swiperOption);
+    new Swiper(".ins-industry-swiper4", swiperOption);
+  } else {
+    $(".industryFlag").each(function () {
+      const _this = $(this);
+      ScrollTrigger.create({
+        trigger: _this,
+        start: "top 75%",
+        end: "bottom 75%",
+        scrub: true,
+        markers: false,
+        onEnter: () => {
           gsap.fromTo(
             this,
             {
@@ -89,34 +100,48 @@ function flexCardAni() {
             {
               opacity: 1,
               transform: "translate(0,0)",
-              duration: 0.5,
-              delay: 0.1 + dataDelay,
+              duration: 1.5,
             }
           );
-          gsap.fromTo(
-            $(this).find(".pic").eq(0),
-            {
-              scale: 1.25,
-              transform: "translate(20px,-30px)",
-            },
-            {
-              scale: 1,
-              transform: "translate(0,0)",
-              duration: 1 + dataDelay,
-              delay: dataDelay,
-            }
-          );
-        });
-      },
+          _this.find(".industry-sitem").each(function (index) {
+            const dataDelay = +$(this).attr("data-delay");
+            gsap.fromTo(
+              this,
+              {
+                opacity: 0,
+                transform: "translate(30px,0)",
+              },
+              {
+                opacity: 1,
+                transform: "translate(0,0)",
+                duration: 0.5,
+                delay: 0.1 + dataDelay,
+              }
+            );
+            gsap.fromTo(
+              $(this).find(".pic").eq(0),
+              {
+                scale: 1.25,
+                transform: "translate(20px,-30px)",
+              },
+              {
+                scale: 1,
+                transform: "translate(0,0)",
+                duration: 1 + dataDelay,
+                delay: dataDelay,
+              }
+            );
+          });
+        },
+      });
     });
-  });
-  
+  }
 }
 
 function execIndustrySwiper() {
   const bannerSwiper2 = new Swiper("#industryWrap2", {
     autoplay: true,
-    effect: "fade",
+    effect: isMobileDevice() ? 'slide' : "fade",
     on: {
       slideChange: function () {
         $("#cusSwiperNav2 > div")
@@ -135,7 +160,7 @@ function execIndustrySwiper() {
   });
   const bannerSwiper3 = new Swiper("#industryWrap3", {
     autoplay: true,
-    effect: "fade",
+    effect:  isMobileDevice() ? 'slide' : "fade",
     on: {
       slideChange: function () {
         $("#cusSwiperNav3 > div")

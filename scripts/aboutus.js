@@ -38,6 +38,9 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next-join",
       prevEl: ".swiper-button-prev-join",
     },
+    pagination: {
+      el: ".swiper-pagination",
+    },
     breakpoints: {
       768: {
         //当屏幕宽度大于等于768

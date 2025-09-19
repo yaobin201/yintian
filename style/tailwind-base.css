@@ -66,6 +66,12 @@ body{
 .pro-card-hover:hover .flex img{
   transform: translateY(-1rem);
 }
+.pro-card-hover .product-title,
+.pro-card-hover .product-title+div{
+  padding-left:2rem;
+  padding-right:2rem;
+  text-align: center;
+}
 .full-pro-cards .w-72{
   transition: transform 1s cubic-bezier(.38,0,0,1);
 }
@@ -887,7 +893,6 @@ body{
 }
 .solution-item .pic{
   position:relative;
-  width:69%;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: .5rem;
@@ -896,12 +901,9 @@ body{
   margin-left:auto;
 }
 .solution-item .info{
-  position:absolute;
   left:0;
   transition:all 0.8s ease;
-  top:10rem;
   z-index:10;
-  width:25.7%;
   text-align: left;
 }
 .solution-item .hide-1,
@@ -967,10 +969,7 @@ body{
   cursor: pointer;
   background-color: #fff;
   border-radius: .5rem;
-  -ms-flex: 1;
-  flex: 1;
   height: 100%;
-  margin: 0 .2rem;
   transition: -ms-flex .6s, -ms-flex .6s, flex .6s;
   position: relative;
   overflow: hidden;
@@ -999,6 +998,13 @@ body{
   display:none;
   opacity: 0;
   width: 30.75vw;
+}
+@media (max-width: 768px) {
+  .flexing .industry-sitem .msg,
+  .flexing .industry-sitem .msg .wc,
+  .flexing .industry-sitem .msg .end.wc{
+    width: 100%;
+  }
 }
 .flexing .industry-sitem.on .msg .wc{
   font-size:1.2rem;
@@ -1086,7 +1092,8 @@ body{
 .news-list .news-list-item{
   cursor: pointer;
 }
-.news-list .news-list-item .news-list-img{
+.news-list .news-list-item .news-list-img,
+.mobile-news-section .news-list-img{
   width:100%;
   aspect-ratio: 16/10;
   overflow: hidden;

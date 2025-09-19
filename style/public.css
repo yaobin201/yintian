@@ -244,6 +244,9 @@
   .top-\[1\.5rem\] {
     top: 1.5rem;
   }
+  .top-\[1rem\] {
+    top: 1rem;
+  }
   .top-\[4rem\] {
     top: 4rem;
   }
@@ -265,14 +268,14 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .left-4 {
+    left: calc(var(--spacing) * 4);
+  }
   .left-\[-2\.5rem\] {
     left: -2.5rem;
   }
   .left-\[-6\.5rem\] {
     left: -6.5rem;
-  }
-  .left-\[4\.5rem\] {
-    left: 4.5rem;
   }
   .left-\[75\%\] {
     left: 75%;
@@ -520,14 +523,14 @@
   .h-\[42rem\] {
     height: 42rem;
   }
-  .h-\[45vh\] {
-    height: 45vh;
-  }
   .h-\[50vh\] {
     height: 50vh;
   }
   .h-\[68vh\] {
     height: 68vh;
+  }
+  .h-\[75vh\] {
+    height: 75vh;
   }
   .h-\[100vh\] {
     height: 100vh;
@@ -659,8 +662,17 @@
   .resize {
     resize: both;
   }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .flex-col {
     flex-direction: column;
+  }
+  .flex-col-reverse {
+    flex-direction: column-reverse;
   }
   .flex-row {
     flex-direction: row;
@@ -712,6 +724,9 @@
   }
   .overflow-hidden {
     overflow: hidden;
+  }
+  .overflow-visible {
+    overflow: visible;
   }
   .rounded {
     border-radius: 0.25rem;
@@ -812,6 +827,9 @@
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
   }
   .p-16 {
     padding: calc(var(--spacing) * 16);
@@ -948,6 +966,9 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .text-\[3\.5rem\] {
+    font-size: 3.5rem;
+  }
   .text-\[7rem\] {
     font-size: 7rem;
   }
@@ -1047,14 +1068,29 @@
       top: calc(var(--spacing) * 16);
     }
   }
+  .md\:top-\[10rem\] {
+    @media (width >= 48rem) {
+      top: 10rem;
+    }
+  }
   .md\:right-0 {
     @media (width >= 48rem) {
       right: calc(var(--spacing) * 0);
     }
   }
+  .md\:left-\[4\.5rem\] {
+    @media (width >= 48rem) {
+      left: 4.5rem;
+    }
+  }
   .md\:left-auto {
     @media (width >= 48rem) {
       left: auto;
+    }
+  }
+  .md\:mx-\[0\.2rem\] {
+    @media (width >= 48rem) {
+      margin-inline: 0.2rem;
     }
   }
   .md\:mt-0 {
@@ -1182,6 +1218,11 @@
       width: 20vw;
     }
   }
+  .md\:w-\[25\.7\%\] {
+    @media (width >= 48rem) {
+      width: 25.7%;
+    }
+  }
   .md\:w-\[26\%\] {
     @media (width >= 48rem) {
       width: 26%;
@@ -1230,6 +1271,11 @@
   .md\:w-\[60vw\] {
     @media (width >= 48rem) {
       width: 60vw;
+    }
+  }
+  .md\:w-\[69\%\] {
+    @media (width >= 48rem) {
+      width: 69%;
     }
   }
   .md\:w-\[80\%\] {
@@ -1420,6 +1466,16 @@
       padding-block: calc(var(--spacing) * 0);
     }
   }
+  .md\:py-16 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:py-20 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
   .md\:pt-4 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 4);
@@ -1557,6 +1613,11 @@ body {
 }
 .pro-card-hover:hover .flex img {
   transform: translateY(-1rem);
+}
+.pro-card-hover .product-title, .pro-card-hover .product-title+div {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
 }
 .full-pro-cards .w-72 {
   transition: transform 1s cubic-bezier(.38,0,0,1);
@@ -2298,7 +2359,6 @@ body {
 }
 .solution-item .pic {
   position: relative;
-  width: 69%;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: .5rem;
@@ -2307,12 +2367,9 @@ body {
   margin-left: auto;
 }
 .solution-item .info {
-  position: absolute;
   left: 0;
   transition: all 0.8s ease;
-  top: 10rem;
   z-index: 10;
-  width: 25.7%;
   text-align: left;
 }
 .solution-item .hide-1, .solution-item .hide-2 {
@@ -2376,10 +2433,7 @@ body {
   cursor: pointer;
   background-color: #fff;
   border-radius: .5rem;
-  -ms-flex: 1;
-  flex: 1;
   height: 100%;
-  margin: 0 .2rem;
   transition: -ms-flex .6s, -ms-flex .6s, flex .6s;
   position: relative;
   overflow: hidden;
@@ -2408,6 +2462,11 @@ body {
   display: none;
   opacity: 0;
   width: 30.75vw;
+}
+@media (max-width: 768px) {
+  .flexing .industry-sitem .msg, .flexing .industry-sitem .msg .wc, .flexing .industry-sitem .msg .end.wc {
+    width: 100%;
+  }
 }
 .flexing .industry-sitem.on .msg .wc {
   font-size: 1.2rem;
@@ -2490,7 +2549,7 @@ body {
 .news-list .news-list-item {
   cursor: pointer;
 }
-.news-list .news-list-item .news-list-img {
+.news-list .news-list-item .news-list-img, .mobile-news-section .news-list-img {
   width: 100%;
   aspect-ratio: 16/10;
   overflow: hidden;
