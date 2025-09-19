@@ -1,26 +1,10 @@
 // 计数器效果
 function startNumberSwitch() {
-  function execNumberAni() {
-    $(".ani-numaber").each(function () {
-      const $this = $(this);
-      const target = parseInt($this.attr("data-number"));
-      $this.animateNumber(
-        {
-          number: target,
-          complete: function () {
-            $this.find("i").show();
-          },
-        },
-        2000
-      );
-    });
-  }
-
   const numberSwich = $("#numberSwich")[0];
   const ob = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        execNumberAni();
+        execNumberAni('numberSwich');
         ob.unobserve(entry.target);
       }
     });
@@ -99,7 +83,22 @@ function bannerScaleAni() {
 
 }
 
+function whoweareAni() {
+  const _$whoWeAre = $('.who-we-are').eq(0)
+  ScrollTrigger.create({
+    trigger: _$whoWeAre,
+    start: 'top bottom',
+    end: 'bottom bottom',
+    scrub: 0.3,
+    onEnter: () => {
+      console.log('enter who we are')
+      initHighlightText('home')
+    }
+  })
+}
+
 $(document).ready(function () {
+  whoweareAni();
   bannerScaleAni();
   solutionAccording();
   newsBgSwitch();
