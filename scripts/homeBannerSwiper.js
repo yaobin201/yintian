@@ -37,7 +37,7 @@ if(isMobileDevice()) {
 var industrySwiper = new Swiper(".industry-swiper", {
   loop: true, // 循环模式选项
   slidesPerView: 1,
-  autoplay:true,
+  autoplay:false,
   breakpoints: { 
       768: {  //当屏幕宽度大于等于768 
         slidesPerView: 3,

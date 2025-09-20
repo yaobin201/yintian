@@ -197,8 +197,11 @@ $(document).ready(function () {
 
   $(".toggle-text-btn").click(function () {
     $(this).prev().slideToggle(300);
-    $(this).find("span").text(function(i, text){
-      return text === "Learn more" ? "Collapse" : "Learn more";
+    // 遍历它的子节点并找到文本节点，然后替换文本节点内容
+    $(this).contents().each(function(item) {
+      if (this.nodeType === 3) {
+        this.nodeValue = this.nodeValue === "Learn more" ? "Collapse" : "Learn more";
+      }
     });
   })
 });

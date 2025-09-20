@@ -15,20 +15,36 @@ function pageWrapFlowUp() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const delay = +entry.target.dataset.delayStep || 0;
-        gsap.fromTo(
-          entry.target,
-          {
-            autoAlpha: 0,
-            transform: "translateY(50px)",
-          },
-          {
-            autoAlpha: 1,
-            transform: "translateY(0)",
-            delay: _delay,
-            duration: 0.5 + delay,
-            ease: "power1.out",
-          }
-        );
+        const tl = gsap.timeline();
+        tl.to(entry.target, {
+          autoAlpha: 1,
+          transform: "translateY(0)",
+          delay: _delay,
+          duration: 0.5 + delay,
+          ease: "power1.out",
+        })
+        const newsImgs = $(entry.target).find('.news-list-img')
+        if(newsImgs.length) {
+          tl.to(newsImgs.eq(0), {
+            backgroundSize: '100% 100%',
+            duration: 0.4,
+            ease: "power2.in"
+          })
+        }
+        // gsap.fromTo(
+        //   entry.target,
+        //   {
+        //     autoAlpha: 0,
+        //     transform: "translateY(50px)",
+        //   },
+        //   {
+        //     autoAlpha: 1,
+        //     transform: "translateY(0)",
+        //     delay: _delay,
+        //     duration: 0.5 + delay,
+        //     ease: "power1.out",
+        //   }
+        // );
         ob.unobserve(entry.target);
       } else {
         // $(entry.target).css('opacity', 0)
@@ -363,11 +379,17 @@ $(document).ready(function () {
     }
   );
 
-  // 底部自定义滚动条
-  $(".scroll-content").mCustomScrollbar({
-    theme: "dark", // 选择一个主题，如 "dark", "light", "light-3" 等
-    autoHideScrollbar: true,
-  });
+  let defaultSrc = ''
+  $('.cus-link-btn').hover(
+    function () {
+      defaultSrc = $(this).find('img').eq(0).attr('src')
+      $(this).find('img').eq(0).attr('src', $(this).find('img').eq(1).attr('src'))
+    },
+    function () {
+      $(this).find('img').eq(0).attr('src', defaultSrc);
+    }
+  )
+
   normalWrapAni();
   showPolicy();
   pageWrapFlowUp();
