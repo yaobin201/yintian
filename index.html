@@ -4,11 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>index</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./scripts/jquery-3.7.1.min.js"></script>
   <script src="./scripts/jquery.animateNumber.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./scripts/swiper8/swiper-bundle.min.css" />
+  <script src="./scripts/swiper8/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="./style/public.css" />
 </head>
 
@@ -221,9 +220,9 @@
           SOLUTION
         </div>
         <div id="accordionWrap"
-          class="flow-up bg-cover bg-center text-white rounded-md solution-section p-20 pt-16 h-fit"
+          class="flow-up bg-cover bg-center text-white rounded-md solution-section p-20 pt-16 h-[68vh]"
           style="background-image: url('./images/n1.jpg')">
-          <div class="flow-up  accordion-section md:w-4/5 mt-6" data-img="./images/n1.jpg">
+          <div class="accordion-section md:w-4/5 mt-6" data-img="./images/n1.jpg">
             <div class="font-bold cursor-pointer relative">
               <div class="dot-circle">
                 <span class="circel"></span><span class="circel"></span>
@@ -244,7 +243,7 @@
                   src="images/icons/arrow-right-white.svg" /><img src="images/icons/arrow-right-white.svg" /></a>
             </div>
           </div>
-          <div class="flow-up accordion-section w-4/5 mt-6" data-img="./images/n2.jpg">
+          <div class="accordion-section w-4/5 mt-6" data-img="./images/n1.jpg">
             <div class="font-bold cursor-pointer relative">
               <div class="dot-circle">
                 <span class="circel"></span><span class="circel"></span>
@@ -265,7 +264,7 @@
                   src="images/icons/arrow-right-white.svg" /><img src="images/icons/arrow-right-white.svg" /></a>
             </div>
           </div>
-          <div class="flow-up accordion-section w-4/5 mt-6" data-img="./images/n1.jpg">
+          <div class="accordion-section w-4/5 mt-6" data-img="./images/n1.jpg">
             <div class="font-bold cursor-pointer relative">
               <div class="dot-circle">
                 <span class="circel"></span><span class="circel"></span>
@@ -359,9 +358,9 @@
       <!-- industry end -->
 
       <!-- who we are start -->
-      <div class="w-full bg-white">
+      <div class="w-full bg-white who-we-are">
         <div class="w-11/12 mx-auto py-20">
-          <div class="flow-up flex flex-row flex-wrap md:flex-nowrap">
+          <div class="flex flex-row flex-wrap md:flex-nowrap">
             <div class="flow-up w-full flex-auto text-center pb-12 md:text-left md:pb-0 md:w-auto md:flex-none font-bold text-5xl font-semi-bold">WHO ARE WE</div>
             <div class="flex-auto md:ml-24">
               <p data-r-text class="read-words text-lg">
@@ -375,7 +374,7 @@
             </div>
           </div>
           <div id="numberSwich" class="flow-up flex flex-col md:flex-row mt-20">
-            <div class="flow-up flex-auto relative p-5 border-t border-[#cccccc] md:border-t-0">
+            <div class="flex-auto relative p-5 border-t border-[#cccccc] md:border-t-0">
                 <div class="count-wrap">
                   <div class="ani-numaber-box">
                     <span class="ani-numaber" data-number="50">50</span><i class="text-lg">+</i>
@@ -383,7 +382,7 @@
                 </div>
               <div class="font-bold">STAFF</div>
             </div>
-            <div class="flow-up flex-auto relative p-5 border-t border-[#cccccc] md:border-t-0">
+            <div class="flex-auto relative p-5 border-t border-[#cccccc] md:border-t-0">
                 <div class="count-wrap">
                   <div class="ani-numaber-box">
                     <span class="ani-numaber" data-number="200">200</span><i class="text-lg">+</i>
@@ -395,7 +394,7 @@
                 </div>
 
             </div>
-            <div class="flow-up flex-auto relative p-5 border-t border-[#cccccc] md:border-t-0">
+            <div class="flex-auto relative p-5 border-t border-[#cccccc] md:border-t-0">
               <div class="count-wrap">
                 <div class="ani-numaber-box">
                   <span class="ani-numaber" data-number="20">20</span><i class="text-lg">+</i>
@@ -407,7 +406,7 @@
                 EXPERIENCE
               </div>
             </div>
-            <div class="flow-up flex-none relative p-5 border-t border-[#cccccc] md:border-t-0">
+            <div class="flex-none relative p-5 border-t border-[#cccccc] md:border-t-0">
                 <div class="count-wrap">
                   <div class="ani-numaber-box">
                     <span class="ani-numaber n-base" data-number="500">500</span><i class="text-lg">+</i>
@@ -434,47 +433,49 @@
           </div>
         </div>
         <div class="w-full news-section text-3xl">
-          <div class="flow-up w-full bg-cover bg-no-repeat bg-center h-fit md:h-60 py-12 md:py-0" data-img="./images/news/n2.jpg">
+          <div class="flow-up w-full bg-cover bg-no-repeat bg-center h-fit md:h-60 py-12 md:py-0">
             <div class="w-11/12 h-full mx-auto flex flex-col md:flex-row items-center">
-              <div class="flex-none w-full md:w-1/4 news-cate font-bold font-semi-bold">
+              <div class="flex-none w-full md:w-1/4 news-cate">
                 SEPTEMBER <br />
                 On The <span>24th</span>
               </div>
-              <div class="flex-auto font-bold font-semi-bold break-all">
+              <div class="flex-auto break-all">
                 VOICE RECOGNITION, BIOMETRICS TECHNOLOGIE...
               </div>
               <div class="flex-none w-full md:w-1/4 flex justify-end text-xs">
                 <a class="cus-line-btn" href="./news-detail.html">Explore more</a>
               </div>
+               <img src="./images/news/n2.jpg" class="hidden news-bgsource"/>
             </div>
           </div>
-          <div class="flow-up w-full bg-cover bg-no-repeat bg-center h-fit md:h-60 py-12 md:py-0 active" data-img="./images/news/n2.jpg"
-            style="background-image: url(./images/news/n2.jpg)">
+          <div class="flow-up w-full bg-cover bg-no-repeat bg-center h-fit md:h-60 py-12 md:py-0">
             <div class="w-11/12 h-full mx-auto flex flex-col md:flex-row items-center">
-              <div class="flex-none w-full md:w-1/4 news-cate font-bold font-semi-bold">
+              <div class="flex-none w-full md:w-1/4 news-cate">
                 SEPTEMBER <br />
                 On The <span>24th</span>
               </div>
-              <div class="flex-auto font-bold font-semi-bold break-all">
+              <div class="flex-auto break-all">
                 VOICE RECOGNITION, BIOMETRICS TECHNOLOGIE...
               </div>
               <div class="flex-none w-full md:w-1/4 flex justify-start md:justify-end text-xs">
                 <a class="cus-line-btn" href="./news-detail.html">Explore more</a>
               </div>
+              <img src="./images/news/n2.jpg" class="hidden news-bgsource"/>
             </div>
           </div>
-          <div class="flow-up w-full bg-cover bg-no-repeat bg-center h-fit md:h-60 py-12 md:py-0" data-img="./images/news/n2.jpg">
+          <div class="flow-up w-full bg-cover bg-no-repeat bg-center h-fit md:h-60 py-12 md:py-0">
             <div class="w-11/12 h-full mx-auto flex flex-col md:flex-row items-center">
-              <div class="flex-none w-full md:w-1/4 news-cate font-bold font-semi-bold">
+              <div class="flex-none w-full md:w-1/4 news-cate">
                 SEPTEMBER <br />
                 On The <span>24th</span>
               </div>
-              <div class="flex-auto font-bold font-semi-bold break-all">
+              <div class="flex-auto break-all">
                 VOICE RECOGNITION, BIOMETRICS TECHNOLOGIE...
               </div>
               <div class="flex-none w-full md:w-1/4 flex justify-end text-xs">
                 <a class="cus-line-btn" href="./news-detail.html">Explore more</a>
               </div>
+              <img src="./images/news/n2.jpg" class="hidden news-bgsource"/>
             </div>
           </div>
         </div>
@@ -641,14 +642,15 @@
         </div>
       </div>
     </div>
-    <div class="relative w-11/12 mx-auto flex flex-col md:flex-row md:items-center justify-between md:justify-start mt-12 py-8 border-t border-[#cccccc]">
+    <div class="relative text-sm w-11/12 mx-auto flex flex-col md:flex-row md:items-center justify-between md:justify-start mt-12 py-8 border-t border-[#cccccc]">
       <div class="flex-none w-full md:w-[36%]">
-        <p>Copyright 2023 Powered by Manfulls Technology.</p>
+        <p>Copyright © 2025. All rights reserved.</p>
       </div>
       <div class="flex-auto pl-0 md:pl-4">
         <a href="#">Privacy Policy</a>
         <a class="ml-[8rem]" href="#">Cookie Policy</a>
       </div>
+      <div class="design">Design by Biosun</div>
     </div>
   </div>
   <div class="medias-section media-absolute">

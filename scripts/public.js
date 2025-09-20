@@ -137,6 +137,9 @@ function normalWrapAni() {
           );
         });
       },
+      onLeaveBack: () => {
+        _this.find(".text-bani-timeline").css("opacity", 0);
+      }
     });
   });
 }
@@ -200,8 +203,27 @@ function gasp_bg_ani() {
   });
 }
 
+function execNumberAni(flag) {
+  // 数字滚动
+  $(".ani-numaber").each(function () {
+    const $this = $(this);
+    const target = parseInt($this.attr("data-number"));
+    $this.animateNumber(
+      {
+        number: target,
+        complete: function () {
+          $this.find("i").show();
+        },
+      },
+      2000
+    );
+  });
+}
+
 // 文字动效
-function initHighlightText() {
+function initHighlightText(flag) {
+  if(window[flag]) return;
+  window[flag] = true;
   let splitHeadingTargets = document.querySelectorAll("[data-r-text]");
   if(!splitHeadingTargets.length) {
     return;
@@ -345,7 +367,6 @@ $(document).ready(function () {
     autoHideScrollbar: true,
   });
   normalWrapAni();
-  initHighlightText()
   showPolicy();
   pageWrapFlowUp();
   gasp_bg_ani()

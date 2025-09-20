@@ -1,26 +1,10 @@
 // 计数器效果
 function startNumberSwitch() {
-  function execNumberAni() {
-    $(".ani-numaber").each(function () {
-      const $this = $(this);
-      const target = parseInt($this.attr("data-number"));
-      $this.animateNumber(
-        {
-          number: target,
-          complete: function () {
-            $this.find("i").show();
-          },
-        },
-        2000
-      );
-    });
-  }
-
   const numberSwich = $("#numberSwich")[0];
   const ob = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        execNumberAni();
+        execNumberAni('numberSwich');
         ob.unobserve(entry.target);
       }
     });
@@ -33,7 +17,7 @@ function solutionAccording() {
   $(".accordion-section").bind("mouseenter", function () {
     const content = $(this).find(".accordion-content");
     if (content.hasClass("hidden")) {
-      content.stop(true, true).slideDown(200, function () {
+      content.stop(true, true).slideDown(600, function () {
         content.removeClass("hidden");
       });
       const imgUrl = $(this).attr("data-img");
@@ -43,7 +27,7 @@ function solutionAccording() {
       if (!$(this).is(content)) {
         $(this)
           .stop(true, true)
-          .slideUp(200, function () {
+          .slideUp(600, function () {
             $(this).addClass("hidden");
           });
       }
@@ -53,6 +37,11 @@ function solutionAccording() {
 
 // 新闻列表切换背景图片
 function newsBgSwitch() {
+  const first = $(".news-section>.bg-cover").eq(0)
+  const imgUrl = first.find('.news-bgsource').attr('src');
+  first.css("background-image", `url(${imgUrl})`);
+  first.addClass("active");
+
   $(".news-section>.bg-cover").bind("mouseenter", function () {
     const $this = $(this);
     if ($this.hasClass("active")) {
@@ -62,8 +51,7 @@ function newsBgSwitch() {
       .addClass("active")
       .siblings()
       .removeClass("active")
-      .css("background-image", "none");
-    const imgUrl = $this.attr("data-img");
+    const imgUrl = $this.find('.news-bgsource').attr('src');
     $this.css("background-image", `url(${imgUrl})`);
   });
 }
@@ -95,7 +83,22 @@ function bannerScaleAni() {
 
 }
 
+function whoweareAni() {
+  const _$whoWeAre = $('.who-we-are').eq(0)
+  ScrollTrigger.create({
+    trigger: _$whoWeAre,
+    start: 'top bottom',
+    end: 'bottom bottom',
+    scrub: 0.3,
+    onEnter: () => {
+      console.log('enter who we are')
+      initHighlightText('home')
+    }
+  })
+}
+
 $(document).ready(function () {
+  whoweareAni();
   bannerScaleAni();
   solutionAccording();
   newsBgSwitch();
