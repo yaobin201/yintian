@@ -303,6 +303,7 @@ gsap.ticker.lagSmoothing(0);
 
 
 $(document).ready(function () {
+  controlNavbar();
   // 处理导航
   $("#menuBurger").click(function () {
     $(".header-right-column")
@@ -341,8 +342,6 @@ $(document).ready(function () {
       window.location.href = `./search.html?keyword=${val}`
     }
   })
-
-  controlNavbar();
 
   // 语言切换
   $("#langArrow").click(function () {
