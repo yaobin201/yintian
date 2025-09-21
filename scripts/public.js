@@ -23,28 +23,32 @@ function pageWrapFlowUp() {
           duration: 0.5 + delay,
           ease: "power1.out",
         })
+        gsap.fromTo(
+          entry.target,
+          {
+            autoAlpha: 0,
+            transform: "translateY(50px)",
+          },
+          {
+            autoAlpha: 1,
+            transform: "translateY(0)",
+            delay: _delay,
+            duration: 0.5 + delay,
+            ease: "power1.out",
+          }
+        );
         const newsImgs = $(entry.target).find('.news-list-img')
         if(newsImgs.length) {
-          tl.to(newsImgs.eq(0), {
-            backgroundSize: '100% 100%',
-            duration: 0.4,
-            ease: "power2.in"
-          })
+          gsap.to(
+            newsImgs.eq(0),
+            {
+              autoAlpha: 1,backgroundSize: '100% 100%',
+              duration: 0.4,
+              ease: "power2.in",
+              delay: 0.8
+            }
+          );
         }
-        // gsap.fromTo(
-        //   entry.target,
-        //   {
-        //     autoAlpha: 0,
-        //     transform: "translateY(50px)",
-        //   },
-        //   {
-        //     autoAlpha: 1,
-        //     transform: "translateY(0)",
-        //     delay: _delay,
-        //     duration: 0.5 + delay,
-        //     ease: "power1.out",
-        //   }
-        // );
         ob.unobserve(entry.target);
       } else {
         // $(entry.target).css('opacity', 0)
@@ -299,6 +303,7 @@ gsap.ticker.lagSmoothing(0);
 
 
 $(document).ready(function () {
+  controlNavbar();
   // 处理导航
   $("#menuBurger").click(function () {
     $(".header-right-column")
@@ -338,8 +343,6 @@ $(document).ready(function () {
     }
   })
 
-  controlNavbar();
-
   // 语言切换
   $("#langArrow").click(function () {
     $(".lang-items").toggle().toggleClass("fade-in");
@@ -363,10 +366,10 @@ $(document).ready(function () {
   // 导航产品下拉
   $(".product-underline").hover(
     function () {
-      $(".categorys-list").show().addClass("fade-in");
+      $(this).find(".categorys-list").show().addClass("fade-in");
     },
     function () {
-      $(".categorys-list").removeClass("fade-in").hide();
+      $(this).find(".categorys-list").removeClass("fade-in").hide();
     }
   );
 

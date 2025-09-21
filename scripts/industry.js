@@ -57,10 +57,11 @@ function flexCardAni() {
         }
       },
       onLeaveBack: () => {
-        console.log('leave back')
-        _this.find(".industry-ani1").css("opacity", 0);
-        _this.find(".industry-sitem").css("opacity", 0);
-        _this.find('.industry-phone-wrap').css("opacity", 0)
+        if(!isMobileDevice()) {
+          _this.find(".industry-ani1").css("opacity", 0);
+          _this.find(".industry-sitem").css("opacity", 0);
+          _this.find('.industry-phone-wrap').css("opacity", 0)
+        }
       }
     });
   });
@@ -142,6 +143,9 @@ function execIndustrySwiper() {
   const bannerSwiper2 = new Swiper("#industryWrap2", {
     autoplay: true,
     effect: isMobileDevice() ? 'slide' : "fade",
+    pagination: {
+      el: ".swiper-pagination",
+    },
     on: {
       slideChange: function () {
         $("#cusSwiperNav2 > div")
@@ -161,6 +165,9 @@ function execIndustrySwiper() {
   const bannerSwiper3 = new Swiper("#industryWrap3", {
     autoplay: true,
     effect:  isMobileDevice() ? 'slide' : "fade",
+    pagination: {
+      el: ".swiper-pagination",
+    },
     on: {
       slideChange: function () {
         $("#cusSwiperNav3 > div")
@@ -184,7 +191,7 @@ function execPhoneSwiper() {
     direction: "vertical", // 垂直切换选项
     autoplay: true,
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper-pagination2",
       clickable: true,
     },
   });
