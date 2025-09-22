@@ -33,6 +33,9 @@ body {
 body{
   overflow-x:hidden;
 }
+img, video{
+  max-height: 100%;
+}
 .t-primary{
   color: var(--primary-color);
 }
@@ -640,6 +643,11 @@ body{
 .swiper-slide img{
   transition: all 0.3s ease;
 }
+@media (max-width: 768px) {
+  .swiper-slide img{
+    border-radius: .5rem;
+  }
+}
 .swiper:not(.phoneSwiper) .swiper-slide:hover img{
   transform: scale(1.1);
 }
@@ -687,7 +695,7 @@ body{
   .footer-cats > div{
     padding-bottom:1.5rem;
   }
-  .swiper:not(.product-cats-swiper):not(.swiper-banner):not(.phoneSwiper){
+  .swiper:not(.product-cats-swiper):not(.swiper-banner):not(.phoneSwiper):not(.historys-swiper){
     padding-bottom: 1.5rem;
   }
   .swiper:not(.product-cats-swiper):not(.swiper-banner) .swiper-horizontal>.swiper-pagination-bullets, 
