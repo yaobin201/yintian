@@ -90,6 +90,9 @@ img, video{
 .full-pro-cards .items-center:hover .w-72{
   transform: translateY(-2rem);
 }
+.lang-item{
+  white-space: nowrap;
+}
 .category-link:hover,
 .lang-item:hover,
 .lang-item.on{
@@ -155,8 +158,10 @@ img, video{
   font-family: Poppins-SemiBold, Arial, sans-serif;
 }
 
-.swiper-banner .cus-swiper-pages .swiper-pagination-bullet {
+.swiper-banner .cus-swiper-pages .swiper-pagination-bullet,
+.honor-swiper .cus-swiper-pages .swiper-pagination-bullet {
   background-color: white;
+  opacity: 1;
 }
 
 .cus-swiper-pages .swiper-pagination-bullet-active {

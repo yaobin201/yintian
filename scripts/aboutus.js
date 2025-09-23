@@ -18,6 +18,9 @@ $(document).ready(function () {
     autoplay: true,
     spaceBetween: 20,
     loop: true, // 循环模式选项
+    pagination: {
+      el: ".swiper-pagination",
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
