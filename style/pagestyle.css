@@ -1657,7 +1657,6 @@ img, video{
 }
 @media (max-width: 768px) {
   .historys-swiper .swiper-slide{
-    height:75vh;
     width:100%;
   }
 }
