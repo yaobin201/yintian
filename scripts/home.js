@@ -112,17 +112,19 @@ function idxCaseMenu() {
       $(this).on('mousemove', function(event) {
         $(this).removeClass(side).addClass(c);
         $(this).siblings().removeClass(c).addClass(side);
+      });
+      $('.news-section .link').on('mousemove', function(event) {
         hoverBox.find('.one').eq($(this).index()).stop().show().siblings().stop().hide();
       });
     });
     
-    divBox.hover(function(event) {
+    $('.news-section .link').hover(function(event) {
       if(event.type != 'mouseenter') {
         menuBox.children().removeClass(c).siblings().removeClass(side);
         gsap.to(hoverBox, {autoAlpha: 0})
       }
     });
-    divBox.on('mousemove', function(e) {
+    $('.news-section .link').on('mousemove', function(e) {
       console.log(e.clientY, e.clientX)
       console.log(e.screenY, e.screenX)
       gsap.to(hoverBox, {left: e.clientX, top: e.clientY, autoAlpha: 1})

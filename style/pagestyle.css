@@ -155,13 +155,12 @@ img, video{
   font-family: Poppins-SemiBold, Arial, sans-serif;
 }
 
-.cus-swiper-pages .swiper-pagination-bullet {
-  background: var(--primary-color);
-  opacity: 1;
+.swiper-banner .cus-swiper-pages .swiper-pagination-bullet {
+  background-color: white;
 }
 
 .cus-swiper-pages .swiper-pagination-bullet-active {
-  background: #0bb629;
+  background-color: var(--primary-color)!important;
 }
 .mobile-menus{
   display: flex!important;
@@ -276,6 +275,9 @@ img, video{
 }
 .product-underline .categorys-list{
   display: none;
+}
+.categorys-list a{
+  white-space: nowrap;
 }
 .mobile-menus .product-underline{
   display: flex;
@@ -553,7 +555,7 @@ img, video{
   overflow: hidden;
 }
 .link{
-  width: 100%;
+  width: 75%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -729,7 +731,7 @@ img, video{
   position: absolute;
   top: 0;
   left: 0;
-  width: 4rem;
+  width: 8rem;
   height: 4rem;
   transition: 600ms ease;
   background-color: var(--primary-color);
@@ -756,7 +758,7 @@ img, video{
 
 .link-btn:hover::before,
 .industry-switch:hover::before {
-  transform: scale(2);
+  transform: scale(3);
 }
 
 .count-wrap {
@@ -843,6 +845,9 @@ img, video{
   display: inline-block;
   border:1px solid var(--primary-color);
   border-radius: 4rem;
+}
+.privacy-btn.flex{
+  display: flex;
 }
 .privacy-btn.primary{
   color:#fff;
@@ -1178,11 +1183,40 @@ img, video{
   object-fit: cover;
   margin-bottom:.6rem;
   background-position:center;
-  background-size: 105% 105%;
-  transition: all .4s;
+  background-size: 120% 120%;
+  animation-duration: .8s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
 }
-.news-list .news-list-item:hover .news-list-img{
-  background-size: 105% 105%!important;
+.news-list .news-list-item .news-list-img.in,
+.mobile-news-section .news-list-img.in{
+  animation-name: newsImgIn;
+}
+.news-list .news-list-item .news-list-img.de,
+.mobile-news-section .news-list-img.de{
+  animation-delay: 0s;
+}
+.news-list .news-list-item .news-list-img.out,
+.mobile-news-section .news-list-img.out{
+  animation-name: newsImgOut;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+}
+@keyframes newsImgIn {
+  0% {
+    background-size: 120% 120%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+@keyframes newsImgOut {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 120% 120%;
+  }
 }
 .news-list-item:hover{
   color:var(--primary-color);
