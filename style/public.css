@@ -571,6 +571,9 @@
   .w-\[10\%\] {
     width: 10%;
   }
+  .w-\[20\%\] {
+    width: 20%;
+  }
   .w-\[50\%\] {
     width: 50%;
   }
@@ -1288,6 +1291,11 @@
       width: auto;
     }
   }
+  .md\:w-full {
+    @media (width >= 48rem) {
+      width: 100%;
+    }
+  }
   .md\:flex-1 {
     @media (width >= 48rem) {
       flex: 1;
@@ -1394,6 +1402,11 @@
   .md\:p-0 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:p-16 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 16);
     }
   }
   .md\:px-2 {

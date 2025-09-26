@@ -8,9 +8,6 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "anywhere": "^1.6.0"
-  },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.13",
     "tailwindcss": "^4.1.13"
