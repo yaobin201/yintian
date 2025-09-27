@@ -140,7 +140,7 @@ function pageNavMobileScroll() {
 
 function controlNavbar() {
   if (isMobileDevice()) {
-    $(window).scroll(AntiThrottle(pageNavMobileScroll, 500));
+    $(window).scroll(AntiThrottle(pageNavMobileScroll, 300));
     return;
   }
   $(window).scroll(AntiThrottle(pageNavScroll, 1000));

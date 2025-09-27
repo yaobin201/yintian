@@ -106,7 +106,7 @@ img, video{
     background-color: rgba(255,255,255,0);
   }
   .global-header-wrapper{
-    transition: all .3s;
+    transition: all .6s;
   }
 }
 .global-header-wrapper.scroll-style{
@@ -126,6 +126,18 @@ img, video{
 }
 .global-header-wrapper.scroll-style .menu-burger img.white{
   display: none;
+}
+.global-header-wrapper.scroll-style .header-logo{
+  display: block;
+}
+.global-header-wrapper.scroll-style .header-logo.header-logo-white{
+  display: none;
+}
+.global-header-wrapper .header-logo{
+  display: none;
+}
+.global-header-wrapper .header-logo.header-logo-white{
+  display: block;
 }
 .header_wrapper.header_wrapper_scroll{
   position:fixed;
