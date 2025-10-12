@@ -140,6 +140,12 @@ function pageNavMobileScroll() {
 
 function controlNavbar() {
   if (isMobileDevice()) {
+    $('.global-header-wrapper').addClass('mobile-nav')
+    const href = window.location.href;
+    if(href.indexOf('products') > -1 || href.indexOf('eProduct') > -1) {
+      $('.global-header-wrapper').removeClass('fixed').addClass('mobile-product-header')
+      return;
+    }
     $(window).scroll(AntiThrottle(pageNavMobileScroll, 300));
     return;
   }
@@ -335,24 +341,34 @@ $(document).ready(function () {
     $('body').css('touch-action', 'none');
   });
 
-  $('.searchBurger').click(function () {
-    $(".media-absolute").hide();
-    $('.mobile-search-wrap').show(300);
-    $('body').css('touch-action', 'none');
-  })
+  // $('.searchBurger').click(function () {
+  //   $(".media-absolute").hide();
+  //   $('.mobile-search-wrap').show(300);
+  //   $('body').css('touch-action', 'none');
+  // })
 
-  $(".mobile-mask").click(function () {
+  $("#menuClose").click(function () {
     $('.mobile-search-wrap').hide(300);
     $(".header-right-column")
-      .hide()
-      .removeClass("side-in")
-      .removeClass("mobile-menus");
+    .removeClass("side-in")
+    .removeClass("mobile-menus")
+    .hide()
     $(".media-absolute").show();
     $('body').css('touch-action', 'auto');
   });
-  $(".mobile-menus .product-underline").click(function () {
-    $(this).find(".categorys-list").toggle();
-  });
+  if(isMobileDevice()) {
+    $(".menu-items .product-underline").each(function() {
+      const rightNode = $('<span class="right-node"><img src="./images/icons/arrow-right.svg" alt="" /></span>')
+      $(this).append(rightNode);
+    })
+    $(".product-underline .right-node").click(function () {
+      console.log($(this))
+      $(this).toggleClass("active");
+      $(this).parent().find(".categorys-list").toggle(300);
+      // $(this).find(".categorys-list").toggle();
+    });
+    
+  }
 
   $("#openSearchIcon").click(function () {
     $(".search-entry .search-txt").addClass("active");
@@ -392,15 +408,18 @@ $(document).ready(function () {
     console.log("切换了语言：", $(e.target).attr("data-lang"));
   });
 
-  // 导航产品下拉
-  $(".product-underline").hover(
-    function () {
-      $(this).find(".categorys-list").show().addClass("fade-in");
-    },
-    function () {
-      $(this).find(".categorys-list").removeClass("fade-in").hide();
-    }
-  );
+  if(!isMobileDevice()) {
+    // 导航产品下拉
+    $(".product-underline").hover(
+      function () {
+        $(this).find(".categorys-list").show().addClass("fade-in");
+      },
+      function () {
+        $(this).find(".categorys-list").removeClass("fade-in").hide();
+      }
+    );
+
+  }
 
   if(isMobileDevice()) {
     $(".ani-pop-code").click(
