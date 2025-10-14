@@ -141,8 +141,8 @@ function pageNavMobileScroll() {
 function controlNavbar() {
   if (isMobileDevice()) {
     $('.global-header-wrapper').addClass('mobile-nav')
-    const href = window.location.href;
-    if(href.indexOf('products') > -1 || href.indexOf('eProduct') > -1) {
+    const href = window.location.href.toLocaleLowerCase();
+    if(href.indexOf('product') > -1 || href.indexOf('search') > -1 || href.indexOf('news') > -1) {
       $('.global-header-wrapper').removeClass('fixed').addClass('mobile-product-header')
       return;
     }

@@ -1350,6 +1350,9 @@ img, video{
   animation-duration: .4s;
   animation-fill-mode: forwards;
 }
+.mobile-news-section a:hover{
+  color:var(--primary-color);
+}
 @keyframes newsImgIn {
   0% {
     background-size: 120% 120%;
