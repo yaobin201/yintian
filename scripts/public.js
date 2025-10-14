@@ -142,7 +142,8 @@ function controlNavbar() {
   if (isMobileDevice()) {
     $('.global-header-wrapper').addClass('mobile-nav')
     const href = window.location.href.toLocaleLowerCase();
-    if(href.indexOf('product') > -1 || href.indexOf('search') > -1 || href.indexOf('news') > -1) {
+    const isNewsDetail = $('.news-detail-wrap').length > 0
+    if(href.indexOf('product') > -1 || href.indexOf('search') > -1 || isNewsDetail) {
       $('.global-header-wrapper').removeClass('fixed').addClass('mobile-product-header')
       return;
     }
