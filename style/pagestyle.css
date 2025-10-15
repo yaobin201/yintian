@@ -1603,6 +1603,18 @@ img, video{
   background: var(--primary-color);
   color:#fff;
 }
+.input-wrapper{
+  border-radius: .4rem;
+  display: flex;
+  height:2.6rem;
+  align-items: center;
+  justify-content: center;
+}
+.active .input-wrapper{
+  flex:1 1 auto;
+  padding:0 .8rem;
+  border:1px solid #ccc;
+}
 .detail-controls .detail-control-btn .b2{
   display: none;
 }
