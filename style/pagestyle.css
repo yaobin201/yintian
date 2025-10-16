@@ -1962,6 +1962,11 @@ img, video{
 .mobile-scroll-section{
   padding-top:calc(var(--spacing) * 16);
 }
+@media (min-width: 768px) {
+  .mobile-scroll-section{
+    padding-top: 0;
+  }
+}
 .select-language-wrap{
   border-top:1px solid #ccc;
   padding-top:1.5rem;
