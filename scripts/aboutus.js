@@ -1,7 +1,7 @@
 $(document).ready(function () {
   let historySwiper = new Swiper(".historys-swiper", {
     slidesPerView: 1,
-    autoplay: true,
+    autoplay: false,
     parallax: true,
     loop: true, // 循环模式选项
     speed: 800,
