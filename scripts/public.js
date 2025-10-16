@@ -342,6 +342,12 @@ $(document).ready(function () {
     $('body').css('touch-action', 'none');
   });
 
+  $('#openLanguageMenus').click(function () {
+    $('.language-menus').show().addClass("side-in");
+  })
+  $('#backMainMenu').click(function () {
+    $('.language-menus').removeClass("side-in").hide();
+  })
   // $('.searchBurger').click(function () {
   //   $(".media-absolute").hide();
   //   $('.mobile-search-wrap').show(300);
@@ -356,6 +362,7 @@ $(document).ready(function () {
     .hide()
     $(".media-absolute").show();
     $('body').css('touch-action', 'auto');
+    $('.language-menus').removeClass("side-in").hide();
   });
   if(isMobileDevice()) {
     $(".menu-items .product-underline").each(function() {
