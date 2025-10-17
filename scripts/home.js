@@ -1,6 +1,9 @@
 // 计数器效果
 function startNumberSwitch() {
   const numberSwich = $("#numberSwich")[0];
+  if(!numberSwich) {
+    return;
+  }
   const ob = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {

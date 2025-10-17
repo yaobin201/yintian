@@ -47,4 +47,15 @@ $(document).ready(function () {
       $(".product-category-toggle").removeClass("active").next().slideUp();
     }
   });
+
+  // 详情页产品处理
+  if($('.product-detail-others').length == 1) {
+    const proCardHover = $('.pro-card-hover')
+    if(proCardHover.length == 1) { 
+      proCardHover.eq(0).parent().addClass('justify-center')
+    }
+    if(proCardHover.length <= 2) {
+      proCardHover.addClass('flex-33')
+    }
+  }
 });
