@@ -238,7 +238,18 @@ img, video{
   background-image: linear-gradient(109deg, #000000 7%, #6f6f6f 91%);
 }
 
-
+.banner-wrapper .bg-cover{
+  position: relative;
+}
+.banner-wrapper .bg-cover::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .banner-wrapper .cus-swiper-pages{
   font-family: Poppins-SemiBold, Arial, sans-serif;
 }
@@ -1092,6 +1103,9 @@ img, video{
 }
 .product-category-wrap .product-category-list .product-category-item{
   padding: .5rem 0;
+}
+.product-category-wrap input[type="checkbox"]{
+  margin-right:.5rem;
 }
 .product-cats-swiper .swiper-slide img{
   border-radius: .5rem;

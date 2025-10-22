@@ -388,13 +388,13 @@ $(document).ready(function () {
     $('#searchTxt').hide(300);
     $("#closeSearchIcon").hide(300);
   });
-  $('.headerSearchInput').on('keyup', function(event) {
-    if(event.key == 'Enter' || event.keyCode == 13 || event.which == 13) {
-      const val = $(this).val().trim()
-      if(!val) return;
-      window.location.href = `./search.html?keyword=${val}`
-    }
-  })
+  // $('.headerSearchInput').on('keyup', function(event) {
+  //   if(event.key == 'Enter' || event.keyCode == 13 || event.which == 13) {
+  //     const val = $(this).val().trim()
+  //     if(!val) return;
+  //     window.location.href = `./search.html?keyword=${val}`
+  //   }
+  // })
 
   // 语言切换
   $("#langArrow").click(function () {

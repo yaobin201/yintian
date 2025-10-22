@@ -58,4 +58,54 @@ $(document).ready(function () {
       proCardHover.addClass('flex-33')
     }
   }
+
+  $('input[data-action="checkall"]').click(function (event) {
+    event.stopPropagation()
+    const id = $(this).attr('id');
+    if (this.checked) {
+      $('input[pid='+id+']').prop('checked', true)
+    } else {
+      $('input[pid='+id+']').prop('checked', false)
+    }
+    getCheckedData()
+  })
+  $('input[data-type="cat_item"]').click(function () {
+    const pid = $(this).attr('pid');
+    const checkedCount = $('input[pid=' + pid + ']:checked').length
+    const totalCount = $('input[pid=' + pid + ']').length
+    if(checkedCount == totalCount) {
+      $('#'+pid).prop('checked', true)
+    } else {
+      $('#'+pid).prop('checked', false)
+    }
+    getCheckedData()
+  })
 });
+
+function getCheckedData() {
+  // 所有选中的子级分类ID
+  const checkedData = []
+  $('input[data-type="cat_item"]:checked').each(function () {
+    checkedData.push($(this).attr('id'))
+  })
+  // 如果全选了某个分类，那么就不需要再添加子级分类ID
+  const selectedCheckAll = []
+  $('input[data-action="checkall"]').each(function () {
+    if (this.checked) {
+      selectedCheckAll.push($(this).attr('id'))
+    } else {
+      $('input[pid='+$(this).attr('id')+']:checked').each(function () {
+        selectedCheckAll.push($(this).attr('id'))
+      })
+    }
+  })
+  // 凡是选中的分类，都需要添加到checkedData中
+  const checkedAll = []
+  $('input[type="checkbox"]:checked').each(function () {
+    checkedAll.push($(this).attr('id'))
+  })
+  console.log('1: ',checkedData)
+  console.log('2: ',selectedCheckAll)
+  console.log('3: ',checkedAll)
+  return checkedData
+}
