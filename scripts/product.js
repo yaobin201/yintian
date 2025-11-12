@@ -37,14 +37,11 @@ $(document).ready(function () {
 
   // 产品分类处理
   $(".product-category-list").hide();
-  // $(".product-category-toggle:eq(0)").addClass("active").next().show();
   $(".product-category-toggle").click(function () {
-    console.log($(this).next())
     if ($(this).next().is(":hidden")) {
-      // $(".product-category-toggle").removeClass("active").next().slideUp();
       $(this).toggleClass("active").next().slideDown();
     } else {
-      // $(".product-category-toggle").removeClass("active").next().slideUp();
+      $(this).toggleClass("active").next().slideUp();
     }
   });
 
@@ -148,11 +145,17 @@ function resetCheckbox(ids) {
   ids.forEach(function (id) {
     // 用url中携带的ID找到对应的checkbox，将其标记为选中
     $(`#${id}`).prop('checked', true)
+    const exsitPid = $(`#${id}`).attr('pid')
     // 将标记为选中的分类要展开显示
-    $(`#${id}`).parents('.product-category-wrap').each(function () {
-      console.log(this, '...')
-      $(this).find('.product-category-toggle').toggleClass("active").next().slideDown();
-    })
+    if (exsitPid) {
+      $(`#${exsitPid}`).parents('.product-category-toggle').each(function () {
+        $(this).toggleClass("active").next().slideDown();
+      })
+    } else {
+      $(`#${id}`).parents('.product-category-toggle').each(function () {
+        $(this).toggleClass("active").next().slideDown();
+      })
+    }
   })
   showClearBtn();
 }
