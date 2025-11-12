@@ -2018,3 +2018,18 @@ img, video{
 .language-menus .product-underline .right-node{
   display: none;
 }
+/* 新增修改 */
+.mask-view{
+  width: 100vw;
+  height:100vh;
+  display:block;
+  position: fixed;
+  top:0;
+  left:0;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter: blur(3px);
+  cursor: wait;
+}
+.clear-wrap{
+  display: none;;
+}
