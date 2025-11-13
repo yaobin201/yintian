@@ -169,14 +169,14 @@ function showClearBtn(ids) {
       dataIds.push($(this).attr('data-rel'))
     })
   })
-  $('.product-category-wrap').each(function () { 
-    const _id = $(this).attr('data-rel')
-    if (dataIds.indexOf(_id) != -1) {
-      $(this).show()
-    } else {
-      $(this).hide()
-    }
-  })
+  // $('.product-category-wrap').each(function () { 
+  //   const _id = $(this).attr('data-rel')
+  //   if (dataIds.indexOf(_id) != -1) {
+  //     $(this).show()
+  //   } else {
+  //     $(this).hide()
+  //   }
+  // })
   $('.clear-wrap').each(function () { 
     const _id = $(this).attr('data-id')
     if (dataIds.indexOf(_id) != -1) {
@@ -185,19 +185,34 @@ function showClearBtn(ids) {
       $(this).hide()
     }
   })
-  const toggle = $('.product-category-wrap').find('.product-category-toggle')
-  if (toggle.length > 1) {
-    ids.forEach(function (id) { 
-      const _this = $(`#${id}`);
-      let fid = _this.attr('pid') ? _this.attr('pid') : id;
-      const pt = $(`#${fid}`).parents('.product-category-toggle')
-      toggle.each(function () {
-        if (pt.get(0) != $(this).get(0)) { 
-          $(this).removeClass("active").hide().next().slideUp();
-        }
-      })
+  ids.forEach(function (id) {
+    $(`#${id}`).parents('.product-category-wrap').each(function () {
+      const toggle = $(this).find('.product-category-toggle')
+      if (toggle.length > 1) {
+        const _this = $(`#${id}`);
+        let fid = _this.attr('pid') ? _this.attr('pid') : id;
+        const pt = $(`#${fid}`).parents('.product-category-toggle')
+        toggle.each(function () {
+          if (pt.get(0) != $(this).get(0)) { 
+            $(this).removeClass("active").hide().next().slideUp();
+          }
+        })
+      }
     })
-  }
+  })
+
+  $('.product-category-wrap').each(function () { 
+    const toggle = $(this).find('.product-category-toggle')
+    if (toggle.length > 1) {
+      const checked = $(this).find('input[type="checkbox"]:checked')
+      if (checked.length == 0) { 
+        toggle.each(function () {
+          $(this).removeClass("active").show().next().slideUp();
+        })
+        return;
+      }
+    }
+  })
 }
 
 function getProductCat() {
