@@ -121,7 +121,7 @@ function reloadData() {
         ids: ids.join('+')
       }, '', newUrl)
     }
-    showClearBtn();
+    showClearBtn(ids);
     $('#masView').removeClass('mask-view');
   } else {
     const curUrl = window.location.href.split('?')[0]
@@ -157,13 +157,47 @@ function resetCheckbox(ids) {
       })
     }
   })
-  showClearBtn();
+  showClearBtn(ids);
 }
 
-function showClearBtn() {
+function showClearBtn(ids) {
   // 显示清除按钮 并绑定点击事件
-  $('.clear-wrap').show()
-  
+  const dataIds = []
+  ids.forEach(function (id) { 
+    $(`#${id}`).parents('.product-category-wrap').each(function () {
+      console.log($(this));
+      dataIds.push($(this).attr('data-rel'))
+    })
+  })
+  $('.product-category-wrap').each(function () { 
+    const _id = $(this).attr('data-rel')
+    if (dataIds.indexOf(_id) != -1) {
+      $(this).show()
+    } else {
+      $(this).hide()
+    }
+  })
+  $('.clear-wrap').each(function () { 
+    const _id = $(this).attr('data-id')
+    if (dataIds.indexOf(_id) != -1) {
+      $(this).show()
+    } else {
+      $(this).hide()
+    }
+  })
+  const toggle = $('.product-category-wrap').find('.product-category-toggle')
+  if (toggle.length > 1) {
+    ids.forEach(function (id) { 
+      const _this = $(`#${id}`);
+      let fid = _this.attr('pid') ? _this.attr('pid') : id;
+      const pt = $(`#${fid}`).parents('.product-category-toggle')
+      toggle.each(function () {
+        if (pt.get(0) != $(this).get(0)) { 
+          $(this).removeClass("active").hide().next().slideUp();
+        }
+      })
+    })
+  }
 }
 
 function getProductCat() {
@@ -185,6 +219,7 @@ function getProductCat() {
 // 这里更新左侧分类和右侧数据列表
 function fetchAndRefreshData(catIds) {
   console.log(catIds)
+  GetValue(catIds, null)
 }
 // 新增修改 结束-----------------------------------------------
 
