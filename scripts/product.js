@@ -219,7 +219,7 @@ function getProductCat() {
 // 这里更新左侧分类和右侧数据列表
 function fetchAndRefreshData(catIds) {
   console.log(catIds)
-  GetValue(catIds, null)
+  // GetValue(catIds, null)
 }
 // 新增修改 结束-----------------------------------------------
 
