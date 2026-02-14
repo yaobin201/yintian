@@ -9,7 +9,7 @@
   <script src="./scripts/jquery.animateNumber.js"></script>
   <link rel="stylesheet" href="./scripts/swiper8/swiper-bundle.min.css" />
   <script src="./scripts/swiper8/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="./style/public.css" />
+  <link rel="stylesheet" href="./style/public.css" /><link rel="stylesheet" href="./style/pagestyle.css" />
 </head>
 
 <body>
@@ -29,7 +29,7 @@
             <div class="mx-5 flex items-center menu-item relative product-underline">
               <a href="./products-all.html">Product</a>
               <div
-                class="absolute w-60 top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md categorys-list">
+                class="absolute w-fit top-16 left-0 px-5 py-3 bg-white shadow-lg rounded-md categorys-list">
                 <div class="py-2 category-item">
                   <a href="./products-barcode-scanner.html" class="category-link">Mobile terminal</a>
                 </div>
@@ -125,43 +125,43 @@
             The rapid growth of the retail / FMCG industry and the increase in customer demand led to evolve a new edge shopping experience – O
             mni-channel Retailing.The rapid growth of the retail / FMCG industry and the increase in customer demand led to evolve a new edge shopping experience – O
             mni-channel Retailing. </div>
-          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="javascript:void(0)"><span>Learn more</span><img src="images/icons/arrow-right.svg" /><img
+          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="javascript:void(0)">Learn more<img src="images/icons/arrow-right.svg" /><img
                 src="images/icons/arrow-right-blue.svg" /></a>
         </div>
   
         <div class="industry-wrapper w-full bg-white pb-16">
           <div class="industry-ani1 font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
-          <div class="industry-section w-11/12 mx-auto">
-            <div class="industryFlag w-full flex h-[32vh] md:h-[36vw] flexing">
-              <div data-delay="0" class="industry-sitem on">
+          <div class="industry-section w-11/12 mx-auto h-[32vh] md:h-[36vw] swiper ins-industry-swiper">
+            <div class="industryFlag swiper-wrapper w-full  flexing">
+              <div data-delay="0" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
                 <div class="msg">
                   <div class="wc">INVENTORY MANAGEMENT SYSTEM</div>
                   <div class="end wc">INVENTORY MANAGEMENT SYSTEM</div>
                 </div>
                 <div class="pic" style="background-image: url('./images/industry/i1.jpg');"></div>
               </div>
-              <div data-delay="0.1" class="industry-sitem">
+              <div data-delay="0.1" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
                 <div class="msg">
                   <div class="wc">MOBILE POINT-OF-SALES(MPOS)</div>
                   <div class="end wc">MOBILE POINT-OF-SALES(MPOS)</div>
                 </div>
                 <div class="pic" style="background-image: url('./images/industry/i2.jpg');"></div>
               </div>
-              <div data-delay="0.2" class="industry-sitem">
+              <div data-delay="0.2" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
                 <div class="msg">
                   <div class="wc">VOICE DIRECTED PICKING</div>
                   <div class="end wc">VOICE DIRECTED PICKING</div>
                 </div>
                 <div class="pic" style="background-image: url('./images/industry/i3.jpg');"></div>
               </div>
-              <div data-delay="0.3" class="industry-sitem">
+              <div data-delay="0.3" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
                 <div class="msg">
                   <div class="wc">SUPPLY CHAIN TRACK AND TRACE</div>
                   <div class="end wc">SUPPLY CHAIN TRACK AND TRACE</div>
                 </div>
                 <div class="pic" style="background-image: url('./images/industry/i4.jpg');"></div>
               </div>
-              <div data-delay="0.4" class="industry-sitem">
+              <div data-delay="0.4" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
                 <div class="msg">
                   <div class="wc">WAREHOUSE MANAGEMENT SYSTEM(WMS)</div>
                   <div class="end wc">WAREHOUSE MANAGEMENT SYSTEM(WMS)</div>
@@ -169,6 +169,7 @@
                 <div class="pic" style="background-image: url('./images/industry/i5.jpg');"></div>
               </div>
             </div>
+            <div class="md:hidden swiper-pagination cus-swiper-pages"></div>
           </div>
         </div>
 
@@ -180,7 +181,7 @@
             business-related requirements and variety of support services
             Globalization rapidly transforms the landscape of transportation and logistics industry. It accelerates the demand of complexity in 
             business-related requirements and variety of support services</div>
-          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="javascript:void(0)"><span>Learn more</span><img src="images/icons/arrow-right.svg" /><img
+          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="javascript:void(0)">Learn more<img src="images/icons/arrow-right.svg" /><img
                 src="images/icons/arrow-right-blue.svg" /></a>
         </div>
 
@@ -188,22 +189,26 @@
           <div class="text-bani-timeline font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
           <div class="text-bani-timeline industry-section w-11/12 mx-auto">
             <div id="industryWrap2" class="swiper rounded-md h-[32vh] md:h-[36vw]">
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper text-white">
                 <div class="swiper-slide">
                   <img class="w-full h-full object-cover rouned-md" src="./images/industry/i_03.jpg" />
+                  <div class="md:hidden w-full overflow-hidden text-ellipsis whitespace-nowrap p-4 absolute bottom-0 left-0 z-1">INVENTORY MANAGEMENT SYSTEM</div>
                 </div>
                 <div class="swiper-slide">
                   <img class="w-full h-full object-cover rouned-md" src="./images/industry/i_04.jpg" />
+                  <div class="md:hidden w-full overflow-hidden text-ellipsis whitespace-nowrap p-4 absolute bottom-0 left-0 z-1">MOBILE PROOF-OF-DELIVERY(MPOD)</div>
                 </div>
                 <div class="swiper-slide">
                   <img class="w-full h-full object-cover rouned-md" src="./images/industry/i_03.jpg" />
+                  <div class="md:hidden w-full overflow-hidden text-ellipsis whitespace-nowrap p-4 absolute bottom-0 left-0 z-1">SUPPLY CHAIN TRACK AND TRACE</div>
                 </div>
               </div>
-              <div id="cusSwiperNav2" class="w-full absolute h-[4rem] left-0 bottom-0 z-10 text-white flex items-center overflow-hidden">
+              <div id="cusSwiperNav2" class="w-full absolute h-[4rem] left-0 bottom-0 z-10 text-white hidden md:flex items-center overflow-hidden">
                 <div class="flex-1 text-center overflow-hidden text-ellipsis whitespace-nowrap px-4 cursor-pointer">INVENTORY MANAGEMENT SYSTEM</div>
                 <div class="flex-1 text-center overflow-hidden text-ellipsis whitespace-nowrap px-4 cursor-pointer">MOBILE PROOF-OF-DELIVERY(MPOD)</div>
                 <div class="flex-1 text-center overflow-hidden text-ellipsis whitespace-nowrap px-4 cursor-pointer">SUPPLY CHAIN TRACK AND TRACE</div>
               </div>
+              <div class="md:hidden swiper-pagination cus-swiper-pages"></div>
             </div>
           </div>
         </div>
@@ -213,27 +218,28 @@
           <div data-delay-step="0.4" class="text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">Globalization rapidly transforms the landscape of transportation and logistics industry. It accelerates the demand of complexity in business-related requirements and variety of support services...</div>
           <div data-delay-step="0.6" class="hidden text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">
             Globalization rapidly transforms the landscape of transportation and logistics industry. It accelerates the demand of complexity in business-related requirements and variety of support services...</div>
-          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="javascript:void(0)"><span>Learn more</span><img src="images/icons/arrow-right.svg" /><img
+          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="javascript:void(0)">Learn more<img src="images/icons/arrow-right.svg" /><img
                 src="images/icons/arrow-right-blue.svg" /></a>
         </div>
 
         <div class="industry-wrapper w-full bg-white pb-16">
           <div class="industry-ani1 font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
-          <div class="industry-section w-11/12 mx-auto">
-            <div class="industryFlag w-full flex h-[32vh] md:h-[30vw] flexing">
-              <div data-delay="0" class="industry-sitem on">
+          <div class="industry-section w-11/12 mx-auto h-[32vh] md:h-[36vw] swiper ins-industry-swiper2">
+            <div class="industryFlag swiper-wrapper w-full flexing">
+              <div data-delay="0" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
                 <div class="msg">INVENTORY MANAGEMENT SYSTEM</div>
                 <div class="pic" style="background-image: url('./images/industry/i6.jpg');"></div>
               </div>
-              <div data-delay="0.1" class="industry-sitem">
+              <div data-delay="0.1" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
                 <div class="msg">VOICE DIRECTED PICKING</div>
                 <div class="pic" style="background-image: url('./images/industry/i7.jpg');"></div>
               </div>
-              <div data-delay="0.2" class="industry-sitem">
+              <div data-delay="0.2" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
                 <div class="msg">WAREHOUSE MANAGEMENT SYSTEM(WMS)</div>
                 <div class="pic" style="background-image: url('./images/industry/i8.jpg');"></div>
               </div>
             </div>
+            <div class="md:hidden swiper-pagination cus-swiper-pages"></div>
           </div>
         </div>
         
@@ -241,15 +247,15 @@
           <div data-delay-step="0.2" class="text-bani-timeline  font-bold font-semi-bold text-black text-3xl text-center">LOGISTICS & TRANSPORTATION</div>
           <div data-delay-step="0.4" class="text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">Globalization rapidly transforms the landscape of transportation and logistics industry. It accelerates the demand of complexity in business-related requirements and variety of support services...</div>
           <div data-delay-step="0.6" class="hidden text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">Globalization rapidly transforms the landscape of transportation and logistics industry. It accelerates the demand of complexity in business-related requirements and variety of support services...</div>
-          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="javascript:void(0)"><span>Learn more</span><img src="images/icons/arrow-right.svg" /><img
+          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="javascript:void(0)">Learn more<img src="images/icons/arrow-right.svg" /><img
                 src="images/icons/arrow-right-blue.svg" /></a>
         </div>
 
 
         <div class="industry-wrapper w-full pb-16 bg-[#eef1f4]">
-          <div class="industry-phone-wrap h-[auto] md:h-[100vh] flex items-center w-11/12 flex-col md:flex-row mx-auto py-[15vh]">
+          <div class="industry-phone-wrap h-[auto] md:h-[100vh] flex items-center w-11/12 flex-col md:flex-row mx-auto py-[8vh] md:py-[15vh]">
             <div class="w-full md:w-[33%]  flex items-center justify-center">
-              <span class="text-5xl font-bold font-semi-bold">HEALTH CARE</span>
+              <span class="text-3xl md:text-5xl font-bold font-semi-bold">HEALTH CARE</span>
             </div>
             <div class="w-full mt-12 md:mt-0 md:w-[33%] relative">
               <div class="swiper phoneSwiper w-[60vw] md:w-[20vw]">
@@ -260,7 +266,7 @@
                   <div class="swiper-slide"><img src="./images/industry/pc-4.jpg" /></div>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="swiper-pagination2 cus-swiper-pages"></div>
               <div class="phone-react  w-[60vw] md:w-[20vw] translate-x-[-30vw] md:translate-x-[-10vw]"></div>
             </div>
             <div class="w-full mt-12 md:mt-0 md:w-[33%] flex items-center md:pl-24 t-gray text-base">
@@ -291,31 +297,34 @@
               </div>
             </div>
 
-            <div class="industryFlag w-full md:fkex-auto mt-6 md:mt-0 flex h-[32vh] md:h-[30vw] flexing">
-              <div data-delay="0" class="industry-sitem on">
-                <div class="msg">
-                  <div class="wc">PATIENT BENEFITS</div>
-                  <div class="end wc">PATIENT BENEFITS</div>
-                  <p class="wcc md:!w-[25vw]">Improve disease suveillance and monitoring of public health. Help gatther more comprehensive statistics for formulating public health policy. Bring efficiency agin in total health penditure.</p>
-                </div>
-                <div class="pic" style="background-image: url('./images/industry/i9.jpg');"></div>
-              </div>
-              <div data-delay="0.1" class="industry-sitem">
-                <div class="msg">
-                  <div class="wc">CLINICIAN BENEFITS</div>
-                  <div class="end wc">CLINICIAN BENEFITS</div>
-                  <p class="wcc md:!w-[25vw]">Improve disease suveillance and monitoring of public health. Help gatther more comprehensive statistics for formulating public health policy. Bring efficiency agin in total health penditure.</p>
-                </div>
-                <div class="pic" style="background-image: url('./images/industry/i10.jpg');"></div>
-              </div>
-              <div data-delay="0.2" class="industry-sitem">
+            <div class="w-full md:flex-auto mt-6 md:mt-0 h-[32vh] md:h-[30vw] swiper ins-industry-swiper3">
+              <div class="industryFlag w-full swiper-wrapper  flexing">
+                <div data-delay="0" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
                   <div class="msg">
-                    <div class="wc">SOCIETY BENEFITS</div>
-                    <div class="end wc">SOCIETY BENEFITS</div>
+                    <div class="wc">PATIENT BENEFITS</div>
+                    <div class="end wc">PATIENT BENEFITS</div>
                     <p class="wcc md:!w-[25vw]">Improve disease suveillance and monitoring of public health. Help gatther more comprehensive statistics for formulating public health policy. Bring efficiency agin in total health penditure.</p>
                   </div>
-                <div class="pic" style="background-image: url('./images/industry/i11.jpg');"></div>
+                  <div class="pic" style="background-image: url('./images/industry/i9.jpg');"></div>
+                </div>
+                <div data-delay="0.1" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
+                  <div class="msg">
+                    <div class="wc">CLINICIAN BENEFITS</div>
+                    <div class="end wc">CLINICIAN BENEFITS</div>
+                    <p class="wcc md:!w-[25vw]">Improve disease suveillance and monitoring of public health. Help gatther more comprehensive statistics for formulating public health policy. Bring efficiency agin in total health penditure.</p>
+                  </div>
+                  <div class="pic" style="background-image: url('./images/industry/i10.jpg');"></div>
+                </div>
+                <div data-delay="0.2" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
+                    <div class="msg">
+                      <div class="wc">SOCIETY BENEFITS</div>
+                      <div class="end wc">SOCIETY BENEFITS</div>
+                      <p class="wcc md:!w-[25vw]">Improve disease suveillance and monitoring of public health. Help gatther more comprehensive statistics for formulating public health policy. Bring efficiency agin in total health penditure.</p>
+                    </div>
+                  <div class="pic" style="background-image: url('./images/industry/i11.jpg');"></div>
+                </div>
               </div>
+              <div class="md:hidden swiper-pagination cus-swiper-pages"></div>
             </div>
           </div>
         </div>
@@ -324,7 +333,7 @@
           <div data-delay-step="0.2" class="text-bani-timeline  font-bold font-semi-bold text-black text-3xl text-center">EDUCATION</div>
           <div data-delay-step="0.4" class="text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">For library services, there are significant numbers of in/out records of books needed to manage every day. For physical assets, it is difficult to control and identify ever-growing asset in comples environments.</div>
           <div data-delay-step="0.6" class="hidden text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">For library services, there are significant numbers of in/out records of books needed to manage every day. For physical assets, it is difficult to control and identify ever-growing asset in comples environments.</div>
-          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="javascript:void(0)"><span>Learn more</span><img src="images/icons/arrow-right.svg" /><img
+          <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="javascript:void(0)">Learn more<img src="images/icons/arrow-right.svg" /><img
                 src="images/icons/arrow-right-blue.svg" /></a>
         </div>
 
@@ -333,23 +342,30 @@
           <div class="text-bani-timeline font-bold text-2xl text-black py-16 text-center opacity-0">PFID PRODUCTS</div>
           <div class="text-bani-timeline industry-section w-11/12 mx-auto  opacity-0">
             <div id="industryWrap3" class="swiper rounded-md h-[32vh] md:h-[36vw]">
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper text-white">
                 <div class="swiper-slide">
                   <img class="w-full h-full object-cover rounded-md" src="./images/industry/i_07.jpg" />
+                  <div class="md:hidden w-full overflow-hidden text-ellipsis whitespace-nowrap p-4 absolute bottom-0 left-0 z-1">LIBRIAY SOLUTIONS</div>
                 </div>
                 <div class="swiper-slide">
                   <img class="w-full h-full object-cover rounded-md" src="./images/industry/i_08.jpg" />
+                  <div class="md:hidden w-full overflow-hidden text-ellipsis whitespace-nowrap p-4 absolute bottom-0 left-0 z-1">ATTENDANCE TRANKING</div>
                 </div>
                 <div class="swiper-slide">
                   <img class="w-full h-full object-cover rounded-md" src="./images/industry/i_07.jpg" />
+                  <div class="md:hidden w-full overflow-hidden text-ellipsis whitespace-nowrap p-4 absolute bottom-0 left-0 z-1">ASSET TRACKING</div>
                 </div>
+                <div class="swiper-slide">
                   <img class="w-full h-full object-cover rounded-md" src="./images/industry/i_08.jpg" />
+                  <div class="md:hidden w-full overflow-hidden text-ellipsis whitespace-nowrap p-4 absolute bottom-0 left-0 z-1">SECURITY</div>
                 </div>
                 <div class="swiper-slide">
                   <img class="w-full h-full object-cover rounded-md" src="./images/industry/i_07.jpg" />
+                  <div class="md:hidden w-full overflow-hidden text-ellipsis whitespace-nowrap p-4 absolute bottom-0 left-0 z-1">REAL TIME LOCATION TRACKING</div>
                 </div>
               </div>
-              <div id="cusSwiperNav3" class="w-full absolute h-[4rem] left-0 bottom-0 z-10 text-white flex items-center overflow-hidden">
+              <div class="md:hidden swiper-pagination cus-swiper-pages"></div>
+              <div id="cusSwiperNav3" class="w-full absolute h-[4rem] left-0 bottom-0 z-10 text-white hidden md:flex items-center overflow-hidden">
                 <div class="flex-1 text-center overflow-hidden text-ellipsis whitespace-nowrap px-4 cursor-pointer">LIBRIAY SOLUTIONS</div>
                 <div class="flex-1 text-center overflow-hidden text-ellipsis whitespace-nowrap px-4 cursor-pointer">ATTENDANCE TRANKING</div>
                 <div class="flex-1 text-center overflow-hidden text-ellipsis whitespace-nowrap px-4 cursor-pointer">ASSET TRACKING</div>
@@ -365,23 +381,23 @@
             <div data-delay-step="0.2" class="text-bani-timeline  font-bold font-semi-bold text-black text-3xl text-center">UTILITIES</div>
             <div data-delay-step="0.4" class="text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">Utilities industry covers a wide range of public services including supply of eletriciry, gas and water to both residential and commercial user. Today, aging infrastruture and workface</div>
             <div data-delay-step="0.6" class="hidden text-bani-timeline text-[#666666] text-base text-center w-full md:w-[60vw] mt-4">Utilities industry covers a wide range of public services including supply of eletriciry, gas and water to both residential and commercial user. Today, aging infrastruture and workface</div>
-            <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="#"><span>Learn more</span><img src="images/icons/arrow-right.svg" /><img
+            <a data-delay-step="0.6" class="text-bani-timeline mt-6 cus-link-btn toggle-text-btn" href="javascript:void(0);">Learn more<img src="images/icons/arrow-right.svg" /><img
                   src="images/icons/arrow-right-blue.svg" /></a>
           </div>
         </div>
 
         <div class="industry-wrapper w-full bg-white pb-16">
           <div class="industry-ani1 font-bold text-2xl text-black py-16 text-center opacity-0">SOLUTIONS</div>
-          <div class="industry-section w-11/12 mx-auto">
-            <div class="industryFlag w-full flex h-[32vh] md:h-[30vw] flexing">
-              <div data-delay="0" class="industry-sitem on">
+          <div class="industry-section w-11/12 mx-auto h-[32vh] md:h-[30vw] swiper ins-industry-swiper4">
+            <div class="industryFlag w-full swiper-wrapper flexing">
+              <div data-delay="0" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
                 <div class="msg">
                   <div class="wc">ASSET MANAGEMENT SYSTEM</div>
                   <div class="end wc">ASSET MANAGEMENT SYSTEM</div>
                   </div>
                 <div class="pic" style="background-image: url('./images/industry/i12.jpg');"></div>
               </div>
-              <div data-delay="0.1" class="industry-sitem">
+              <div data-delay="0.1" class="industry-sitem swiper-slide flex-none md:flex-[1] md:mx-[0.2rem]">
                 <div class="msg">
                   <div class="wc">PATIENT BENEFITS</div>
                   <div class="end wc">FIELD SERVICE AND WORKFACE MOBILITY</div>
@@ -389,6 +405,7 @@
                 <div class="pic" style="background-image: url('./images/industry/i13.jpg');"></div>
               </div>
             </div>
+            <div class="md:hidden swiper-pagination cus-swiper-pages"></div>
           </div>
         </div>
 
@@ -586,12 +603,6 @@
     </div>
   </div>
 </body>
-
-<!-- 引入malihu custom scrollbar CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
-<!-- 引入malihu custom scrollbar JS -->
-<script src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"
-  type="text/javascript"></script>
 
 <script src="./scripts/gsap/3.13.0/gsap.min.js" type="text/javascript"></script>
 <script src="./scripts/gsap/3.13.0/ScrollTrigger.min.js" type="text/javascript"></script>

@@ -21,6 +21,20 @@ $(document).ready(function () {
     },
   });
 
+  if(isMobileDevice()) {
+    var productMobileSwiper = new Swiper(".product-mobile-swiper", {
+      direction: "horizontal",
+      autoplay:true,
+      parallax: true,
+      loop: true, // 循环模式选项
+      speed: 1000,
+      // 如果需要分页器
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  }
+
   // 产品分类处理
   $(".product-category-list").hide();
   // $(".product-category-toggle:eq(0)").addClass("active").next().show();

@@ -4,7 +4,7 @@
 npm install tailwindcss @tailwindcss/cli
 
 - 配置tailwindcss
-npx @tailwindcss/cli -i ./src/tailwind-base.css -o ./src/public.css --watch
+npx @tailwindcss/cli -i ./style/tailwind-base.css -o ./style/public.css --watch
 
 - 引入public.css
 在html文件中引入public.css文件

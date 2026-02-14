@@ -18,6 +18,9 @@ $(document).ready(function () {
     autoplay: true,
     spaceBetween: 20,
     loop: true, // 循环模式选项
+    pagination: {
+      el: ".swiper-pagination",
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -38,6 +41,9 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next-join",
       prevEl: ".swiper-button-prev-join",
     },
+    pagination: {
+      el: ".swiper-pagination",
+    },
     breakpoints: {
       768: {
         //当屏幕宽度大于等于768
@@ -48,13 +54,13 @@ $(document).ready(function () {
 
   $('.gsap-page').each(function () {
     const _this = $(this)
-    const maskBox = _this.find('.fixed-bg')
-    if(maskBox.length) {
-      gsap.timeline({
-          scrollTrigger: { trigger: _this, pin: maskBox, start: 'top top', end: 'bottom top', scrub: .1, 
-        }
-      });
-    }
+    // const maskBox = _this.find('.fixed-bg')
+    // if(maskBox.length) {
+    //   gsap.timeline({
+    //       scrollTrigger: { trigger: _this, pin: maskBox, start: 'top top', end: 'bottom top', scrub: .1, 
+    //     }
+    //   });
+    // }
     const aniPs = _this.find('.ani-p')
     aniPs.css('opacity', 0)
     gsap.timeline({

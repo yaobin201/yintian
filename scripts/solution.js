@@ -121,7 +121,9 @@ $(document).ready(function () {
   //     fontFlowUp(this, false);
   //   }
   // );
-  solutionItemScroll()
+  if(!isMobileDevice()){
+    solutionItemScroll();
+  }
   swiperSlide();
   solutionSwiperTab();
 });

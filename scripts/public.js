@@ -15,6 +15,14 @@ function pageWrapFlowUp() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const delay = +entry.target.dataset.delayStep || 0;
+        const tl = gsap.timeline();
+        // tl.to(entry.target, {
+        //   autoAlpha: 1,
+        //   transform: "translateY(0)",
+        //   delay: _delay,
+        //   duration: 0.5 + delay,
+        //   ease: "power1.out",
+        // })
         gsap.fromTo(
           entry.target,
           {
@@ -29,6 +37,19 @@ function pageWrapFlowUp() {
             ease: "power1.out",
           }
         );
+        const newsImgs = $(entry.target).find('.news-list-img')
+        newsImgs.addClass('in')
+        // if(newsImgs.length) {
+        //   gsap.to(
+        //     newsImgs.eq(0),
+        //     {
+        //       backgroundSize: '100% 100%',
+        //       duration: 0.8,
+        //       ease: "power0.out",
+        //       delay: 2
+        //     }
+        //   );
+        // }
         ob.unobserve(entry.target);
       } else {
         // $(entry.target).css('opacity', 0)
@@ -283,6 +304,7 @@ gsap.ticker.lagSmoothing(0);
 
 
 $(document).ready(function () {
+  controlNavbar();
   // 处理导航
   $("#menuBurger").click(function () {
     $(".header-right-column")
@@ -290,6 +312,7 @@ $(document).ready(function () {
       .show()
       .addClass("fade-in");
     $(".media-absolute").hide();
+    $('body').css('touch-action', 'none');
   });
   $(".mobile-mask").click(function () {
     $(".header-right-column")
@@ -297,6 +320,7 @@ $(document).ready(function () {
       .removeClass("fade-in")
       .removeClass("mobile-menus");
     $(".media-absolute").show();
+    $('body').css('touch-action', 'auto');
   });
   $(".mobile-menus .product-underline").click(function () {
     $(this).find(".categorys-list").toggle();
@@ -319,8 +343,6 @@ $(document).ready(function () {
       window.location.href = `./search.html?keyword=${val}`
     }
   })
-
-  controlNavbar();
 
   // 语言切换
   $("#langArrow").click(function () {
@@ -345,10 +367,10 @@ $(document).ready(function () {
   // 导航产品下拉
   $(".product-underline").hover(
     function () {
-      $(".categorys-list").show().addClass("fade-in");
+      $(this).find(".categorys-list").show().addClass("fade-in");
     },
     function () {
-      $(".categorys-list").removeClass("fade-in").hide();
+      $(this).find(".categorys-list").removeClass("fade-in").hide();
     }
   );
 
@@ -361,11 +383,23 @@ $(document).ready(function () {
     }
   );
 
-  // 底部自定义滚动条
-  $(".scroll-content").mCustomScrollbar({
-    theme: "dark", // 选择一个主题，如 "dark", "light", "light-3" 等
-    autoHideScrollbar: true,
-  });
+  let defaultSrc = ''
+  $('.cus-link-btn').hover(
+    function () {
+      defaultSrc = $(this).find('img').eq(0).attr('src')
+      $(this).find('img').eq(0).attr('src', $(this).find('img').eq(1).attr('src'))
+    },
+    function () {
+      $(this).find('img').eq(0).attr('src', defaultSrc);
+    }
+  )
+
+  $('.news-list-img').hover(function() {
+    $(this).addClass('de').addClass('out')
+  }, function() {
+    $(this).removeClass('out')
+  })
+
   normalWrapAni();
   showPolicy();
   pageWrapFlowUp();
