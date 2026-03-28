@@ -76,6 +76,7 @@ function flexCardAni() {
       autoplay:true,
       parallax: true,
       loop: true, // 循环模式选项
+      spaceBetween: 6,
       speed: 1000,
       // 如果需要分页器
       pagination: {

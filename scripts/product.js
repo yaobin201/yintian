@@ -24,7 +24,7 @@ $(document).ready(function () {
   if(isMobileDevice()) {
     var productMobileSwiper = new Swiper(".product-mobile-swiper", {
       direction: "horizontal",
-      autoplay:true,
+      autoplay:false,
       parallax: true,
       loop: true, // 循环模式选项
       speed: 1000,
@@ -39,9 +39,12 @@ $(document).ready(function () {
   $(".product-category-list").hide();
   // $(".product-category-toggle:eq(0)").addClass("active").next().show();
   $(".product-category-toggle").click(function () {
+    console.log($(this).next())
     if ($(this).next().is(":hidden")) {
       $(".product-category-toggle").removeClass("active").next().slideUp();
       $(this).toggleClass("active").next().slideDown();
+    } else {
+      $(".product-category-toggle").removeClass("active").next().slideUp();
     }
   });
 });

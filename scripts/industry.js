@@ -72,6 +72,7 @@ function flexCardAni() {
       autoplay:true,
       parallax: true,
       loop: true, // 循环模式选项
+      spaceBetween: 6,
       speed: 1000,
       // 如果需要分页器
       pagination: {
@@ -143,6 +144,8 @@ function execIndustrySwiper() {
   const bannerSwiper2 = new Swiper("#industryWrap2", {
     autoplay: true,
     effect: isMobileDevice() ? 'slide' : "fade",
+    loop: true,
+    spaceBetween: 6,
     pagination: {
       el: ".swiper-pagination",
     },
@@ -165,6 +168,8 @@ function execIndustrySwiper() {
   const bannerSwiper3 = new Swiper("#industryWrap3", {
     autoplay: true,
     effect:  isMobileDevice() ? 'slide' : "fade",
+    loop: true,
+    spaceBetween: 6,
     pagination: {
       el: ".swiper-pagination",
     },

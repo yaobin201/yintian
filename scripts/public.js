@@ -119,8 +119,28 @@ function pageNavScroll() {
   lastScrollTop = st;
 }
 
+function pageNavMobileScroll() {
+  const st = $(this).scrollTop(); // 当前滚动的位置
+    if (st <= 50) {
+    $(".header_wrapper").parent()
+      .removeClass("move-out")
+      .removeClass("scroll-style");
+    return;
+  }
+  if (st > lastScrollTop) {
+    $(".header_wrapper").parent()
+    .addClass("scroll-style")
+      .addClass("move-out");
+  } else {
+    $(".header_wrapper").parent()
+      .removeClass("move-out");
+  }
+  lastScrollTop = st;
+}
+
 function controlNavbar() {
   if (isMobileDevice()) {
+    $(window).scroll(AntiThrottle(pageNavMobileScroll, 300));
     return;
   }
   $(window).scroll(AntiThrottle(pageNavScroll, 1000));
@@ -306,18 +326,26 @@ gsap.ticker.lagSmoothing(0);
 $(document).ready(function () {
   controlNavbar();
   // 处理导航
-  $("#menuBurger").click(function () {
+  $(".menuBurger").click(function () {
     $(".header-right-column")
       .addClass("mobile-menus")
       .show()
-      .addClass("fade-in");
+      .addClass("side-in");
     $(".media-absolute").hide();
     $('body').css('touch-action', 'none');
   });
+
+  $('.searchBurger').click(function () {
+    $(".media-absolute").hide();
+    $('.mobile-search-wrap').show(300);
+    $('body').css('touch-action', 'none');
+  })
+
   $(".mobile-mask").click(function () {
+    $('.mobile-search-wrap').hide(300);
     $(".header-right-column")
       .hide()
-      .removeClass("fade-in")
+      .removeClass("side-in")
       .removeClass("mobile-menus");
     $(".media-absolute").show();
     $('body').css('touch-action', 'auto');
@@ -336,7 +364,7 @@ $(document).ready(function () {
     $('#searchTxt').hide(300);
     $("#closeSearchIcon").hide(300);
   });
-  $('#headerSearchInput').on('keyup', function(event) {
+  $('.headerSearchInput').on('keyup', function(event) {
     if(event.key == 'Enter' || event.keyCode == 13 || event.which == 13) {
       const val = $(this).val().trim()
       if(!val) return;
@@ -374,14 +402,29 @@ $(document).ready(function () {
     }
   );
 
-  $(".ani-pop-code").hover(
-    function () {
-      $(this).find(".pop-code").show().addClass("fade-in");
-    },
-    function () {
-      $(this).find(".pop-code").removeClass("fade-in").hide();
-    }
-  );
+  if(isMobileDevice()) {
+    $(".ani-pop-code").click(
+      function () {
+        const el = $(this).find(".pop-code")
+        if(el.is(':visible')) {
+          el.removeClass("fade-in").hide();
+        } else {
+          $(".pop-code").not(el).removeClass("fade-in").hide();
+          el.show().addClass("fade-in");
+        }
+      }
+    );
+  } else{ 
+    $(".ani-pop-code").hover(
+      function () {
+        $(this).find(".pop-code").show().addClass("fade-in");
+      },
+      function () {
+        $(this).find(".pop-code").removeClass("fade-in").hide();
+      }
+    );
+
+  }
 
   let defaultSrc = ''
   $('.cus-link-btn').hover(
