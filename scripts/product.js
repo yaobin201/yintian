@@ -37,14 +37,11 @@ $(document).ready(function () {
 
   // 产品分类处理
   $(".product-category-list").hide();
-  // $(".product-category-toggle:eq(0)").addClass("active").next().show();
   $(".product-category-toggle").click(function () {
-    console.log($(this).next())
     if ($(this).next().is(":hidden")) {
-      $(".product-category-toggle").removeClass("active").next().slideUp();
       $(this).toggleClass("active").next().slideDown();
     } else {
-      $(".product-category-toggle").removeClass("active").next().slideUp();
+      $(this).toggleClass("active").next().slideUp();
     }
   });
 
@@ -59,28 +56,187 @@ $(document).ready(function () {
     }
   }
 
-  $('input[data-action="checkall"]').click(function (event) {
-    event.stopPropagation()
-    const id = $(this).attr('id');
-    if (this.checked) {
-      $('input[pid='+id+']').prop('checked', true)
-    } else {
-      $('input[pid='+id+']').prop('checked', false)
-    }
-    getCheckedData()
+  // 新增修改 开始-----------------------------------------------
+  // $('input[data-action="checkall"]').click(function (event) {
+  //   event.stopPropagation()
+  //   const id = $(this).attr('id');
+  //   if (this.checked) {
+  //     $('input[pid='+id+']').prop('checked', true)
+  //   } else {
+  //     $('input[pid='+id+']').prop('checked', false)
+  //   }
+  //   getCheckedData()
+  // })
+  // $('input[data-type="cat_item"]').click(function () {
+  //   const pid = $(this).attr('pid');
+  //   const checkedCount = $('input[pid=' + pid + ']:checked').length
+  //   const totalCount = $('input[pid=' + pid + ']').length
+  //   if(checkedCount == totalCount) {
+  //     $('#'+pid).prop('checked', true)
+  //   } else {
+  //     $('#'+pid).prop('checked', false)
+  //   }
+  //   getCheckedData()
+  // })
+  $('.product-category-wrap input[type="checkbox"]').click(function () {
+    reloadData()
   })
-  $('input[data-type="cat_item"]').click(function () {
-    const pid = $(this).attr('pid');
-    const checkedCount = $('input[pid=' + pid + ']:checked').length
-    const totalCount = $('input[pid=' + pid + ']').length
-    if(checkedCount == totalCount) {
-      $('#'+pid).prop('checked', true)
-    } else {
-      $('#'+pid).prop('checked', false)
-    }
-    getCheckedData()
-  })
+
+  initSearchParams();
+  clickClearHandler();
 });
+
+// 从url中初始化参数到checkbox
+function initSearchParams() {
+  const proCat = getProductCat();
+  // proCat是一组用加号拼接的字符串，单也可能没有加号
+  if (proCat) {
+    console.log(proCat, 'proCat是一组用加号拼接的字符串')
+    // 从url中获取产品分类的ID 并用于请求新的分类列表和产品列表 todo
+    fetchAndRefreshData(proCat.split('+'))
+    // 从url中获取产品分类的ID 并设置checkbox状态
+    resetCheckbox(proCat.split('+'))
+  } else {
+    // 原本的加载页面分类和产品列表逻辑 todo
+    console.log('proCat是一组用加号拼接的字符串')
+  }
+}
+
+// 选中checkbox
+function reloadData() {
+  $('#masView').addClass('mask-view');
+  const ids = []
+  $('.product-category-wrap input:checked').each(function(){
+    ids.push($(this).attr('id'))
+  });
+
+  if (ids.length > 0) {
+    // 这里开始处理请求数据 todo
+    fetchAndRefreshData(ids)
+    const curUrl = window.location.href.split('?')[0]
+    const newUrl = `${curUrl}?product_cat=${ids.join('+')}`
+    console.log(newUrl,' ...newUrl')
+    if (!navigator.userAgent.match(/msie/i)) { 
+      window.history.pushState({
+        ids: ids.join('+')
+      }, '', newUrl)
+    }
+    showClearBtn(ids);
+    $('#masView').removeClass('mask-view');
+  } else {
+    const curUrl = window.location.href.split('?')[0]
+    window.location.replace(curUrl)
+  }
+}
+
+// 增加点击clear动作
+function clickClearHandler() {
+  $('.clear-wrap').click(function (event) {
+    console.log($(this).next())
+    $(this).next().find('input[type="checkbox"]').each(function () {
+      $(this).prop('checked', false)
+    })
+    // checkbox状态发生改变，开始加载新的数据
+    reloadData()
+  })
+}
+
+function resetCheckbox(ids) {
+  ids.forEach(function (id) {
+    // 用url中携带的ID找到对应的checkbox，将其标记为选中
+    $(`#${id}`).prop('checked', true)
+    const exsitPid = $(`#${id}`).attr('pid')
+    // 将标记为选中的分类要展开显示
+    if (exsitPid) {
+      $(`#${exsitPid}`).parents('.product-category-toggle').each(function () {
+        $(this).toggleClass("active").next().slideDown();
+      })
+    } else {
+      $(`#${id}`).parents('.product-category-toggle').each(function () {
+        $(this).toggleClass("active").next().slideDown();
+      })
+    }
+  })
+  showClearBtn(ids);
+}
+
+function showClearBtn(ids) {
+  // 显示清除按钮 并绑定点击事件
+  const dataIds = []
+  ids.forEach(function (id) { 
+    $(`#${id}`).parents('.product-category-wrap').each(function () {
+      console.log($(this));
+      dataIds.push($(this).attr('data-rel'))
+    })
+  })
+  // $('.product-category-wrap').each(function () { 
+  //   const _id = $(this).attr('data-rel')
+  //   if (dataIds.indexOf(_id) != -1) {
+  //     $(this).show()
+  //   } else {
+  //     $(this).hide()
+  //   }
+  // })
+  $('.clear-wrap').each(function () { 
+    const _id = $(this).attr('data-id')
+    if (dataIds.indexOf(_id) != -1) {
+      $(this).show()
+    } else {
+      $(this).hide()
+    }
+  })
+  ids.forEach(function (id) {
+    $(`#${id}`).parents('.product-category-wrap').each(function () {
+      const toggle = $(this).find('.product-category-toggle')
+      if (toggle.length > 1) {
+        const _this = $(`#${id}`);
+        let fid = _this.attr('pid') ? _this.attr('pid') : id;
+        const pt = $(`#${fid}`).parents('.product-category-toggle')
+        toggle.each(function () {
+          if (pt.get(0) != $(this).get(0)) { 
+            $(this).removeClass("active").hide().next().slideUp();
+          }
+        })
+      }
+    })
+  })
+
+  $('.product-category-wrap').each(function () { 
+    const toggle = $(this).find('.product-category-toggle')
+    if (toggle.length > 1) {
+      const checked = $(this).find('input[type="checkbox"]:checked')
+      if (checked.length == 0) { 
+        toggle.each(function () {
+          $(this).removeClass("active").show().next().slideUp();
+        })
+        return;
+      }
+    }
+  })
+}
+
+function getProductCat() {
+  const search = window.location.search.replace('?', '');
+  console.log(search.split('&'),'.search')
+  if (search) {
+    const params = {}
+    search.split('&').forEach(item => {
+      const temp = item.split('=')
+      params[temp[0]] = temp[1]
+    })
+    if (params['product_cat']) {
+      return params['product_cat']
+    }
+  }
+  return ''
+}
+
+// 这里更新左侧分类和右侧数据列表
+function fetchAndRefreshData(catIds) {
+  console.log(catIds)
+  // GetValue(catIds, null)
+}
+// 新增修改 结束-----------------------------------------------
 
 function getCheckedData() {
   // 所有选中的子级分类ID

@@ -260,6 +260,9 @@
   </div>
   <div class="relative z-10 w-full scroll-section">
     <div class="relative w-full home-wrapper">
+      
+      <!-- 新增修改 一行 -->
+      <div id="masView"></div>
       <!-- product category swiper -->
       <div class="pt-8 pb-8 md:pb-12 w-full border-b border-[#ccc]">
 
@@ -321,15 +324,19 @@
 
       <div class="w-full my-8 relative">
         <div class="w-11/12 mx-auto flex flex-col md:flex-row gap-2 md:gap-6">
-          <div class="flex-none w-full md:w-[28.5%]">
-            <div class="flow-up site-breadcrumb mb-8 hidden md:flex items-center gap-2 text-sm h-8">
+          <div class="flow-up flex-none w-full md:w-[28.5%]">
+            <div class="site-breadcrumb mb-8 hidden md:flex items-center gap-2 text-sm h-8">
               <img class="h-[1.5em]" src="./images/icons/home-black.svg" />
               <a href="#">Home</a>
               <img class="h-[.4em]" src="./images/icons/arrow-right-bold.svg" />
               <a href="#">Product</a>
             </div>
             <!-- 产品分类 -->
-            <div class="flow-up bg-white mb-2 rounded-lg px-6 py-3 product-category-wrap">
+            <!-- data-id是紧接着它的分类列表的第一个分类ID，类目的父级ID -->
+            <div class="clear-wrap" data-id="cat_2">   
+              <a class="clear-btn" href="javascript:void(0)">Clear</a>
+            </div>
+            <div class="bg-white mb-2 rounded-lg px-6 py-3 product-category-wrap" data-rel="cat_2">
               <div class="py-2 font-bold flex justify-between product-category-toggle">
                 <span><input type="checkbox" data-action="checkall" id="cat_id_1" name="cat_id_1" />Shelf Labels</span>
                 <span class="category-toggle">
@@ -469,7 +476,11 @@
                 </div>
               </div>
             </div>
-            <div class="flow-up bg-white mb-2 rounded-lg px-6 py-3 product-category-wrap">
+            <!-- data-id是紧接着它的分类列表的第一个分类ID，类目的父级ID -->
+            <div class="clear-wrap" data-id="cat_3">   
+              <a class="clear-btn" href="javascript:void(0)">Clear</a>
+            </div>
+            <div class="bg-white mb-2 rounded-lg px-6 py-3 product-category-wrap" data-rel="cat_3">
               <div class="py-2 font-bold flex justify-between product-category-toggle">
                 <span><input type="checkbox" data-action="checkall" id="brand_id_24" name="brand_id_24" />Brand</span>
                 <span class="category-toggle">
@@ -494,7 +505,11 @@
                 </div>
               </div>
             </div>
-            <div class="flow-up bg-white mb-2 rounded-lg px-6 py-3 product-category-wrap">
+            <!-- data-id是紧接着它的分类列表的第一个分类ID，类目的父级ID -->
+            <div class="clear-wrap" data-id="cat_4">   
+              <a class="clear-btn" href="javascript:void(0)">Clear</a>
+            </div>
+            <div class="bg-white mb-2 rounded-lg px-6 py-3 product-category-wrap" data-rel="cat_4">
               <div class="py-2 font-bold flex justify-between product-category-toggle">
                 <span><input type="checkbox" data-action="checkall" id="os_id_25" name="os_id_25" />Operating System</span>
                 <span class="category-toggle">
@@ -519,7 +534,11 @@
                 </div>
               </div>
             </div>
-            <div class="flow-up bg-white mb-2 rounded-lg px-6 py-3 product-category-wrap">
+            <!-- data-id是紧接着它的分类列表的第一个分类ID，类目的父级ID -->
+            <div class="clear-wrap" data-id="cat_5">   
+              <a class="clear-btn" href="javascript:void(0)">Clear</a>
+            </div>
+            <div class="bg-white mb-2 rounded-lg px-6 py-3 product-category-wrap" data-rel="cat_5">
               <div class="py-2 font-bold flex justify-between product-category-toggle">
                 <span><input type="checkbox" data-action="checkall" id="pt_id_25" name="pt_id_25" />Printer Type</span>
                 <span class="category-toggle">
